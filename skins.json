@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "updatedAt": "2026-11-16",
+  "skins": [
+    {
+      "id": "glass",
+      "name": "玻璃",
+      "desc": "柔光玻璃，半透明、跟随深浅色。默认。",
+      "preview": "https://aka.doubaocdn.com/s/QKU0AaI9yT",
+      "url": ""
+    },
+    {
+      "id": "paper",
+      "name": "纸质",
+      "desc": "暖米纸面，细描边，零模糊，最省电。",
+      "preview": "https://aka.doubaocdn.com/s/OJiyOtj3KD",
+      "url": "https://aka.doubaocdn.com/s/6yg03P5tvf"
+    },
+    {
+      "id": "blueprint",
+      "name": "蓝图",
+      "desc": "深蓝方格底，线条描边，工程图纸感。",
+      "preview": "https://aka.doubaocdn.com/s/7nNNRe4eEu",
+      "url": "https://aka.doubaocdn.com/s/6UpAkXK2Jj"
+    }
+  ]
+}
