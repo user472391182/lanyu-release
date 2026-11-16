@@ -9,10 +9,10 @@
     "notes": "深色模式设置面板对比度修复"
   },
   "app": {
-    "versionCode": 12,
-    "versionName": "0.1.0-lanyu12",
-    "url": "https://aka.doubaocdn.com/s/Vn7aLUECBS",
+    "versionCode": 13,
+    "versionName": "0.1.0-lanyu13",
+    "url": "https://aka.doubaocdn.com/s/SmW6pe3eXe",
     "netdisk": "https://pan.quark.cn/s/0b387f194b56",
-    "notes": "新增 App 与插件更新检测，支持在线更新与网盘更新"
+    "notes": "更新检测改走 GitHub API（原方式在这台设备不通）；设置页去掉检查更新入口"
   }
 }
