@@ -9,10 +9,10 @@
     "notes": "第一个注册的用户自动成为管理员"
   },
   "app": {
-    "versionCode": 17,
-    "versionName": "0.1.0-lanyu17",
-    "url": "https://aka.doubaocdn.com/s/WZn1Qcu2oC",
+    "versionCode": 18,
+    "versionName": "0.1.0-lanyu18",
+    "url": "https://aka.doubaocdn.com/s/FU2njPIMzY",
     "netdisk": "https://pan.quark.cn/s/0b387f194b56",
-    "notes": "一键部署装完 AstrBot 后自动装插件并重启，结束弹环境已部署提示；隐私政策署名改为减减"
+    "notes": "内置浏览器去掉重复的澜雨标签，只保留 AstrBot"
   }
 }
