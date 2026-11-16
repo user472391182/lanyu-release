@@ -9,10 +9,10 @@
     "notes": "修复聊天页发图片发不出去：选图后缩略图不出现、点发送没反应"
   },
   "app": {
-    "versionCode": 30,
-    "versionName": "0.1.0-lanyu30",
-    "url": "https://aka.doubaocdn.com/s/Q5o2L65cso",
+    "versionCode": 31,
+    "versionName": "0.1.0-lanyu31",
+    "url": "https://aka.doubaocdn.com/s/JDsse0vIel",
     "netdisk": "https://pan.quark.cn/s/0b387f194b56",
-    "notes": "tailscaled 改为按 socket 判活，进程残留会先清理再重启；funnel 前自动拉起守护进程"
+    "notes": "固定 Tailscale 1.80.0 稳定版，显式指定 socket 路径，已登录判定放宽（userid 即视为已登录）"
   }
 }
