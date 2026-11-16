@@ -2,5 +2,17 @@
   "plugin": "astrbot_plugin_self_app",
   "version": "1.8.87",
   "url": "https://aka.doubaocdn.com/s/E7TVy2jgVa",
-  "note": "2026-11-16 深色模式设置面板对比度修复"
+  "note": "2026-11-16 深色模式设置面板对比度修复",
+  "plugin_detail": {
+    "version": "1.8.87",
+    "url": "https://aka.doubaocdn.com/s/E7TVy2jgVa",
+    "notes": "深色模式设置面板对比度修复"
+  },
+  "app": {
+    "versionCode": 12,
+    "versionName": "0.1.0-lanyu12",
+    "url": "https://aka.doubaocdn.com/s/Vn7aLUECBS",
+    "netdisk": "https://pan.quark.cn/s/0b387f194b56",
+    "notes": "新增 App 与插件更新检测，支持在线更新与网盘更新"
+  }
 }
