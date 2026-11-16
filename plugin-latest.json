@@ -1,18 +1,18 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.87",
-  "url": "https://aka.doubaocdn.com/s/E7TVy2jgVa",
-  "note": "2026-11-16 深色模式设置面板对比度修复",
+  "version": "1.8.88",
+  "url": "https://aka.doubaocdn.com/s/tBSiNYsHAV",
+  "note": "第一个注册的用户自动成为管理员",
   "plugin_detail": {
-    "version": "1.8.87",
-    "url": "https://aka.doubaocdn.com/s/E7TVy2jgVa",
-    "notes": "深色模式设置面板对比度修复"
+    "version": "1.8.88",
+    "url": "https://aka.doubaocdn.com/s/tBSiNYsHAV",
+    "notes": "第一个注册的用户自动成为管理员"
   },
   "app": {
     "versionCode": 13,
     "versionName": "0.1.0-lanyu13",
     "url": "https://aka.doubaocdn.com/s/QXBOzPsIVo",
     "netdisk": "https://pan.quark.cn/s/0b387f194b56",
-    "notes": "更新检测改走 gh-proxy 镜像：官方 raw 常被墙，api.github.com 有匿名限速"
+    "notes": "更新检测改走 gh-proxy 镜像；设置页去掉检查更新入口"
   }
 }
