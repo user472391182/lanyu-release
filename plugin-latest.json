@@ -9,10 +9,10 @@
     "notes": "修复聊天页发图片发不出去：选图后缩略图不出现、点发送没反应"
   },
   "app": {
-    "versionCode": 26,
-    "versionName": "0.1.0-lanyu26",
-    "url": "https://aka.doubaocdn.com/s/85tVE2DwZc",
+    "versionCode": 27,
+    "versionName": "0.1.0-lanyu27",
+    "url": "https://aka.doubaocdn.com/s/GWcZQyyik4",
     "netdisk": "https://pan.quark.cn/s/0b387f194b56",
-    "notes": "公网访问页显示容器实时输出；脚本加 GitHub 备用下载源；未登录时提供重新获取登录链接"
+    "notes": "修复容器内 Tailscale 解包失败：不解整包，直接从 tar 抽取两个二进制"
   }
 }
