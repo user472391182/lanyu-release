@@ -9,10 +9,10 @@
     "notes": "第一个注册的用户自动成为管理员"
   },
   "app": {
-    "versionCode": 13,
-    "versionName": "0.1.0-lanyu13",
-    "url": "https://aka.doubaocdn.com/s/QXBOzPsIVo",
+    "versionCode": 14,
+    "versionName": "0.1.0-lanyu14",
+    "url": "https://aka.doubaocdn.com/s/xVbYD07eaV",
     "netdisk": "https://pan.quark.cn/s/0b387f194b56",
-    "notes": "更新检测改走 gh-proxy 镜像；设置页去掉检查更新入口"
+    "notes": "更新检测走 gh-proxy 镜像；设置页去掉检查更新入口"
   }
 }
