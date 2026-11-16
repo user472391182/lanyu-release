@@ -9,10 +9,10 @@
     "notes": "修复聊天页发图片发不出去：选图后缩略图不出现、点发送没反应"
   },
   "app": {
-    "versionCode": 23,
-    "versionName": "0.1.0-lanyu23",
-    "url": "https://aka.doubaocdn.com/s/pQOwCdCiJK",
+    "versionCode": 24,
+    "versionName": "0.1.0-lanyu24",
+    "url": "https://aka.doubaocdn.com/s/GCxVwU2t7g",
     "netdisk": "https://pan.quark.cn/s/0b387f194b56",
-    "notes": "公网访问页新增公开到互联网（Funnel）和开机后启动服务按钮"
+    "notes": "公网访问页的 Funnel 按钮改为常显，未连接时点击会提示先开启"
   }
 }
