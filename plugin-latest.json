@@ -9,10 +9,10 @@
     "notes": "修复聊天页发图片发不出去：选图后缩略图不出现、点发送没反应"
   },
   "app": {
-    "versionCode": 21,
-    "versionName": "0.1.0-lanyu21",
-    "url": "https://aka.doubaocdn.com/s/WciKWVtqbj",
+    "versionCode": 22,
+    "versionName": "0.1.0-lanyu22",
+    "url": "https://aka.doubaocdn.com/s/IekmPZtgQ7",
     "netdisk": "https://pan.quark.cn/s/0b387f194b56",
-    "notes": "设置里新增公网访问：一键用 Tailscale 打通外网，自动换面板密码"
+    "notes": "修复 App 内在线更新装不上：安装包下载目录改到 cache/update"
   }
 }
