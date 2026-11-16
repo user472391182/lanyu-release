@@ -9,10 +9,10 @@
     "notes": "修复聊天页发图片发不出去：选图后缩略图不出现、点发送没反应"
   },
   "app": {
-    "versionCode": 33,
-    "versionName": "0.1.0-lanyu33",
-    "url": "https://aka.doubaocdn.com/s/AKYr4ApDbO",
+    "versionCode": 34,
+    "versionName": "0.1.0-lanyu34",
+    "url": "https://aka.doubaocdn.com/s/ZYCLJ11BRd",
     "netdisk": "https://pan.quark.cn/s/0b387f194b56",
-    "notes": "Tailscale 固定 1.104.7：1.80 在 proot 里 netlinkrib permission denied 起不来"
+    "notes": "控制接口改走本地 TCP tcp://127.0.0.1:1056，修复 proot 里 unix socket 丢失；Funnel 实测可开"
   }
 }
