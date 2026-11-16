@@ -9,10 +9,10 @@
     "notes": "修复聊天页发图片发不出去：选图后缩略图不出现、点发送没反应"
   },
   "app": {
-    "versionCode": 34,
-    "versionName": "0.1.0-lanyu34",
-    "url": "https://aka.doubaocdn.com/s/ZYCLJ11BRd",
+    "versionCode": 35,
+    "versionName": "0.1.0-lanyu35",
+    "url": "https://aka.doubaocdn.com/s/ili44jHJug",
     "netdisk": "https://pan.quark.cn/s/0b387f194b56",
-    "notes": "控制接口改走本地 TCP tcp://127.0.0.1:1056，修复 proot 里 unix socket 丢失；Funnel 实测可开"
+    "notes": "修「打开 WebUI」跳转索引：AstrBot/NapCat/OpenCode 三个入口由澜雨聊天页(1)改为 WebUI内置浏览器(2)"
   }
 }
