@@ -1,18 +1,18 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.90",
-  "url": "https://aka.doubaocdn.com/s/JRwSxqzWER",
-  "note": "新增身份查询工具 who_am_i：用户问「我是管理员吗」时机器人能直接回答",
+  "version": "1.8.91",
+  "url": "https://aka.doubaocdn.com/s/i5cyYuImMg",
+  "note": "修复聊天页发图片发不出去：选图后缩略图不出现、点发送没反应",
   "plugin_detail": {
-    "version": "1.8.90",
-    "url": "https://aka.doubaocdn.com/s/JRwSxqzWER",
-    "notes": "新增身份查询工具 who_am_i：用户问「我是管理员吗」时机器人能直接回答"
+    "version": "1.8.91",
+    "url": "https://aka.doubaocdn.com/s/i5cyYuImMg",
+    "notes": "修复聊天页发图片发不出去：选图后缩略图不出现、点发送没反应"
   },
   "app": {
-    "versionCode": 20,
-    "versionName": "0.1.0-lanyu20",
-    "url": "https://aka.doubaocdn.com/s/QNZpYYk3PT",
+    "versionCode": 21,
+    "versionName": "0.1.0-lanyu21",
+    "url": "https://aka.doubaocdn.com/s/WciKWVtqbj",
     "netdisk": "https://pan.quark.cn/s/0b387f194b56",
-    "notes": "设置里新增界面风格，可从云端下载皮肤包"
+    "notes": "设置里新增公网访问：一键用 Tailscale 打通外网，自动换面板密码"
   }
 }
