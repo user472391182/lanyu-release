@@ -9,10 +9,10 @@
     "notes": "第一个注册的用户自动成为管理员"
   },
   "app": {
-    "versionCode": 18,
-    "versionName": "0.1.0-lanyu18",
-    "url": "https://aka.doubaocdn.com/s/FU2njPIMzY",
+    "versionCode": 19,
+    "versionName": "0.1.0-lanyu19",
+    "url": "https://aka.doubaocdn.com/s/Cu7bmNGdpq",
     "netdisk": "https://pan.quark.cn/s/0b387f194b56",
-    "notes": "内置浏览器去掉重复的澜雨标签，只保留 AstrBot"
+    "notes": "更新检测改为多源并行取最新，修好被 CDN 缓存卡在旧版本的问题"
   }
 }
