@@ -9,10 +9,10 @@
     "notes": "第一个注册的用户自动成为管理员"
   },
   "app": {
-    "versionCode": 14,
-    "versionName": "0.1.0-lanyu14",
-    "url": "https://aka.doubaocdn.com/s/xVbYD07eaV",
+    "versionCode": 15,
+    "versionName": "0.1.0-lanyu15",
+    "url": "https://aka.doubaocdn.com/s/B7GCZkCFPe",
     "netdisk": "https://pan.quark.cn/s/0b387f194b56",
-    "notes": "更新检测走 gh-proxy 镜像；设置页去掉检查更新入口"
+    "notes": "一键部署改为真正串行，三步骤一次点完不再需要重复点击"
   }
 }
