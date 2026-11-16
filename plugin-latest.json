@@ -1,12 +1,12 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.89",
-  "url": "https://aka.doubaocdn.com/s/otdfuwkqUW",
-  "note": "新增皮肤接口：/skin.css、/skins",
+  "version": "1.8.90",
+  "url": "https://aka.doubaocdn.com/s/JRwSxqzWER",
+  "note": "新增身份查询工具 who_am_i：用户问「我是管理员吗」时机器人能直接回答",
   "plugin_detail": {
-    "version": "1.8.89",
-    "url": "https://aka.doubaocdn.com/s/otdfuwkqUW",
-    "notes": "新增皮肤接口：/skin.css、/skins"
+    "version": "1.8.90",
+    "url": "https://aka.doubaocdn.com/s/JRwSxqzWER",
+    "notes": "新增身份查询工具 who_am_i：用户问「我是管理员吗」时机器人能直接回答"
   },
   "app": {
     "versionCode": 20,
