@@ -9,10 +9,10 @@
     "notes": "修复聊天页发图片发不出去：选图后缩略图不出现、点发送没反应"
   },
   "app": {
-    "versionCode": 28,
-    "versionName": "0.1.0-lanyu28",
-    "url": "https://aka.doubaocdn.com/s/FBEf6htpv4",
+    "versionCode": 30,
+    "versionName": "0.1.0-lanyu30",
+    "url": "https://aka.doubaocdn.com/s/Q5o2L65cso",
     "netdisk": "https://pan.quark.cn/s/0b387f194b56",
-    "notes": "给 tailscale serve / funnel 加 75 秒超时兜底，避免卡在挂载端口这一步"
+    "notes": "tailscaled 改为按 socket 判活，进程残留会先清理再重启；funnel 前自动拉起守护进程"
   }
 }
