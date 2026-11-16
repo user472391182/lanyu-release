@@ -1,18 +1,18 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.88",
-  "url": "https://aka.doubaocdn.com/s/tBSiNYsHAV",
-  "note": "第一个注册的用户自动成为管理员",
+  "version": "1.8.89",
+  "url": "https://aka.doubaocdn.com/s/otdfuwkqUW",
+  "note": "新增皮肤接口：/skin.css、/skins",
   "plugin_detail": {
-    "version": "1.8.88",
-    "url": "https://aka.doubaocdn.com/s/tBSiNYsHAV",
-    "notes": "第一个注册的用户自动成为管理员"
+    "version": "1.8.89",
+    "url": "https://aka.doubaocdn.com/s/otdfuwkqUW",
+    "notes": "新增皮肤接口：/skin.css、/skins"
   },
   "app": {
-    "versionCode": 19,
-    "versionName": "0.1.0-lanyu19",
-    "url": "https://aka.doubaocdn.com/s/Cu7bmNGdpq",
+    "versionCode": 20,
+    "versionName": "0.1.0-lanyu20",
+    "url": "https://aka.doubaocdn.com/s/QNZpYYk3PT",
     "netdisk": "https://pan.quark.cn/s/0b387f194b56",
-    "notes": "更新检测改为多源并行取最新，修好被 CDN 缓存卡在旧版本的问题"
+    "notes": "设置里新增界面风格，可从云端下载皮肤包"
   }
 }
