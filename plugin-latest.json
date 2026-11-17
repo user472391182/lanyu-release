@@ -1,18 +1,18 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.91",
-  "url": "https://aka.doubaocdn.com/s/i5cyYuImMg",
-  "note": "修复聊天页发图片发不出去：选图后缩略图不出现、点发送没反应",
+  "version": "1.8.93",
+  "url": "https://aka.doubaocdn.com/s/vTJc6qeUoM",
+  "note": "新增手机文件读取：列文件/读文件/找文件（Download/Documents/Pictures/DCIM），管理员专用；表情添加入口改走 App 原生选图通道，修复 WebView 选不到文件内容",
   "plugin_detail": {
-    "version": "1.8.91",
-    "url": "https://aka.doubaocdn.com/s/i5cyYuImMg",
-    "notes": "修复聊天页发图片发不出去：选图后缩略图不出现、点发送没反应"
+    "version": "1.8.93",
+    "url": "https://aka.doubaocdn.com/s/vTJc6qeUoM",
+    "notes": "新增手机文件读取：列文件/读文件/找文件（Download/Documents/Pictures/DCIM），管理员专用；表情添加入口改走 App 原生选图通道，修复 WebView 选不到文件内容"
   },
   "app": {
-    "versionCode": 35,
-    "versionName": "0.1.0-lanyu35",
-    "url": "https://aka.doubaocdn.com/s/ili44jHJug",
+    "versionCode": 37,
+    "versionName": "0.1.0-lanyu37",
+    "url": "https://aka.doubaocdn.com/s/X2chyzeXuE",
     "netdisk": "https://pan.quark.cn/s/0b387f194b56",
-    "notes": "修「打开 WebUI」跳转索引：AstrBot/NapCat/OpenCode 三个入口由澜雨聊天页(1)改为 WebUI内置浏览器(2)"
+    "notes": "设置新增「手机文件访问」授权页（所有文件访问）；表情批量添加走 LanyuBridge 原生选图通道；含公网访问/Tailscale Funnel 与 WebUI 跳转修复"
   }
 }
