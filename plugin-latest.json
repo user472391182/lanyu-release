@@ -1,18 +1,18 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.106",
-  "url": "https://aka.doubaocdn.com/s/0UvKNqJbvK",
-  "note": "聊天记录只按时间保留 30 天，去掉 120 条与 2.2MB 两道上限",
+  "version": "1.8.107",
+  "url": "https://aka.doubaocdn.com/s/mp0H46IqyI",
+  "note": "聊天历史同步写成本地文件（hist_save 桥），localStorage 保留一份供页面即时读取",
   "plugin_detail": {
-    "version": "1.8.106",
-    "url": "https://aka.doubaocdn.com/s/0UvKNqJbvK",
-    "notes": "storeSave 仅按 30 天过滤；含 1.8.105 回复带图、1.8.104 子回复单独回复、1.8.103 版本号可见"
+    "version": "1.8.107",
+    "url": "https://aka.doubaocdn.com/s/mp0H46IqyI",
+    "notes": "保存时通过 LanyuBridge 推 hist_save 给 App 落盘；仍需 30 天规则，不设条数与体积上限"
   },
   "app": {
-    "versionCode": 41,
-    "versionName": "0.1.0-lanyu41",
-    "url": "https://aka.doubaocdn.com/s/59YydSUVtb",
+    "versionCode": 42,
+    "versionName": "0.1.0-lanyu42",
+    "url": "https://aka.doubaocdn.com/s/Czn7shQGST",
     "netdisk": "https://pan.quark.cn/s/0b387f194b56",
-    "notes": "设置页新增「查找聊天记录」：按关键词搜索近 30 天澜雨聊天，读到 WebView 里的 feiyu_history，长按可复制；含 v40 的主页布局调整"
+    "notes": "聊天记录真正落地：写 App 私有目录 lanyu_chat_history.json（.tmp 后重命名原子替换）；查找聊天记录页优先读文件、可导出到自选位置"
   }
 }
