@@ -1,12 +1,12 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.99",
-  "url": "https://aka.doubaocdn.com/s/Sz6lcpJnwH",
-  "note": "修朋友圈评论 token 不对：token 失效但 uid 已注册/管理员时按本机直连放行，未注册照拒；新增朋友圈评论带图（评论框「图」按钮走原生桥，缩略图可移除，点击看大图），comment_moment 工具也支持 image 参数",
+  "version": "1.8.100",
+  "url": "https://aka.doubaocdn.com/s/r31BQxLrbU",
+  "note": "朋友圈评论 token 不对的真因：/moment_cmt 等 5 个接口调鉴权时把用户身份传成空串，导致 1.8.99 的放行回退永远拿不到 uid。本版补齐 claim，token 失效但 uid 已注册/管理员时正常放行",
   "plugin_detail": {
-    "version": "1.8.99",
-    "url": "https://aka.doubaocdn.com/s/Sz6lcpJnwH",
-    "notes": "token 失效按 uid 放行（一处修复覆盖评论/回复/发动态/传图等 20+ 接口）；朋友圈评论支持配图，前端走 LanyuBridge 选图、/moment_img 上传、评论渲染缩略图与全屏查看；澜宝 comment_moment 可带图"
+    "version": "1.8.100",
+    "url": "https://aka.doubaocdn.com/s/r31BQxLrbU",
+    "notes": "补齐 5 处 _resolve_user 的 user 参（token 失效回退依赖它）；含 1.8.99 的朋友圈评论带图与 token 按 uid 放行"
   },
   "app": {
     "versionCode": 39,
