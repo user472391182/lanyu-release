@@ -1,18 +1,18 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.93",
-  "url": "https://aka.doubaocdn.com/s/vTJc6qeUoM",
-  "note": "新增手机文件读取：列文件/读文件/找文件（Download/Documents/Pictures/DCIM），管理员专用；表情添加入口改走 App 原生选图通道，修复 WebView 选不到文件内容",
+  "version": "1.8.94",
+  "url": "https://aka.doubaocdn.com/s/y0gupByLXK",
+  "note": "修复「本地存不下了」：聊天记录占用上限从6MB降到2.2MB（localStorage实际只有约5MB），写入失败时自动缩减历史重试；表情保存失败不再误报是表情满了；设置面板新增本地占用显示与「清理本地聊天缓存」",
   "plugin_detail": {
-    "version": "1.8.93",
-    "url": "https://aka.doubaocdn.com/s/vTJc6qeUoM",
-    "notes": "新增手机文件读取：列文件/读文件/找文件（Download/Documents/Pictures/DCIM），管理员专用；表情添加入口改走 App 原生选图通道，修复 WebView 选不到文件内容"
+    "version": "1.8.94",
+    "url": "https://aka.doubaocdn.com/s/y0gupByLXK",
+    "notes": "修复「本地存不下了」：聊天记录占用上限从6MB降到2.2MB（localStorage实际只有约5MB），写入失败时自动缩减历史重试；表情保存失败不再误报是表情满了；设置面板新增本地占用显示与「清理本地聊天缓存」"
   },
   "app": {
-    "versionCode": 37,
-    "versionName": "0.1.0-lanyu37",
-    "url": "https://aka.doubaocdn.com/s/X2chyzeXuE",
+    "versionCode": 38,
+    "versionName": "0.1.0-lanyu38",
+    "url": "https://aka.doubaocdn.com/s/6I1J2ZyvL1",
     "netdisk": "https://pan.quark.cn/s/0b387f194b56",
-    "notes": "设置新增「手机文件访问」授权页（所有文件访问）；表情批量添加走 LanyuBridge 原生选图通道；含公网访问/Tailscale Funnel 与 WebUI 跳转修复"
+    "notes": "聊天轻量版补上换头像/背景/批量加表情的原生选图通道（与主版协议对齐）；含手机文件访问、公网访问、WebUI跳转修复"
   }
 }
