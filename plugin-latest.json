@@ -1,12 +1,12 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.104",
-  "url": "https://aka.doubaocdn.com/s/lgSEnKMcbT",
-  "note": "评论区每条子回复（包括澜宝的回复）右侧都有回复入口，点它回复的就是那一句，不再只能回复主评论；回复时存 reply_to，渲染时显示 @谁",
+  "version": "1.8.105",
+  "url": "https://aka.doubaocdn.com/s/DcJY3f8070",
+  "note": "回复也能带图：回复输入框同样有「＋图」，选图走原生桥加 /moment_img 上传，后端 /moment_reply 收 image 字段，子回复渲染时显示配图并可点开大图",
   "plugin_detail": {
-    "version": "1.8.104",
-    "url": "https://aka.doubaocdn.com/s/lgSEnKMcbT",
-    "notes": "子回复也有单独的回复按钮，输入框占位直接显示「回复 澜宝…」；后端记录 to 字段，回复后仍会自动接一句；含 1.8.103 朋友圈版本号与评论图按钮"
+    "version": "1.8.105",
+    "url": "https://aka.doubaocdn.com/s/DcJY3f8070",
+    "notes": "1.8.104 的回复只支持纯文字，这版把评论那套配图通道并给回复共用；只有图没字也能发；含 1.8.104 子回复单独回复、1.8.103 版本号可见"
   },
   "app": {
     "versionCode": 40,
