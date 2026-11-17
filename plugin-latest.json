@@ -1,12 +1,12 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.102",
-  "url": "https://aka.doubaocdn.com/s/tLtuu8aWw0",
-  "note": "朋友圈评论 500 的真因：评论配图函数放在了插件类，而 /moment_cmt 等接口在平台类，self._cmt_image 直接 AttributeError。已改为模块级 _moment_img_url，并用真实 aiohttp 跑通 200/401/400 四种情况",
+  "version": "1.8.103",
+  "url": "https://aka.doubaocdn.com/s/l1BVZBbkEn",
+  "note": "评论带图按钮醒目化为「＋图」，朋友圈标题右侧显示插件版本号，方便一眼确认装的是哪一版；评论框还可一键清掉已选图",
   "plugin_detail": {
-    "version": "1.8.102",
-    "url": "https://aka.doubaocdn.com/s/tLtuu8aWw0",
-    "notes": "评论配图函数改为模块级供两个类共用；含 1.8.101 的社交请求重试与错误可见化、1.8.100 的鉴权 user 参数补齐、1.8.99 的评论带图"
+    "version": "1.8.103",
+    "url": "https://aka.doubaocdn.com/s/l1BVZBbkEn",
+    "notes": "朋友圈页头显示版本号；评论框「＋图」按钮加粗可见；含 1.8.102 的评论接口 500 修复、1.8.101 社交请求重试、1.8.100 鉴权 user 参数补齐、1.8.99 评论带图"
   },
   "app": {
     "versionCode": 39,
