@@ -1,12 +1,12 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.95",
-  "url": "https://aka.doubaocdn.com/s/YcgYLCmMnx",
-  "note": "修复发图片提示「没选到图片」：图片发送改走 LanyuBridge 原生选图通道（cmd:pick, mode:send, multiple:true），绕开 WebView 读不到 file:// 私有路径的问题；浏览器环境仍保留 input 兜底",
+  "version": "1.8.96",
+  "url": "https://aka.doubaocdn.com/s/cbXNjxGnV9",
+  "note": "修复换头像：聊天页点头像改走原生选图桥（不再走 input[type=file]）；说「换个头像」时插件直接执行，不依赖模型调工具；管理员换澜宝头像会同步推服务端",
   "plugin_detail": {
-    "version": "1.8.95",
-    "url": "https://aka.doubaocdn.com/s/YcgYLCmMnx",
-    "notes": "修复发图片提示「没选到图片」：图片发送改走 LanyuBridge 原生选图通道（cmd:pick, mode:send, multiple:true），绕开 WebView 读不到 file:// 私有路径的问题；浏览器环境仍保留 input 兜底"
+    "version": "1.8.96",
+    "url": "https://aka.doubaocdn.com/s/cbXNjxGnV9",
+    "notes": "修复换头像：聊天页点头像改走原生选图桥（不再走 input[type=file]）；说「换个头像」时插件直接执行，不依赖模型调工具；管理员换澜宝头像会同步推服务端"
   },
   "app": {
     "versionCode": 39,
