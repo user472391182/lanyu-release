@@ -1,12 +1,12 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.97",
-  "url": "https://aka.doubaocdn.com/s/iG23hmOPGE",
-  "note": "修复“换头像说没连上”：sender_id 形态(selfapp:FriendMessage:uXXX)与连接键(uXXX)对不上导致推送失败，改为 uid 归一化匹配；说「换成这个」默认换机器人头像，并不依赖模型工具调用",
+  "version": "1.8.98",
+  "url": "https://aka.doubaocdn.com/s/VRlOoOYP7x",
+  "note": "换头像改回纯模型理解驱动：删掉关键词短路，强化 change_avatar 工具描述让模型主动调；sender_id/连接键按 uid 归一化，最近图双键记录；工具调用写日志",
   "plugin_detail": {
-    "version": "1.8.97",
-    "url": "https://aka.doubaocdn.com/s/iG23hmOPGE",
-    "notes": "修复“换头像说没连上”：sender_id 形态(selfapp:FriendMessage:uXXX)与连接键(uXXX)对不上导致推送失败，改为 uid 归一化匹配；说「换成这个」默认换机器人头像，并不依赖模型工具调用"
+    "version": "1.8.98",
+    "url": "https://aka.doubaocdn.com/s/VRlOoOYP7x",
+    "notes": "换头像改回纯模型理解驱动：删掉关键词短路，强化 change_avatar 工具描述让模型主动调；sender_id/连接键按 uid 归一化，最近图双键记录；工具调用写日志"
   },
   "app": {
     "versionCode": 39,
