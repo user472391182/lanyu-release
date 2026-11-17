@@ -1,12 +1,12 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.103",
-  "url": "https://aka.doubaocdn.com/s/l1BVZBbkEn",
-  "note": "评论带图按钮醒目化为「＋图」，朋友圈标题右侧显示插件版本号，方便一眼确认装的是哪一版；评论框还可一键清掉已选图",
+  "version": "1.8.104",
+  "url": "https://aka.doubaocdn.com/s/lgSEnKMcbT",
+  "note": "评论区每条子回复（包括澜宝的回复）右侧都有回复入口，点它回复的就是那一句，不再只能回复主评论；回复时存 reply_to，渲染时显示 @谁",
   "plugin_detail": {
-    "version": "1.8.103",
-    "url": "https://aka.doubaocdn.com/s/l1BVZBbkEn",
-    "notes": "朋友圈页头显示版本号；评论框「＋图」按钮加粗可见；含 1.8.102 的评论接口 500 修复、1.8.101 社交请求重试、1.8.100 鉴权 user 参数补齐、1.8.99 评论带图"
+    "version": "1.8.104",
+    "url": "https://aka.doubaocdn.com/s/lgSEnKMcbT",
+    "notes": "子回复也有单独的回复按钮，输入框占位直接显示「回复 澜宝…」；后端记录 to 字段，回复后仍会自动接一句；含 1.8.103 朋友圈版本号与评论图按钮"
   },
   "app": {
     "versionCode": 39,
