@@ -1,18 +1,18 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.94",
-  "url": "https://aka.doubaocdn.com/s/y0gupByLXK",
-  "note": "修复「本地存不下了」：聊天记录占用上限从6MB降到2.2MB（localStorage实际只有约5MB），写入失败时自动缩减历史重试；表情保存失败不再误报是表情满了；设置面板新增本地占用显示与「清理本地聊天缓存」",
+  "version": "1.8.95",
+  "url": "https://aka.doubaocdn.com/s/YcgYLCmMnx",
+  "note": "修复发图片提示「没选到图片」：图片发送改走 LanyuBridge 原生选图通道（cmd:pick, mode:send, multiple:true），绕开 WebView 读不到 file:// 私有路径的问题；浏览器环境仍保留 input 兜底",
   "plugin_detail": {
-    "version": "1.8.94",
-    "url": "https://aka.doubaocdn.com/s/y0gupByLXK",
-    "notes": "修复「本地存不下了」：聊天记录占用上限从6MB降到2.2MB（localStorage实际只有约5MB），写入失败时自动缩减历史重试；表情保存失败不再误报是表情满了；设置面板新增本地占用显示与「清理本地聊天缓存」"
+    "version": "1.8.95",
+    "url": "https://aka.doubaocdn.com/s/YcgYLCmMnx",
+    "notes": "修复发图片提示「没选到图片」：图片发送改走 LanyuBridge 原生选图通道（cmd:pick, mode:send, multiple:true），绕开 WebView 读不到 file:// 私有路径的问题；浏览器环境仍保留 input 兜底"
   },
   "app": {
-    "versionCode": 38,
-    "versionName": "0.1.0-lanyu38",
-    "url": "https://aka.doubaocdn.com/s/6I1J2ZyvL1",
+    "versionCode": 39,
+    "versionName": "0.1.0-lanyu39",
+    "url": "https://aka.doubaocdn.com/s/cWz9mwmVFO",
     "netdisk": "https://pan.quark.cn/s/0b387f194b56",
-    "notes": "聊天轻量版补上换头像/背景/批量加表情的原生选图通道（与主版协议对齐）；含手机文件访问、公网访问、WebUI跳转修复"
+    "notes": "主版选图通道支持 send 模式（多选、统一压到 1600px）；含 v38 的聊天轻量版选图修复、手机文件访问、公网访问、WebUI跳转修复"
   }
 }
