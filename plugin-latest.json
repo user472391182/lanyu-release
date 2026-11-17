@@ -9,10 +9,10 @@
     "notes": "子回复也有单独的回复按钮，输入框占位直接显示「回复 澜宝…」；后端记录 to 字段，回复后仍会自动接一句；含 1.8.103 朋友圈版本号与评论图按钮"
   },
   "app": {
-    "versionCode": 39,
-    "versionName": "0.1.0-lanyu39",
-    "url": "https://aka.doubaocdn.com/s/cWz9mwmVFO",
+    "versionCode": 40,
+    "versionName": "0.1.0-lanyu40",
+    "url": "https://aka.doubaocdn.com/s/dvemCh2Foh",
     "netdisk": "https://pan.quark.cn/s/0b387f194b56",
-    "notes": "主版选图通道支持 send 模式（多选、统一压到 1600px）；含 v38 的聊天轻量版选图修复、手机文件访问、公网访问、WebUI跳转修复"
+    "notes": "主页布局调整：环境管理卡第一、AstrBot 第二、新增「远程访问」卡（公网访问 + 打开 WebUI）；OpenCode 卡有则排最后"
   }
 }
