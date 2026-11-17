@@ -1,12 +1,12 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.96",
-  "url": "https://aka.doubaocdn.com/s/cbXNjxGnV9",
-  "note": "修复换头像：聊天页点头像改走原生选图桥（不再走 input[type=file]）；说「换个头像」时插件直接执行，不依赖模型调工具；管理员换澜宝头像会同步推服务端",
+  "version": "1.8.97",
+  "url": "https://aka.doubaocdn.com/s/iG23hmOPGE",
+  "note": "修复“换头像说没连上”：sender_id 形态(selfapp:FriendMessage:uXXX)与连接键(uXXX)对不上导致推送失败，改为 uid 归一化匹配；说「换成这个」默认换机器人头像，并不依赖模型工具调用",
   "plugin_detail": {
-    "version": "1.8.96",
-    "url": "https://aka.doubaocdn.com/s/cbXNjxGnV9",
-    "notes": "修复换头像：聊天页点头像改走原生选图桥（不再走 input[type=file]）；说「换个头像」时插件直接执行，不依赖模型调工具；管理员换澜宝头像会同步推服务端"
+    "version": "1.8.97",
+    "url": "https://aka.doubaocdn.com/s/iG23hmOPGE",
+    "notes": "修复“换头像说没连上”：sender_id 形态(selfapp:FriendMessage:uXXX)与连接键(uXXX)对不上导致推送失败，改为 uid 归一化匹配；说「换成这个」默认换机器人头像，并不依赖模型工具调用"
   },
   "app": {
     "versionCode": 39,
