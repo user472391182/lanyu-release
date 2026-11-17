@@ -1,12 +1,12 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.100",
-  "url": "https://aka.doubaocdn.com/s/r31BQxLrbU",
-  "note": "朋友圈评论 token 不对的真因：/moment_cmt 等 5 个接口调鉴权时把用户身份传成空串，导致 1.8.99 的放行回退永远拿不到 uid。本版补齐 claim，token 失效但 uid 已注册/管理员时正常放行",
+  "version": "1.8.101",
+  "url": "https://aka.doubaocdn.com/s/eUNracQYhD",
+  "note": "朋友圈社交接口统一的 postJSON：网络层失败自动重试一次（插件重载期第一次请求会打空），失败提示改成真实原因不再一律「连不上服务器」",
   "plugin_detail": {
-    "version": "1.8.100",
-    "url": "https://aka.doubaocdn.com/s/r31BQxLrbU",
-    "notes": "补齐 5 处 _resolve_user 的 user 参（token 失效回退依赖它）；含 1.8.99 的朋友圈评论带图与 token 按 uid 放行"
+    "version": "1.8.101",
+    "url": "https://aka.doubaocdn.com/s/eUNracQYhD",
+    "notes": "评论/回复/删朋友圈/配图上传改走 postJSON，业务错误不重试、网络错误自动重试一次并在弹窗里带出具体原因；含 1.8.100 的鉴权 user 参数补齐与 1.8.99 评论带图"
   },
   "app": {
     "versionCode": 39,
