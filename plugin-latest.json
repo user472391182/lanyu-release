@@ -1,12 +1,12 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.101",
-  "url": "https://aka.doubaocdn.com/s/eUNracQYhD",
-  "note": "朋友圈社交接口统一的 postJSON：网络层失败自动重试一次（插件重载期第一次请求会打空），失败提示改成真实原因不再一律「连不上服务器」",
+  "version": "1.8.102",
+  "url": "https://aka.doubaocdn.com/s/tLtuu8aWw0",
+  "note": "朋友圈评论 500 的真因：评论配图函数放在了插件类，而 /moment_cmt 等接口在平台类，self._cmt_image 直接 AttributeError。已改为模块级 _moment_img_url，并用真实 aiohttp 跑通 200/401/400 四种情况",
   "plugin_detail": {
-    "version": "1.8.101",
-    "url": "https://aka.doubaocdn.com/s/eUNracQYhD",
-    "notes": "评论/回复/删朋友圈/配图上传改走 postJSON，业务错误不重试、网络错误自动重试一次并在弹窗里带出具体原因；含 1.8.100 的鉴权 user 参数补齐与 1.8.99 评论带图"
+    "version": "1.8.102",
+    "url": "https://aka.doubaocdn.com/s/tLtuu8aWw0",
+    "notes": "评论配图函数改为模块级供两个类共用；含 1.8.101 的社交请求重试与错误可见化、1.8.100 的鉴权 user 参数补齐、1.8.99 的评论带图"
   },
   "app": {
     "versionCode": 39,
