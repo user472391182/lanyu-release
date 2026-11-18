@@ -2,11 +2,11 @@
   "plugin": "astrbot_plugin_self_app",
   "version": "1.8.113",
   "url": "https://aka.doubaocdn.com/s/xEPUWATxgy",
-  "note": "外观设置新增输入框字色；chat.html 新变量 --input-fg",
+  "note": "聊天记录从文件补回（LanyuRestore/Chunk 并集合并）+ 输入框字色可自定义",
   "plugin_detail": {
     "version": "1.8.113",
     "url": "https://aka.doubaocdn.com/s/xEPUWATxgy",
-    "notes": "输入框字色可自定义：#input / #mtext 改用 var(--input-fg)，placeholder 跟随同色半透明；外观面板新增「输入框」组（inputFg，默认 #000000，存 localStorage 后立即生效）"
+    "notes": "1) 杀进程重启后聊天记录变少：新增 LanyuRestoreChunk(idx,total,chunk)/LanyuRestore(raw)，把 App 私有目录 lanyu_chat_history.json 与 localStorage 取并集（dir+内容指纹+分钟去重），排序后整块重绘并写回；补回时提示条数 2) 输入框字色：#input/#mtext 改用 var(--input-fg)，placeholder 跟随同色半透明，外观面板新增「输入框」组（inputFg，默认 #000000）"
   },
   "app": {
     "versionCode": 43,
