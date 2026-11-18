@@ -1,12 +1,12 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.108",
-  "url": "https://aka.doubaocdn.com/s/9DmaN1djED",
-  "note": "朋友圈可以用手机相册里的图：post_moment 新增 image 路径参数（支持多图），自动发动态优先从 moments_auto_post_gallery 挑图",
+  "version": "1.8.109",
+  "url": "https://aka.doubaocdn.com/s/Wa5H570oxr",
+  "note": "朋友圈可用手机相册图（post_moment 带 image 路径）；朋友圈卡片新增删除动态，澜宝自己的动态也能删",
   "plugin_detail": {
-    "version": "1.8.108",
-    "url": "https://aka.doubaocdn.com/s/9DmaN1djED",
-    "notes": "post_moment(text, use_image, image)：image 接受手机绝对/相对路径，英文逗号分隔多张，图片复制进 uploads 后以 /img/m_xxx 显示；>12MB 或非图片自动跳过；新增配置 moments_auto_post_gallery，自动发朋友圈时优先从该目录最近 30 张随机挑，挑不到回退文生图"
+    "version": "1.8.109",
+    "url": "https://aka.doubaocdn.com/s/Wa5H570oxr",
+    "notes": "post_moment(text, use_image, image)：image 接受手机绝对/相对路径，英文逗号分隔多张，图片复制进 uploads 后以 /img/m_xxx 显示；>12MB 或非图片自动跳过。新增 moments_auto_post_gallery（自动发朋友圈优先从该目录最近 30 张随机挑）。删除动态：前端卡片对自己的和澜宝的动态都显示删除按钮，/moment_del 放开 bot 动态（moments_allow_del_bot 默认开）；新增 llm_tool delete_moment 让澜宝自己删"
   },
   "app": {
     "versionCode": 42,
