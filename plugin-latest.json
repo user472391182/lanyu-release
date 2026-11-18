@@ -1,12 +1,12 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.117",
-  "url": "https://aka.doubaocdn.com/s/YVaKm6UqUy",
-  "note": "朋友圈加图改走原生桥（pick mode=moment），不再用 input[type=file]",
+  "version": "1.8.118",
+  "url": "https://aka.doubaocdn.com/s/ZQ86tt1HXf",
+  "note": "按配置注销 7 个低频工具，每轮上下文少带约 4000 token",
   "plugin_detail": {
-    "version": "1.8.117",
-    "url": "https://aka.doubaocdn.com/s/YVaKm6UqUy",
-    "notes": "朋友圈「加图片」优先 LanyuBridge.postMessage({cmd:pick,mode:moment,multiple:true})；__lanyuPickMulti 新增 moment 分支：dataUrl→blob→POST /moment_img→mImgs，失败不再静默；mFile 回退路径补充空文件与失败提示"
+    "version": "1.8.118",
+    "url": "https://aka.doubaocdn.com/s/ZQ86tt1HXf",
+    "notes": "新增 disabled_tools 配置项，__init__ 阶段从 llm_tools.func_list 真实摘除工具（不是函数内返回提示），默认注销 post_moment_from_gallery / attach_gallery_image / reply_comment / delete_moment / set_app_sign / read_host_file / send_file_to_user；清空列表即全部恢复；修 metadata 的 astrbot_version 被误写成本身版本号的问题"
   },
   "app": {
     "versionCode": 44,
