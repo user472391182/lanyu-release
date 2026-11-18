@@ -1,18 +1,18 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.111",
-  "url": "https://aka.doubaocdn.com/s/OVwwHpOv3p",
-  "note": "朋友圈发图走事件附件：新增 attach_gallery_image 挂图工具，发完自动撤回；新增 /朋友圈日志 看每次调用传了什么",
+  "version": "1.8.112",
+  "url": "https://aka.doubaocdn.com/s/oz1l6jjAuB",
+  "note": "修杀进程后聊天记录变少：网页端新增 LanyuRestore/LanyuRestoreChunk 合并回推，App 在 onPageFinished 后读文件分块推送并去重",
   "plugin_detail": {
-    "version": "1.8.111",
-    "url": "https://aka.doubaocdn.com/s/OVwwHpOv3p",
-    "notes": "attach_gallery_image(dir,count)：把相册目录里的图挂到当前消息附件（Image(file=本地路径)），可直接被 _event_image_bytes 读到，随后 post_moment(use_image=\"yes\") 必然带图；发完 _event_detach_attached 自动从消息链撤掉，不留残留。post_moment 增加兑底：已挂图时即使没传 use_image 也会取到。新增 /朋友圈日志 输出最近 20 次调用的 use_image/image 参数与最终配图数。相册名容错：澜宝/澜宝相册/澜宝文件夹/纯路径都能解析"
+    "version": "1.8.112",
+    "url": "https://aka.doubaocdn.com/s/oz1l6jjAuB",
+    "notes": "chat.html 新增 LanyuRestoreChunk(idx,total,chunk) 与 LanyuRestore(raw)：把 App 私有目录 lanyu_chat_history.json 的内容与 localStorage 取并集（按 dir+内容指纹+分钟去重），按 ts 排序后整块重绘并写回；restoreHistory 重绘前先 pendOff 清占位"
   },
   "app": {
-    "versionCode": 42,
-    "versionName": "0.1.0-lanyu42",
-    "url": "https://aka.doubaocdn.com/s/Czn7shQGST",
+    "versionCode": 43,
+    "versionName": "0.1.0-lanyu43",
+    "url": "https://aka.doubaocdn.com/s/5COOY7XJcy",
     "netdisk": "https://pan.quark.cn/s/0b387f194b56",
-    "notes": "聊天记录真正落地：写 App 私有目录 lanyu_chat_history.json（.tmp 后重命名原子替换）；查找聊天记录页优先读文件、可导出到自选位置"
+    "notes": "onPageFinished 后读 lanyu_chat_history.json，超过 200000 字符分块 runJavaScript 推给页面（LanyuRestoreChunk），一次性小文件走 LanyuRestore；带 3 次就绪重试"
   }
 }
