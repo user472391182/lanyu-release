@@ -1,12 +1,12 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.109",
-  "url": "https://aka.doubaocdn.com/s/Wa5H570oxr",
-  "note": "朋友圈可用手机相册图（post_moment 带 image 路径）；朋友圈卡片新增删除动态，澜宝自己的动态也能删",
+  "version": "1.8.110",
+  "url": "https://aka.doubaocdn.com/s/63JO7nyPsK",
+  "note": "朋友圈配图可传相册目录（她不用知道文件名，自己挑），新增 /朋友圈配图测试 指令查路径通不通",
   "plugin_detail": {
-    "version": "1.8.109",
-    "url": "https://aka.doubaocdn.com/s/Wa5H570oxr",
-    "notes": "post_moment(text, use_image, image)：image 接受手机绝对/相对路径，英文逗号分隔多张，图片复制进 uploads 后以 /img/m_xxx 显示；>12MB 或非图片自动跳过。新增 moments_auto_post_gallery（自动发朋友圈优先从该目录最近 30 张随机挑）。删除动态：前端卡片对自己的和澜宝的动态都显示删除按钮，/moment_del 放开 bot 动态（moments_allow_del_bot 默认开）；新增 llm_tool delete_moment 让澜宝自己删"
+    "version": "1.8.110",
+    "url": "https://aka.doubaocdn.com/s/63JO7nyPsK",
+    "notes": "post_moment 的 image 参数现在接受图片路径或整相册目录：传目录时在最近 200 张里随机挑一张，模型不必知道文件名。新增 /朋友圈配图测试 <路径或目录>，输出解析路径、是否存在、目录图片数、挑中哪张、复制后 /img 地址。保留 1.8.109 的删除动态（前端对自己的和澜宝动态都显示删除，/moment_del 放开 bot，moments_allow_del_bot 默认开，llm_tool delete_moment）"
   },
   "app": {
     "versionCode": 42,
