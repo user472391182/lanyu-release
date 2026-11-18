@@ -1,12 +1,12 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.114",
-  "url": "https://aka.doubaocdn.com/s/DqWWeLBU99",
-  "note": "换头像不依赖协议端：change_avatar 新增 image 参数，支持相册目录自动挑图；强化工具说明，禁止调 congling_avatar_change",
+  "version": "1.8.115",
+  "url": "https://aka.doubaocdn.com/s/lFoZoclsNP",
+  "note": "顶栏新增刷新按钮（深浅色右边）；hello 带版本号，版本不一致提示刷新",
   "plugin_detail": {
-    "version": "1.8.114",
-    "url": "https://aka.doubaocdn.com/s/DqWWeLBU99",
-    "notes": "1) change_avatar(who,image) 新增 image：传澜宝/澜宝相册/绝对路径都能解析（复用小册解析 _gallery_pick），目录自动挑一张 2) 工具描述里明确写“换头像唯一正确工具、不依赖协议端、禁调 congling_avatar_change” 3) /换头像 可带目录：/换头像 /storage/emulated/0/澜宝 4) _apply_look 取图顺序：image 参数 → 消息附件 → 最近一张"
+    "version": "1.8.115",
+    "url": "https://aka.doubaocdn.com/s/lFoZoclsNP",
+    "notes": "1) 顶栏 themeBtn 右侧新增 ⟳ 刷新按钮，带时间戳重载绕过缓存，而页面本身已 no-store 2) ws hello 新增 ver 字段，页面比对渲染版本，不一致弹提示“插件已更新到 x，点右上 ⟳ 刷新” 3) 换头像不依赖协议端（现 image 参数，相册目录自动挑图）"
   },
   "app": {
     "versionCode": 43,
