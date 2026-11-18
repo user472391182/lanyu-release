@@ -1,12 +1,12 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.115",
-  "url": "https://aka.doubaocdn.com/s/lFoZoclsNP",
-  "note": "顶栏新增刷新按钮（深浅色右边）；hello 带版本号，版本不一致提示刷新",
+  "version": "1.8.116",
+  "url": "https://aka.doubaocdn.com/s/bRUoG75IVU",
+  "note": "每轮请求前注入澜雨硬规则（换头像只调 change_avatar），防止模型去调协议端工具",
   "plugin_detail": {
-    "version": "1.8.115",
-    "url": "https://aka.doubaocdn.com/s/lFoZoclsNP",
-    "notes": "1) 顶栏 themeBtn 右侧新增 ⟳ 刷新按钮，带时间戳重载绕过缓存，而页面本身已 no-store 2) ws hello 新增 ver 字段，页面比对渲染版本，不一致弹提示“插件已更新到 x，点右上 ⟳ 刷新” 3) 换头像不依赖协议端（现 image 参数，相册目录自动挑图）"
+    "version": "1.8.116",
+    "url": "https://aka.doubaocdn.com/s/bRUoG75IVU",
+    "notes": "新增 on_llm_request 钩子 inject_selfapp_rules：仅当平台是 selfapp 时，把「换头像一律调 change_avatar，可从相册传 image，禁调 congling_avatar_change/协议端工具」追加进 system_prompt；QQ 等其他平台不碰"
   },
   "app": {
     "versionCode": 43,
