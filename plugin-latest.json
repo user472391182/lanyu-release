@@ -1,12 +1,12 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.113",
-  "url": "https://aka.doubaocdn.com/s/xEPUWATxgy",
-  "note": "聊天记录从文件补回（LanyuRestore/Chunk 并集合并）+ 输入框字色可自定义",
+  "version": "1.8.114",
+  "url": "https://aka.doubaocdn.com/s/DqWWeLBU99",
+  "note": "换头像不依赖协议端：change_avatar 新增 image 参数，支持相册目录自动挑图；强化工具说明，禁止调 congling_avatar_change",
   "plugin_detail": {
-    "version": "1.8.113",
-    "url": "https://aka.doubaocdn.com/s/xEPUWATxgy",
-    "notes": "1) 杀进程重启后聊天记录变少：新增 LanyuRestoreChunk(idx,total,chunk)/LanyuRestore(raw)，把 App 私有目录 lanyu_chat_history.json 与 localStorage 取并集（dir+内容指纹+分钟去重），排序后整块重绘并写回；补回时提示条数 2) 输入框字色：#input/#mtext 改用 var(--input-fg)，placeholder 跟随同色半透明，外观面板新增「输入框」组（inputFg，默认 #000000）"
+    "version": "1.8.114",
+    "url": "https://aka.doubaocdn.com/s/DqWWeLBU99",
+    "notes": "1) change_avatar(who,image) 新增 image：传澜宝/澜宝相册/绝对路径都能解析（复用小册解析 _gallery_pick），目录自动挑一张 2) 工具描述里明确写“换头像唯一正确工具、不依赖协议端、禁调 congling_avatar_change” 3) /换头像 可带目录：/换头像 /storage/emulated/0/澜宝 4) _apply_look 取图顺序：image 参数 → 消息附件 → 最近一张"
   },
   "app": {
     "versionCode": 43,
