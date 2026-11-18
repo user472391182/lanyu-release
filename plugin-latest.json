@@ -1,12 +1,12 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.110",
-  "url": "https://aka.doubaocdn.com/s/63JO7nyPsK",
-  "note": "朋友圈配图可传相册目录（她不用知道文件名，自己挑），新增 /朋友圈配图测试 指令查路径通不通",
+  "version": "1.8.111",
+  "url": "https://aka.doubaocdn.com/s/OVwwHpOv3p",
+  "note": "朋友圈发图走事件附件：新增 attach_gallery_image 挂图工具，发完自动撤回；新增 /朋友圈日志 看每次调用传了什么",
   "plugin_detail": {
-    "version": "1.8.110",
-    "url": "https://aka.doubaocdn.com/s/63JO7nyPsK",
-    "notes": "post_moment 的 image 参数现在接受图片路径或整相册目录：传目录时在最近 200 张里随机挑一张，模型不必知道文件名。新增 /朋友圈配图测试 <路径或目录>，输出解析路径、是否存在、目录图片数、挑中哪张、复制后 /img 地址。保留 1.8.109 的删除动态（前端对自己的和澜宝动态都显示删除，/moment_del 放开 bot，moments_allow_del_bot 默认开，llm_tool delete_moment）"
+    "version": "1.8.111",
+    "url": "https://aka.doubaocdn.com/s/OVwwHpOv3p",
+    "notes": "attach_gallery_image(dir,count)：把相册目录里的图挂到当前消息附件（Image(file=本地路径)），可直接被 _event_image_bytes 读到，随后 post_moment(use_image=\"yes\") 必然带图；发完 _event_detach_attached 自动从消息链撤掉，不留残留。post_moment 增加兑底：已挂图时即使没传 use_image 也会取到。新增 /朋友圈日志 输出最近 20 次调用的 use_image/image 参数与最终配图数。相册名容错：澜宝/澜宝相册/澜宝文件夹/纯路径都能解析"
   },
   "app": {
     "versionCode": 42,
