@@ -1,12 +1,12 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.107",
-  "url": "https://aka.doubaocdn.com/s/mp0H46IqyI",
-  "note": "聊天历史同步写成本地文件（hist_save 桥），localStorage 保留一份供页面即时读取",
+  "version": "1.8.108",
+  "url": "https://aka.doubaocdn.com/s/9DmaN1djED",
+  "note": "朋友圈可以用手机相册里的图：post_moment 新增 image 路径参数（支持多图），自动发动态优先从 moments_auto_post_gallery 挑图",
   "plugin_detail": {
-    "version": "1.8.107",
-    "url": "https://aka.doubaocdn.com/s/mp0H46IqyI",
-    "notes": "保存时通过 LanyuBridge 推 hist_save 给 App 落盘；仍需 30 天规则，不设条数与体积上限"
+    "version": "1.8.108",
+    "url": "https://aka.doubaocdn.com/s/9DmaN1djED",
+    "notes": "post_moment(text, use_image, image)：image 接受手机绝对/相对路径，英文逗号分隔多张，图片复制进 uploads 后以 /img/m_xxx 显示；>12MB 或非图片自动跳过；新增配置 moments_auto_post_gallery，自动发朋友圈时优先从该目录最近 30 张随机挑，挑不到回退文生图"
   },
   "app": {
     "versionCode": 42,
