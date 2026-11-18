@@ -1,18 +1,18 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.116",
-  "url": "https://aka.doubaocdn.com/s/bRUoG75IVU",
-  "note": "每轮请求前注入澜雨硬规则（换头像只调 change_avatar），防止模型去调协议端工具",
+  "version": "1.8.117",
+  "url": "https://aka.doubaocdn.com/s/YVaKm6UqUy",
+  "note": "朋友圈加图改走原生桥（pick mode=moment），不再用 input[type=file]",
   "plugin_detail": {
-    "version": "1.8.116",
-    "url": "https://aka.doubaocdn.com/s/bRUoG75IVU",
-    "notes": "新增 on_llm_request 钩子 inject_selfapp_rules：仅当平台是 selfapp 时，把「换头像一律调 change_avatar，可从相册传 image，禁调 congling_avatar_change/协议端工具」追加进 system_prompt；QQ 等其他平台不碰"
+    "version": "1.8.117",
+    "url": "https://aka.doubaocdn.com/s/YVaKm6UqUy",
+    "notes": "朋友圈「加图片」优先 LanyuBridge.postMessage({cmd:pick,mode:moment,multiple:true})；__lanyuPickMulti 新增 moment 分支：dataUrl→blob→POST /moment_img→mImgs，失败不再静默；mFile 回退路径补充空文件与失败提示"
   },
   "app": {
-    "versionCode": 43,
-    "versionName": "0.1.0-lanyu43",
-    "url": "https://aka.doubaocdn.com/s/5COOY7XJcy",
+    "versionCode": 44,
+    "versionName": "0.1.0-lanyu44",
+    "url": "https://aka.doubaocdn.com/s/YuSH9fTg4a",
     "netdisk": "https://pan.quark.cn/s/0b387f194b56",
-    "notes": "onPageFinished 后读 lanyu_chat_history.json，超过 200000 字符分块 runJavaScript 推给页面（LanyuRestoreChunk），一次性小文件走 LanyuRestore；带 3 次就绪重试"
+    "notes": "原生桥多选新增 moment（朋友圈加图）：多选、1600px 压缩、回填 __lanyuPickMulti；另含 v43 的聊天记录文件回推"
   }
 }
