@@ -1,12 +1,12 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.123",
-  "url": "https://aka.doubaocdn.com/s/tSGb7XaUof",
-  "note": "选图新增系统文件选择兜底：桥不通的 App（澜雨聊天版）也能选图",
+  "version": "1.8.124",
+  "url": "https://aka.doubaocdn.com/s/0pgTrSn6kZ",
+  "note": "澜宝的家并入插件：聊天页恢复房间入口，房间页与全部接口由插件自托管，不用再跑 node",
   "plugin_detail": {
-    "version": "1.8.123",
-    "url": "https://aka.doubaocdn.com/s/tSGb7XaUof",
-    "notes": "三级兜底：① 先发官方消息 {cmd:'pick',mode:...}（澜雨服务端 App 认，直接弹相册）；② 1.2 秒没弹则补发老协议 pickFiles/pickAvatar/pickBackground，并把 LanyuApp.onImagePicked 回传统一归一；③ 再等 1.5 秒仍没弹，则页面自己创建 input[type=file] 唤起系统相册，选完用 FileReader/canvas 读成 dataURL（长边限 1600、JPEG 0.86），走同一条 __lanyuPick / __lanyuPickMulti 通路，不依赖任何 App 桥。同时保留加载自检行用于定位。"
+    "version": "1.8.124",
+    "url": "https://aka.doubaocdn.com/s/0pgTrSn6kZ",
+    "notes": "新增 room.py 与 room/ 目录。插件自己提供 /room/ 房间页与 /api/home/state、/api/home/act、/api/home/item、/api/garden/state、/api/tv/opinion、/api/room/chat 全套接口，原来靠手机上 node 服务（13100 端口）的部分全部用 Python 实现，启动插件即可用，不用敲命令。房间页优先托管手机上现成的房间前端目录（自动探测 ~/lanbao/home-fe 等位置，含 three.js vendor、模型 glb、立绘 webm、garden.css 都直接复用），找不到时才用插件自带的 room/ 兜底。状态落在 selfapp_data/room.json，覆盖安装不丢。chat.html 的加号菜单重新加上「🏠 澜宝的家」入口，点一下进 /room/。房间里的对话走当前使用的模型，取不到时有兜底回复。"
   },
   "app": {
     "versionCode": 44,
