@@ -1,12 +1,12 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.125",
-  "url": "https://aka.doubaocdn.com/s/6ErXbAgXdD",
-  "note": "澜宝的家入口移到顶栏刷新按钮右边，加号菜单里不再重复",
+  "version": "1.8.126",
+  "url": "https://aka.doubaocdn.com/s/3MGRqyysUr",
+  "note": "澜宝的家画质与帧率优化：手机不再默认低画质，按帧率自动升/降分辨率和阴影",
   "plugin_detail": {
-    "version": "1.8.125",
-    "url": "https://aka.doubaocdn.com/s/6ErXbAgXdD",
-    "notes": "聊天页顶栏在刷新按钮（⟳）右边新增一个固定的澜宝的家入口（🏠），一直可见，不用再展开加号菜单；加号菜单里原来那条同名入口已移除，避免两处重复。窄屏（≤430px）下顶栏间距和球形按钮自动收紧（36px→32px），保证标题与版本号不被挤掉。房间页、接口、选图双协议+系统选图兜底均与 1.8.124 一致。"
+    "version": "1.8.126",
+    "url": "https://aka.doubaocdn.com/s/3MGRqyysUr",
+    "notes": "房间渲染重调：① 手机上原来默认 tier=low（像素比固定 1、无阴影、无凹凸）所以又糊又平，现在默认 balanced，起始像素比 1.5（目标 1.75），高画质档起始 2.0；② 关掉 MSAA，用高像素比换清晰度，比低分辨率 + 4x 抗锯齿更锐且更省；③ 阴影贴图从 2048 降到 1024（balanced），high 档才给 2048；④ 自适应从 8 秒一次改为 3.5 秒评估：帧率低于 46 先降像素比，低于 34 一路降到 0.95，像素比见底后再关阴影，高于 56 才回升，不会再来回酮；⑤ 切到后台（visibilitychange）直接暂停渲染循环，省电也不卡；⑥ 插件自带的 app.js / world.js 会覆盖手机上同名文件（这两份是代码，其余 three.js vendor、模型 glb、立绘 webm、garden.css 仍读手机目录），覆盖安装插件即生效。"
   },
   "app": {
     "versionCode": 44,
