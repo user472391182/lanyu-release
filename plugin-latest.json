@@ -1,12 +1,12 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.121",
-  "url": "https://aka.doubaocdn.com/s/GSZyDVqpbe",
-  "note": "选图双协议：集成版与聊天版 App 同时兼容，两边都能选图发图",
+  "version": "1.8.122",
+  "url": "https://aka.doubaocdn.com/s/bVKDpXJw7f",
+  "note": "选图双协议 + 页面加载自检横幅（连上后会打一行“选图自检 版本=1.8.122 桥=? 回调=? 环境=?”，用来定位到底卡在哪一边）",
   "plugin_detail": {
-    "version": "1.8.121",
-    "url": "https://aka.doubaocdn.com/s/GSZyDVqpbe",
-    "notes": "双协议兼容层：集成版（com.lanyu.app v44+）走 {cmd:'pick',mode:'send/emoji/moment/me/peer/bg',multiple:bool}，回调 __lanyuPick / __lanyuPickMulti；聊天版（com.lanyu.app.chat）走 pickAvatar / pickBackground / pickFiles，回调 window.LanyuApp.onImagePicked。发送时先发官方消息，1.2 秒内页面未失焦（说明没弹选择器）再补发老协议命令，两套 App 各认各的，不会双弹。回调层会自动把老协议回传的 dataUrl / mode 归一成官方模式，再交给原有 __lanyuPick / __lanyuPickMulti 处理，聊天、表情、朋友圈、评论、头像、背景六条入口全部走同一条通路。其余文件与 1.8.119 一致。"
+    "version": "1.8.122",
+    "url": "https://aka.doubaocdn.com/s/bVKDpXJw7f",
+    "notes": "在 1.8.121 双协议基础上，页面加载 1.5 秒后往聊天区打一行自检：选图自检 版本=1.8.122 桥=有/无 回调=有/无 环境=App内/浏览器。桥=无 说明当前 App 的 WebView 没有注入能力，选图只能走浏览器；桥=有但点发图无弹窗，则说明消息协议仍未对上。其余文件与 1.8.119 一致。"
   },
   "app": {
     "versionCode": 44,
