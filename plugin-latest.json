@@ -1,12 +1,12 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.124",
-  "url": "https://aka.doubaocdn.com/s/0pgTrSn6kZ",
-  "note": "澜宝的家并入插件：聊天页恢复房间入口，房间页与全部接口由插件自托管，不用再跑 node",
+  "version": "1.8.125",
+  "url": "https://aka.doubaocdn.com/s/6ErXbAgXdD",
+  "note": "澜宝的家入口移到顶栏刷新按钮右边，加号菜单里不再重复",
   "plugin_detail": {
-    "version": "1.8.124",
-    "url": "https://aka.doubaocdn.com/s/0pgTrSn6kZ",
-    "notes": "新增 room.py 与 room/ 目录。插件自己提供 /room/ 房间页与 /api/home/state、/api/home/act、/api/home/item、/api/garden/state、/api/tv/opinion、/api/room/chat 全套接口，原来靠手机上 node 服务（13100 端口）的部分全部用 Python 实现，启动插件即可用，不用敲命令。房间页优先托管手机上现成的房间前端目录（自动探测 ~/lanbao/home-fe 等位置，含 three.js vendor、模型 glb、立绘 webm、garden.css 都直接复用），找不到时才用插件自带的 room/ 兜底。状态落在 selfapp_data/room.json，覆盖安装不丢。chat.html 的加号菜单重新加上「🏠 澜宝的家」入口，点一下进 /room/。房间里的对话走当前使用的模型，取不到时有兜底回复。"
+    "version": "1.8.125",
+    "url": "https://aka.doubaocdn.com/s/6ErXbAgXdD",
+    "notes": "聊天页顶栏在刷新按钮（⟳）右边新增一个固定的澜宝的家入口（🏠），一直可见，不用再展开加号菜单；加号菜单里原来那条同名入口已移除，避免两处重复。窄屏（≤430px）下顶栏间距和球形按钮自动收紧（36px→32px），保证标题与版本号不被挤掉。房间页、接口、选图双协议+系统选图兜底均与 1.8.124 一致。"
   },
   "app": {
     "versionCode": 44,
