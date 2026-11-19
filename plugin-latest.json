@@ -1,12 +1,12 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.126",
-  "url": "https://aka.doubaocdn.com/s/3MGRqyysUr",
-  "note": "澜宝的家画质与帧率优化：手机不再默认低画质，按帧率自动升/降分辨率和阴影",
+  "version": "1.8.127",
+  "url": "https://aka.doubaocdn.com/s/VSEUrzyvaR",
+  "note": "菜园修复：插件自动拉起原生后端并转发 /api/garden/*，不再需要手动跑 node",
   "plugin_detail": {
-    "version": "1.8.126",
-    "url": "https://aka.doubaocdn.com/s/3MGRqyysUr",
-    "notes": "房间渲染重调：① 手机上原来默认 tier=low（像素比固定 1、无阴影、无凹凸）所以又糊又平，现在默认 balanced，起始像素比 1.5（目标 1.75），高画质档起始 2.0；② 关掉 MSAA，用高像素比换清晰度，比低分辨率 + 4x 抗锯齿更锐且更省；③ 阴影贴图从 2048 降到 1024（balanced），high 档才给 2048；④ 自适应从 8 秒一次改为 3.5 秒评估：帧率低于 46 先降像素比，低于 34 一路降到 0.95，像素比见底后再关阴影，高于 56 才回升，不会再来回酮；⑤ 切到后台（visibilitychange）直接暂停渲染循环，省电也不卡；⑥ 插件自带的 app.js / world.js 会覆盖手机上同名文件（这两份是代码，其余 three.js vendor、模型 glb、立绘 webm、garden.css 仍读手机目录），覆盖安装插件即生效。"
+    "version": "1.8.127",
+    "url": "https://aka.doubaocdn.com/s/VSEUrzyvaR",
+    "notes": "菜园的真实数据结构在 garden-client.js / 原生后端里，插件这边没有副本，硬照 Python 实现会一直报“菜园数据不完整”。本版改为桥接模式：插件先探测 127.0.0.1 的 13100~13103 / 13099，探到就直接代理 /api/home/state、/api/home/act、/api/home/item、/api/garden/state、/api/tv/opinion；探不到就自己拉起 ~/lanbao/start.sh（或直接 node bridge.js / home_state.js，自动用 ~/node-*/bin/node），不再需要用户瑳命令。打开房间页时后台预热，最多等 4 秒。若原生后端确实不存在，才用插件自带的 Python 房间状态兜底，菜园接口返回 503 提示重试。"
   },
   "app": {
     "versionCode": 44,
