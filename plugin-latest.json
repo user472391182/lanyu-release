@@ -1,12 +1,12 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.120",
-  "url": "https://aka.doubaocdn.com/s/7UBaXN73bx",
-  "note": "恢复官方选图协议：{cmd:pick, mode:send/emoji/moment/me/peer/bg}，撤掉此前误改成 pickFiles/pickAvatar 的几版补丁；头像与背景预置已移除",
+  "version": "1.8.121",
+  "url": "https://aka.doubaocdn.com/s/GSZyDVqpbe",
+  "note": "选图双协议：集成版与聊天版 App 同时兼容，两边都能选图发图",
   "plugin_detail": {
-    "version": "1.8.120",
-    "url": "https://aka.doubaocdn.com/s/7UBaXN73bx",
-    "notes": "1.8.119 的 chat.html 里选图本来就是对的（LanyuBridge.postMessage(JSON.stringify({cmd:'pick',mode:'send',multiple:true}))，回调 __lanyuPick / __lanyuPickMulti）。此前多轮补丁把命令改成了 pickFiles / pickAvatar / pickBackground 这类壳不认的写法，导致点发图片、换头像全部无反应。本版把 chat.html 整份恢复为官方 1.8.119 原文（174244 字节），并保留预置头像已删除的状态。其余文件（main.py 等）与 1.8.119 完全一致。"
+    "version": "1.8.121",
+    "url": "https://aka.doubaocdn.com/s/GSZyDVqpbe",
+    "notes": "双协议兼容层：集成版（com.lanyu.app v44+）走 {cmd:'pick',mode:'send/emoji/moment/me/peer/bg',multiple:bool}，回调 __lanyuPick / __lanyuPickMulti；聊天版（com.lanyu.app.chat）走 pickAvatar / pickBackground / pickFiles，回调 window.LanyuApp.onImagePicked。发送时先发官方消息，1.2 秒内页面未失焦（说明没弹选择器）再补发老协议命令，两套 App 各认各的，不会双弹。回调层会自动把老协议回传的 dataUrl / mode 归一成官方模式，再交给原有 __lanyuPick / __lanyuPickMulti 处理，聊天、表情、朋友圈、评论、头像、背景六条入口全部走同一条通路。其余文件与 1.8.119 一致。"
   },
   "app": {
     "versionCode": 44,
