@@ -1,12 +1,12 @@
 {
   "plugin": "astrbot_plugin_self_app",
   "version": "1.8.119",
-  "url": "https://aka.doubaocdn.com/s/2GVJGJUhbH",
+  "url": "https://aka.doubaocdn.com/s/t52xS9eFHo",
   "note": "主动消息与朋友圈改为按自然日随机排程，每天时间不固定",
   "plugin_detail": {
     "version": "1.8.119",
-    "url": "https://aka.doubaocdn.com/s/2GVJGJUhbH",
-    "notes": "主动消息与自动发朋友圈重写调度：不再用「每次循环排一批」的滚动偏移，改为按自然日排程——当天 0 点后抽当天条数，在活跃窗口内随机取时刻（朋友圈相邻至少 45 分钟、主动消息至少 1 小时），发完睡到次日再抽，杜绝某天连发六七条；新增 proactive_min_per_day=2 / proactive_max_per_day=4 / proactive_window=8-23 / moments_post_window=9-23；两个总开关默认打开；旧的 proactive_min_minutes / proactive_max_minutes 已失效并标注；启动时打印当天计划便于核对"
+    "url": "https://aka.doubaocdn.com/s/t52xS9eFHo",
+    "notes": "主动消息与自动发朋友圈重写调度：改为按自然日排程，当天 0 点后抽当天条数，在活跃窗口内随机取时刻（朋友圈相邻至少 45 分钟、主动消息至少 1 小时），发完睡到次日再抽；新增 proactive_min_per_day=2 / proactive_max_per_day=4 / proactive_window=8-23 / moments_post_window=9-23；两个总开关默认打开；旧的 proactive_min_minutes / proactive_max_minutes 已失效并标注；启动时打印当天计划便于核对。包结构改为平铺（根层直接是 main.py 与 metadata.yaml），适配 AstrBot 的 install-upload 解压到 plugin/ 后直接读 metadata 的行为"
   },
   "app": {
     "versionCode": 44,
