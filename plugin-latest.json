@@ -1,12 +1,12 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.122",
-  "url": "https://aka.doubaocdn.com/s/bVKDpXJw7f",
-  "note": "选图双协议 + 页面加载自检横幅（连上后会打一行“选图自检 版本=1.8.122 桥=? 回调=? 环境=?”，用来定位到底卡在哪一边）",
+  "version": "1.8.123",
+  "url": "https://aka.doubaocdn.com/s/tSGb7XaUof",
+  "note": "选图新增系统文件选择兜底：桥不通的 App（澜雨聊天版）也能选图",
   "plugin_detail": {
-    "version": "1.8.122",
-    "url": "https://aka.doubaocdn.com/s/bVKDpXJw7f",
-    "notes": "在 1.8.121 双协议基础上，页面加载 1.5 秒后往聊天区打一行自检：选图自检 版本=1.8.122 桥=有/无 回调=有/无 环境=App内/浏览器。桥=无 说明当前 App 的 WebView 没有注入能力，选图只能走浏览器；桥=有但点发图无弹窗，则说明消息协议仍未对上。其余文件与 1.8.119 一致。"
+    "version": "1.8.123",
+    "url": "https://aka.doubaocdn.com/s/tSGb7XaUof",
+    "notes": "三级兜底：① 先发官方消息 {cmd:'pick',mode:...}（澜雨服务端 App 认，直接弹相册）；② 1.2 秒没弹则补发老协议 pickFiles/pickAvatar/pickBackground，并把 LanyuApp.onImagePicked 回传统一归一；③ 再等 1.5 秒仍没弹，则页面自己创建 input[type=file] 唤起系统相册，选完用 FileReader/canvas 读成 dataURL（长边限 1600、JPEG 0.86），走同一条 __lanyuPick / __lanyuPickMulti 通路，不依赖任何 App 桥。同时保留加载自检行用于定位。"
   },
   "app": {
     "versionCode": 44,
