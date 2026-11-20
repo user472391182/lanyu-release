@@ -1,14 +1,14 @@
 {
   "plugin": "astrbot_plugin_self_app",
   "version": "1.8.135",
-  "url": "https://aka.doubaocdn.com/s/6rELVMy1n7",
-  "size": 140484,
-  "sha256": "e47ec7461bd36593d0709838bf70fdc655cb255dfa26a39d8fc2b6735e330387",
-  "note": "1.8.135：导出走 App 原生桥（WebView 不认 <a download>，以前点了没反应）；localStorage 只留最近 200 条且剥掉图片 base64，避免被表情占满 5MB 后历史越存越少。",
+  "url": "https://aka.doubaocdn.com/s/5ZiOIPUn1Y",
+  "size": 140971,
+  "sha256": "d5f0d7f568bcb3ace7fde924a5c0af9436acd17e6872cf24a70bf95f1b5df67e",
+  "note": "1.8.135：导出走 App 原生桥（WebView 不认 <a download>，点了没反应）；localStorage 只留最近 200 条且剥掉图片 base64；消息按 ts 插回正确位置并做本机/服务端时钟对齐。",
   "plugin_detail": {
     "version": "1.8.135",
-    "url": "https://aka.doubaocdn.com/s/6rELVMy1n7",
-    "notes": "1.8.131 回复带 seq/ts 并进每用户 120 条缓存，WS 新增 resync；1.8.132 补拉基准改时间戳；1.8.133 补拉用服务端原始 ts、乱序整块重排；1.8.134 打包改平铺修正「未安装」；1.8.135 导出改走 hist_export 原生桥写 Download/AstrBotBubble，localStorage 只存瘦身版（200 条 + 剥 base64）。"
+    "url": "https://aka.doubaocdn.com/s/5ZiOIPUn1Y",
+    "notes": "1.8.131 回复带 seq/ts 并进每用户 120 条缓存，WS 新增 resync；1.8.132 补拉基准改时间戳；1.8.133 补拉用服务端原始 ts、乱序整块重排；1.8.134 打包改平铺修正「未安装」；1.8.135 导出改走 hist_export 原生桥写 Download/AstrBotBubble，localStorage 只存瘦身版（200 条 + 剥 base64），每条消息按 ts 选插入点 + 服务端 ts 校正本机时钟偏移。"
   },
   "app": {
     "versionCode": 62,
