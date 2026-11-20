@@ -9,10 +9,10 @@
     "notes": "菜园的真实数据结构在 garden-client.js / 原生后端里，插件这边没有副本，硬照 Python 实现会一直报“菜园数据不完整”。本版改为桥接模式：插件先探测 127.0.0.1 的 13100~13103 / 13099，探到就直接代理 /api/home/state、/api/home/act、/api/home/item、/api/garden/state、/api/tv/opinion；探不到就自己拉起 ~/lanbao/start.sh（或直接 node bridge.js / home_state.js，自动用 ~/node-*/bin/node），不再需要用户瑳命令。打开房间页时后台预热，最多等 4 秒。若原生后端确实不存在，才用插件自带的 Python 房间状态兜底，菜园接口返回 503 提示重试。"
   },
   "app": {
-    "versionCode": 44,
-    "versionName": "0.1.0-lanyu44",
-    "url": "https://aka.doubaocdn.com/s/YuSH9fTg4a",
+    "versionCode": 47,
+    "versionName": "0.1.0-lanyu47",
+    "url": "https://aka.doubaocdn.com/s/zQtzwpkD2L",
     "netdisk": "https://pan.quark.cn/s/0b387f194b56",
-    "notes": "原生桥多选新增 moment（朋友圈加图）：多选、1600px 压缩、回填 __lanyuPickMulti"
+    "notes": "后台保活加固：补 WakeLock/WifiLock，前台服务划掉最近任务不停，启动自动申请电池优化白名单；另修切后台回前台面板误显示未启动、重复启动撞端口占用"
   }
 }
