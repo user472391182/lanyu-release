@@ -1,18 +1,18 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.128",
-  "url": "https://aka.doubaocdn.com/s/x166LMTjLI",
-  "note": "文件卡片下载修复：记忆导出 md 等附件点击走 App 桥接写盘，不再点了没反应",
+  "version": "1.8.129",
+  "url": "https://aka.doubaocdn.com/s/HiUv21VWFI",
+  "note": "发文件改为系统文档选择器，不再误弹相册；md/zip/pdf 等任意文件可发",
   "plugin_detail": {
-    "version": "1.8.128",
-    "url": "https://aka.doubaocdn.com/s/x166LMTjLI",
-    "notes": "上一版文件卡片只是个 <a download>，App 内 WebView 不认这个属性，澜宝发的记忆导出 md 点了下载没反应。本版点击改为先走 LanyuBridge 的 save_file 命令，由 App 侧把文件拉下来存到 Download/AstrBotBubble；老壳子有 FeiyuShell.saveFile 就用它，纯浏览器环境再退回 fetch blob 下载。另保留 1.8.127 的菜园桥接：探测 127.0.0.1 的 13100~13103 / 13099 并代理 /api/home/state、/api/home/act、/api/home/item、/api/garden/state、/api/tv/opinion，探不到自动拉起 ~/lanbao/start.sh 或 node bridge.js / home_state.js。"
+    "version": "1.8.129",
+    "url": "https://aka.doubaocdn.com/s/HiUv21VWFI",
+    "notes": "点「发文件」以前永远弹相册：WebView 里 input[type=file] 的弹窗由 App 接管，而 App 那边一律按 image 唤起。本版把发文件改成走 LanyuBridge 的 pick 模式 mode=file，由 App 开系统文档选择器（可浏览内部存储，选 md/txt/zip/json/pdf 等），选完以 dataURL 回调 __lanyuFilePicked 再走原来的 /upload 上传，单文件上限 10MB；浏览器环境仍保留 input 直选兜底。文件下载（1.8.128 的 save_file 桥接）继续有效。另保留菜园桥接：探测 127.0.0.1 的 13100~13103 / 13099 并代理 /api/home/state、/api/home/act、/api/home/item、/api/garden/state、/api/tv/opinion，探不到自动拉起 ~/lanbao/start.sh 或 node bridge.js / home_state.js。"
   },
   "app": {
-    "versionCode": 48,
-    "versionName": "0.1.0-lanyu48",
-    "url": "https://aka.doubaocdn.com/s/Zwu6PeBgNR",
+    "versionCode": 49,
+    "versionName": "0.1.0-lanyu49",
+    "url": "https://aka.doubaocdn.com/s/wO5p7ZM6PA",
     "netdisk": "https://pan.quark.cn/s/0b387f194b56",
-    "notes": "修聊天里澜宝发的文件（记忆导出 md 等）点了下载没反应：文件卡片走桥接由 App 存到 Download/AstrBotBubble；含 v47 后台保活加固（WakeLock/WifiLock、划任务不停、电池白名单申请）与切后台回前台状态同步修复"
+    "notes": "修「点发文件弹相册」：文件选择器按 input 的 accept 分流，无 accept 时开系统文档选择器；新增发文件专用桥接，选完转 dataURL 回填上传（≤10MB）。含 v48 文件下载、v47 后台保活与状态同步修复"
   }
 }
