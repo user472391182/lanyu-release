@@ -1,14 +1,14 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.133",
-  "url": "https://aka.doubaocdn.com/s/QHTOpu36Rg",
-  "size": 140664,
-  "sha256": "cd893b32b3b39b7a2ecda3efa2e4aa700dc049e1d64d31f8d191b0c515b517f0",
-  "note": "修「后台收到通知、回前台聊天页却没有这条」：回复缓存+按时间戳补拉，补回来的消息保留原时间，顺序乱了会整块重排",
+  "version": "1.8.134",
+  "url": "https://aka.doubaocdn.com/s/Fc6HHAepd3",
+  "size": 140088,
+  "sha256": "23f747647eb90aff9ec93a6bf18e5f62876e946ce29ecd9d3a3bbc8a61d95635",
+  "note": "重打包成平铺结构（之前多了层顶层文件夹，解压后嵌套成 plugins/astrbot_plugin_self_app/astrbot_plugin_self_app，插件加载不到、显示未安装）",
   "plugin_detail": {
-    "version": "1.8.133",
-    "url": "https://aka.doubaocdn.com/s/QHTOpu36Rg",
-    "notes": "1.8.131 起回复带序号进每用户 120 条缓存，WS 新增 resync 动作；1.8.132 把补拉基准改成时间戳（服务端重启序号归零也不怕），并带 ts 返回；1.8.133 修顺序：补拉消息用服务端原始时间戳而不是“收到的时刻”，比列表尾巴还早就按 ts 整块重排，重排前先撤掉等待中的三个点。配套 App v61：切后台先让页面让出连接（__feiyuPause），回前台重连后补拉，后台连接每 20 秒 ping 保活，且后台 WS 地址补 ws:// 前缀（旧版因缺协议头一直连不上，后台端始终 0 个连接）。"
+    "version": "1.8.134",
+    "url": "https://aka.doubaocdn.com/s/Fc6HHAepd3",
+    "notes": "1.8.131 起回复带序号进每用户 120 条缓存，WS 新增 resync 动作；1.8.132 把补拉基准改成时间戳；1.8.133 补拉消息用服务端原始时间戳、顺序不对就整块重排；1.8.134 纯打包修正：zip 改为平铺（不再带 astrbot_plugin_self_app/ 顶层目录），旧包解压后会多一层嵌套导致插件显示未安装。App 侧 v61 配套：切后台让出页面连接、回前台补拉、后台连接 20 秒 ping、后台 WS 地址补 ws:// 前缀。"
   },
   "app": {
     "versionCode": 49,
