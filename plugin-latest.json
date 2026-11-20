@@ -1,20 +1,20 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.134",
-  "url": "https://aka.doubaocdn.com/s/Fc6HHAepd3",
-  "size": 140088,
-  "sha256": "23f747647eb90aff9ec93a6bf18e5f62876e946ce29ecd9d3a3bbc8a61d95635",
-  "note": "重打包成平铺结构（之前多了层顶层文件夹，解压后嵌套成 plugins/astrbot_plugin_self_app/astrbot_plugin_self_app，插件加载不到、显示未安装）",
+  "version": "1.8.135",
+  "url": "https://aka.doubaocdn.com/s/VVCWmK3uyq",
+  "size": 140484,
+  "sha256": "e47ec7461bd36593d0709838bf70fdc655cb255dfa26a39d8fc2b6735e330387",
+  "note": "1.8.135：导出按钮改走 App 原生桥（WebView 不认 <a download>，以前点了没反应）；localStorage 里只留最近 200 条且剥掉图片 base64，避免被表情占满 5MB 后历史越存越少。",
   "plugin_detail": {
-    "version": "1.8.134",
-    "url": "https://aka.doubaocdn.com/s/Fc6HHAepd3",
-    "notes": "1.8.131 起回复带序号进每用户 120 条缓存，WS 新增 resync 动作；1.8.132 把补拉基准改成时间戳；1.8.133 补拉消息用服务端原始时间戳、顺序不对就整块重排；1.8.134 纯打包修正：zip 改为平铺（不再带 astrbot_plugin_self_app/ 顶层目录），旧包解压后会多一层嵌套导致插件显示未安装。App 侧 v61 配套：切后台让出页面连接、回前台补拉、后台连接 20 秒 ping、后台 WS 地址补 ws:// 前缀。"
+    "version": "1.8.135",
+    "url": "https://aka.doubaocdn.com/s/VVCWmK3uyq",
+    "notes": "1.8.131 回复带 seq/ts 并进每用户 120 条缓存，WS 新增 resync；1.8.132 补拉基准改时间戳；1.8.133 补拉用服务端原始 ts、乱序整块重排；1.8.134 打包改平铺修正「未安装」；1.8.135 导出改走 hist_export 原生桥写 Download/AstrBotBubble，localStorage 只存瘦身版（200 条 + 剥 base64），完整历史在 App 文件里。"
   },
   "app": {
-    "versionCode": 49,
-    "versionName": "0.1.0-lanyu49",
-    "url": "https://aka.doubaocdn.com/s/wO5p7ZM6PA",
+    "versionCode": 62,
+    "versionName": "0.1.0-lanyu62",
+    "url": "https://aka.doubaocdn.com/s/VVCWmK3uyq",
     "netdisk": "https://pan.quark.cn/s/0b387f194b56",
-    "notes": "修「点发文件弹相册」：文件选择器按 input 的 accept 分流，无 accept 时开系统文档选择器；新增发文件专用桥接，选完转 dataURL 回填上传（≤10MB）。含 v48 文件下载、v47 后台保活与状态同步修复"
+    "notes": "v62 与 1.8.135 配套：App 端接 hist_export，导出直接写 Download/AstrBotBubble；localStorage 只留瘦身历史，解决 5MB 被表情挤爆导致的历史丢失。"
   }
 }
