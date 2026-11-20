@@ -1,12 +1,14 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.130",
-  "url": "https://aka.doubaocdn.com/s/NIV0VdU0nK",
-  "note": "修发文件「上传失败：token 不对」：上传带上 uid、服务端 token/uid 双认并本机回环绕过",
+  "version": "1.8.133",
+  "url": "https://aka.doubaocdn.com/s/QHTOpu36Rg",
+  "size": 140664,
+  "sha256": "cd893b32b3b39b7a2ecda3efa2e4aa700dc049e1d64d31f8d191b0c515b517f0",
+  "note": "修「后台收到通知、回前台聊天页却没有这条」：回复缓存+按时间戳补拉，补回来的消息保留原时间，顺序乱了会整块重排",
   "plugin_detail": {
-    "version": "1.8.130",
-    "url": "https://aka.doubaocdn.com/s/NIV0VdU0nK",
-    "notes": "发文件时 /upload 只带了 token、没带 user：一旦 token 换过或被清缓存，_resolve_user 拿不到 uid，就只能一律拒，页面报「上传失败：token 不对」。本版两处一起补：1) 页面改成 /upload?user=xxx&token=xxx，和 /moment_img 同一套鉴权参数；2) 服务端新增 _upload_user，token 命中用户表或命中主 token 都放行，token 失效但 uid 已注册时按 uid 放行，token 与 uid 都没有时仅对本机回环（127.0.0.1 / ::1）放行，局域网和公网来源照样拒。/upload 与 /moment_img 都换用这套判定。401 的提示里会附一句「登录状态过期了，点右上角齿轮重新验证一次」。1.8.129 的发文件走文档选择器、1.8.128 的文件下载桥接都继续有效。"
+    "version": "1.8.133",
+    "url": "https://aka.doubaocdn.com/s/QHTOpu36Rg",
+    "notes": "1.8.131 起回复带序号进每用户 120 条缓存，WS 新增 resync 动作；1.8.132 把补拉基准改成时间戳（服务端重启序号归零也不怕），并带 ts 返回；1.8.133 修顺序：补拉消息用服务端原始时间戳而不是“收到的时刻”，比列表尾巴还早就按 ts 整块重排，重排前先撤掉等待中的三个点。配套 App v61：切后台先让页面让出连接（__feiyuPause），回前台重连后补拉，后台连接每 20 秒 ping 保活，且后台 WS 地址补 ws:// 前缀（旧版因缺协议头一直连不上，后台端始终 0 个连接）。"
   },
   "app": {
     "versionCode": 49,
