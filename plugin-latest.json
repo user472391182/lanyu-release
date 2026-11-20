@@ -1,20 +1,21 @@
 {
   "plugin": "astrbot_plugin_self_app",
   "version": "1.8.135",
-  "url": "https://aka.doubaocdn.com/s/VVCWmK3uyq",
+  "url": "https://aka.doubaocdn.com/s/6rELVMy1n7",
   "size": 140484,
   "sha256": "e47ec7461bd36593d0709838bf70fdc655cb255dfa26a39d8fc2b6735e330387",
-  "note": "1.8.135：导出按钮改走 App 原生桥（WebView 不认 <a download>，以前点了没反应）；localStorage 里只留最近 200 条且剥掉图片 base64，避免被表情占满 5MB 后历史越存越少。",
+  "note": "1.8.135：导出走 App 原生桥（WebView 不认 <a download>，以前点了没反应）；localStorage 只留最近 200 条且剥掉图片 base64，避免被表情占满 5MB 后历史越存越少。",
   "plugin_detail": {
     "version": "1.8.135",
-    "url": "https://aka.doubaocdn.com/s/VVCWmK3uyq",
-    "notes": "1.8.131 回复带 seq/ts 并进每用户 120 条缓存，WS 新增 resync；1.8.132 补拉基准改时间戳；1.8.133 补拉用服务端原始 ts、乱序整块重排；1.8.134 打包改平铺修正「未安装」；1.8.135 导出改走 hist_export 原生桥写 Download/AstrBotBubble，localStorage 只存瘦身版（200 条 + 剥 base64），完整历史在 App 文件里。"
+    "url": "https://aka.doubaocdn.com/s/6rELVMy1n7",
+    "notes": "1.8.131 回复带 seq/ts 并进每用户 120 条缓存，WS 新增 resync；1.8.132 补拉基准改时间戳；1.8.133 补拉用服务端原始 ts、乱序整块重排；1.8.134 打包改平铺修正「未安装」；1.8.135 导出改走 hist_export 原生桥写 Download/AstrBotBubble，localStorage 只存瘦身版（200 条 + 剥 base64）。"
   },
   "app": {
     "versionCode": 62,
     "versionName": "0.1.0-lanyu62",
-    "url": "https://aka.doubaocdn.com/s/VVCWmK3uyq",
+    "url": "https://aka.doubaocdn.com/s/UF2wM4HUC5",
     "netdisk": "https://pan.quark.cn/s/0b387f194b56",
+    "size": 80359992,
     "notes": "v62 与 1.8.135 配套：App 端接 hist_export，导出直接写 Download/AstrBotBubble；localStorage 只留瘦身历史，解决 5MB 被表情挤爆导致的历史丢失。"
   }
 }
