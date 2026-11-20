@@ -1,13 +1,13 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.135",
-  "url": "https://aka.doubaocdn.com/s/5ZiOIPUn1Y",
-  "size": 140971,
-  "sha256": "d5f0d7f568bcb3ace7fde924a5c0af9436acd17e6872cf24a70bf95f1b5df67e",
-  "note": "1.8.135：导出走 App 原生桥（WebView 不认 <a download>，点了没反应）；localStorage 只留最近 200 条且剥掉图片 base64；消息按 ts 插回正确位置并做本机/服务端时钟对齐。",
+  "version": "1.8.136",
+  "url": "https://aka.doubaocdn.com/s/PUHKnM4HCP",
+  "size": 141589,
+  "sha256": "3ed587ba1afd988350d786a98802f8f26272fa6a0244d797427bbb8e33ad64a6",
+  "note": "1.8.136：修顺序错乱的真正原因——补拉会把已有的整段回复重放一遍、而且时间戳被写成收到时刻，于是“看到了”被挤到一排重复回复中间。现在改成按正文去重（不看时间戳），补拉没给时间就贴在队尾而不是写成“现在”，重绘前先清掉同内容重复记录。",
   "plugin_detail": {
-    "version": "1.8.135",
-    "url": "https://aka.doubaocdn.com/s/5ZiOIPUn1Y",
-    "notes": "1.8.131 回复带 seq/ts 并进每用户 120 条缓存，WS 新增 resync；1.8.132 补拉基准改时间戳；1.8.133 补拉用服务端原始 ts、乱序整块重排；1.8.134 打包改平铺修正「未安装」；1.8.135 导出改走 hist_export 原生桥写 Download/AstrBotBubble，localStorage 只存瘦身版（200 条 + 剥 base64），每条消息按 ts 选插入点 + 服务端 ts 校正本机时钟偏移。"
+    "version": "1.8.136",
+    "url": "https://aka.doubaocdn.com/s/PUHKnM4HCP",
+    "notes": "1.8.131 回复带 seq/ts 并进缓存，WS 新增 resync；1.8.132 补拉基准改时间戳；1.8.133 用服务端原始 ts；1.8.134 打包改平铺；1.8.135 导出走 hist_export 原生桥 + localStorage 只存瘦身版（200 条、剥 base64）+ 按 ts 选插入点 + 本机/服务端时钟对齐；1.8.136 内容级去重（_isRepeatIn/_dedupeMsgs，不看 ts），补拉无 ts 时贴在队尾，reply 入列前也查重。"
   }
 }
