@@ -1,18 +1,18 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.127",
-  "url": "https://aka.doubaocdn.com/s/VSEUrzyvaR",
-  "note": "菜园修复：插件自动拉起原生后端并转发 /api/garden/*，不再需要手动跑 node",
+  "version": "1.8.128",
+  "url": "https://aka.doubaocdn.com/s/x166LMTjLI",
+  "note": "文件卡片下载修复：记忆导出 md 等附件点击走 App 桥接写盘，不再点了没反应",
   "plugin_detail": {
-    "version": "1.8.127",
-    "url": "https://aka.doubaocdn.com/s/VSEUrzyvaR",
-    "notes": "菜园的真实数据结构在 garden-client.js / 原生后端里，插件这边没有副本，硬照 Python 实现会一直报“菜园数据不完整”。本版改为桥接模式：插件先探测 127.0.0.1 的 13100~13103 / 13099，探到就直接代理 /api/home/state、/api/home/act、/api/home/item、/api/garden/state、/api/tv/opinion；探不到就自己拉起 ~/lanbao/start.sh（或直接 node bridge.js / home_state.js，自动用 ~/node-*/bin/node），不再需要用户瑳命令。打开房间页时后台预热，最多等 4 秒。若原生后端确实不存在，才用插件自带的 Python 房间状态兜底，菜园接口返回 503 提示重试。"
+    "version": "1.8.128",
+    "url": "https://aka.doubaocdn.com/s/x166LMTjLI",
+    "notes": "上一版文件卡片只是个 <a download>，App 内 WebView 不认这个属性，澜宝发的记忆导出 md 点了下载没反应。本版点击改为先走 LanyuBridge 的 save_file 命令，由 App 侧把文件拉下来存到 Download/AstrBotBubble；老壳子有 FeiyuShell.saveFile 就用它，纯浏览器环境再退回 fetch blob 下载。另保留 1.8.127 的菜园桥接：探测 127.0.0.1 的 13100~13103 / 13099 并代理 /api/home/state、/api/home/act、/api/home/item、/api/garden/state、/api/tv/opinion，探不到自动拉起 ~/lanbao/start.sh 或 node bridge.js / home_state.js。"
   },
   "app": {
-    "versionCode": 47,
-    "versionName": "0.1.0-lanyu47",
-    "url": "https://aka.doubaocdn.com/s/zQtzwpkD2L",
+    "versionCode": 48,
+    "versionName": "0.1.0-lanyu48",
+    "url": "https://aka.doubaocdn.com/s/Zwu6PeBgNR",
     "netdisk": "https://pan.quark.cn/s/0b387f194b56",
-    "notes": "后台保活加固：补 WakeLock/WifiLock，前台服务划掉最近任务不停，启动自动申请电池优化白名单；另修切后台回前台面板误显示未启动、重复启动撞端口占用"
+    "notes": "修聊天里澜宝发的文件（记忆导出 md 等）点了下载没反应：文件卡片走桥接由 App 存到 Download/AstrBotBubble；含 v47 后台保活加固（WakeLock/WifiLock、划任务不停、电池白名单申请）与切后台回前台状态同步修复"
   }
 }
