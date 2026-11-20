@@ -1,12 +1,12 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.129",
-  "url": "https://aka.doubaocdn.com/s/HiUv21VWFI",
-  "note": "发文件改为系统文档选择器，不再误弹相册；md/zip/pdf 等任意文件可发",
+  "version": "1.8.130",
+  "url": "https://aka.doubaocdn.com/s/NIV0VdU0nK",
+  "note": "修发文件「上传失败：token 不对」：上传带上 uid、服务端 token/uid 双认并本机回环绕过",
   "plugin_detail": {
-    "version": "1.8.129",
-    "url": "https://aka.doubaocdn.com/s/HiUv21VWFI",
-    "notes": "点「发文件」以前永远弹相册：WebView 里 input[type=file] 的弹窗由 App 接管，而 App 那边一律按 image 唤起。本版把发文件改成走 LanyuBridge 的 pick 模式 mode=file，由 App 开系统文档选择器（可浏览内部存储，选 md/txt/zip/json/pdf 等），选完以 dataURL 回调 __lanyuFilePicked 再走原来的 /upload 上传，单文件上限 10MB；浏览器环境仍保留 input 直选兜底。文件下载（1.8.128 的 save_file 桥接）继续有效。另保留菜园桥接：探测 127.0.0.1 的 13100~13103 / 13099 并代理 /api/home/state、/api/home/act、/api/home/item、/api/garden/state、/api/tv/opinion，探不到自动拉起 ~/lanbao/start.sh 或 node bridge.js / home_state.js。"
+    "version": "1.8.130",
+    "url": "https://aka.doubaocdn.com/s/NIV0VdU0nK",
+    "notes": "发文件时 /upload 只带了 token、没带 user：一旦 token 换过或被清缓存，_resolve_user 拿不到 uid，就只能一律拒，页面报「上传失败：token 不对」。本版两处一起补：1) 页面改成 /upload?user=xxx&token=xxx，和 /moment_img 同一套鉴权参数；2) 服务端新增 _upload_user，token 命中用户表或命中主 token 都放行，token 失效但 uid 已注册时按 uid 放行，token 与 uid 都没有时仅对本机回环（127.0.0.1 / ::1）放行，局域网和公网来源照样拒。/upload 与 /moment_img 都换用这套判定。401 的提示里会附一句「登录状态过期了，点右上角齿轮重新验证一次」。1.8.129 的发文件走文档选择器、1.8.128 的文件下载桥接都继续有效。"
   },
   "app": {
     "versionCode": 49,
