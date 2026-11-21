@@ -1,13 +1,13 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.136",
-  "url": "https://aka.doubaocdn.com/s/PUHKnM4HCP",
-  "size": 141589,
-  "sha256": "3ed587ba1afd988350d786a98802f8f26272fa6a0244d797427bbb8e33ad64a6",
-  "note": "1.8.136：修顺序错乱的真正原因——补拉会把已有的整段回复重放一遍、而且时间戳被写成收到时刻，于是“看到了”被挤到一排重复回复中间。现在改成按正文去重（不看时间戳），补拉没给时间就贴在队尾而不是写成“现在”，重绘前先清掉同内容重复记录。",
+  "version": "1.8.137",
+  "url": "https://aka.doubaocdn.com/s/RIlxXMmUbV",
+  "size": 141647,
+  "sha256": "7f33579defa8ad1e0490aca5f242191455b003c64fc1b0b53bf883f44a727bd5",
+  "note": "1.8.137：selfapp 聊天 WS 从 6199 挪到 6198，6199 整个留给 aiocqhttp(OneBot v11) 适配器，解决两个服务抢同一端口导致 Rosmontis 反向 WS 被 selfapp 401 拒绝。App v63 配套：聊天页地址、存活探测、平台实例配置同步指向 6198。",
   "plugin_detail": {
-    "version": "1.8.136",
-    "url": "https://aka.doubaocdn.com/s/PUHKnM4HCP",
-    "notes": "1.8.131 回复带 seq/ts 并进缓存，WS 新增 resync；1.8.132 补拉基准改时间戳；1.8.133 用服务端原始 ts；1.8.134 打包改平铺；1.8.135 导出走 hist_export 原生桥 + localStorage 只存瘦身版（200 条、剥 base64）+ 按 ts 选插入点 + 本机/服务端时钟对齐；1.8.136 内容级去重（_isRepeatIn/_dedupeMsgs，不看 ts），补拉无 ts 时贴在队尾，reply 入列前也查重。"
+    "version": "1.8.137",
+    "url": "https://aka.doubaocdn.com/s/RIlxXMmUbV",
+    "notes": "1.8.131 回复带 seq/ts 进缓存 + resync；1.8.132 补拉基准改时间戳；1.8.133 服务端原始 ts；1.8.134 平铺打包；1.8.135 导出走原生桥 + localStorage 瘦身 + 时钟对齐；1.8.136 内容级去重；1.8.137 端口迁移 6199→6198，插件兜底端口跳过 6199 不撞 OneBot 适配器。"
   }
 }
