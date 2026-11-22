@@ -9,5 +9,12 @@
     "version": "1.8.136",
     "url": "https://aka.doubaocdn.com/s/PUHKnM4HCP",
     "notes": "1.8.131 回复带 seq/ts 并进缓存，WS 新增 resync；1.8.132 补拉基准改时间戳；1.8.133 用服务端原始 ts；1.8.134 打包改平铺；1.8.135 导出走 hist_export 原生桥 + localStorage 只存瘦身版（200 条、剥 base64）+ 按 ts 选插入点 + 本机/服务端时钟对齐；1.8.136 内容级去重（_isRepeatIn/_dedupeMsgs，不看 ts），补拉无 ts 时贴在队尾，reply 入列前也查重。"
+  },
+  "app": {
+    "versionCode": 69,
+    "versionName": "0.1.0-lanyu69",
+    "url": "https://aka.doubaocdn.com/s/7P2QS4L6Hp",
+    "size": 100454765,
+    "notes": "v69：WebView 保存图片改到公共相册目录 Pictures/AstrBotBubble，写盘后即时媒体扫描入库，系统相册直接可见（文件类仍落 Download/AstrBotBubble）；v68：修 WebView 录音不弹授权窗，补 WebView 权限回调 + 系统麦克风运行时授权；v67：修图片保存后黑遮罩卡死（补 FeiyuShell.saveImage 桥 + 保存后关遮罩），语音回放/录音转写三件套上线。"
   }
 }
