@@ -11,11 +11,11 @@
     "notes": "1.8.131 回复带 seq/ts 并进缓存，WS 新增 resync；1.8.132 补拉基准改时间戳；1.8.133 用服务端原始 ts；1.8.134 打包改平铺；1.8.135 导出走 hist_export 原生桥 + localStorage 只存瘦身版；1.8.136 内容级去重；1.8.143 机器人资料外置备份；1.8.144 资料接口补回 avatar 字段。"
   },
   "app": {
-    "versionCode": 89,
-    "versionName": "0.1.0-lanyu89",
-    "url": "https://aka.doubaocdn.com/s/X2RIT7H2ZD",
+    "versionCode": 94,
+    "versionName": "0.1.0-lanyu94",
+    "url": "https://aka.doubaocdn.com/s/90SDEq9yVB",
     "size": 100697349,
-    "sha256": "ef74fce6ab2e0787a7a89a3d5c9f2a137b74a75b7f9f0fd29e1f328061dba2fc",
-    "notes": "v89：长按保存改存公共相册 Pictures/AstrBotBubble 并调用媒体扫描入库，不再落到 App 私有 downloads 的 .bin；相册选择器换成自建九宫格（图片视频混排、带时长角标）；发视频时自动抽 3 帧拼一张画面条给模型看。v88 自建相册首发、头像单选；v87 相册开始支持视频、聊天里直接播视频气泡。"
+    "sha256": "66f9421d793f1c0193c2e4c4cde9037305813f8965f5ccd7425d143ec1236e72",
+    "notes": "v94：移除内置 QQ 接入（协议端页面、内核资源、部署脚本全部拆掉），回落到纯聊天/相册/房间形态，体积回到 100.7MB。v90-v93 的 QQ 协议端尝试作废，不再分发。"
   }
 }
