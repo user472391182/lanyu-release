@@ -1,21 +1,21 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.144",
-  "url": "https://aka.doubaocdn.com/s/mASyy6ihnq",
-  "size": 221671,
-  "sha256": "1c8bca2ebb5e838ea5e289b353340c42162f8a8418ec3e05b24acfc95625d9ab",
-  "note": "1.8.144：/profile 接口把 avatar 一起返回——以前只给昵称/签名/生日，App 永远拿不到头像字段，换多少次头像都还是灰头像。聊天页和资料卡现在都能正常显示头像。",
+  "version": "1.8.145",
+  "url": "https://aka.doubaocdn.com/s/9i2aVD60gC",
+  "size": 223763,
+  "sha256": "3af28a465d7f4b1addb666fd0534d5cf9e861cd87d3c11311529e3c93632ff20",
+  "note": "1.8.145：资料接口稳定回头像，并新增 GET /me/avatar 单独查头像；头像另存一份 avatars.json 索引，用户表被旧备份覆盖时也能把图找回来。修聊天页头像显示成「澜」字占位的问题。",
   "plugin_detail": {
-    "version": "1.8.144",
-    "url": "https://aka.doubaocdn.com/s/mASyy6ihnq",
-    "notes": "1.8.131 回复带 seq/ts 并进缓存，WS 新增 resync；1.8.132 补拉基准改时间戳；1.8.133 用服务端原始 ts；1.8.134 打包改平铺；1.8.135 导出走 hist_export 原生桥 + localStorage 只存瘦身版；1.8.136 内容级去重；1.8.143 机器人资料外置备份；1.8.144 资料接口补回 avatar 字段。"
+    "version": "1.8.145",
+    "url": "https://aka.doubaocdn.com/s/9i2aVD60gC",
+    "notes": "1.8.131 回复带 seq/ts 并进缓存，WS 新增 resync；1.8.132 补拉基准改时间戳；1.8.133 用服务端原始 ts；1.8.134 打包改平铺；1.8.135 导出走 hist_export 原生桥 + localStorage 只存瘦身版；1.8.136 内容级去重；1.8.143 机器人资料外置备份；1.8.144 资料接口补回 avatar 字段；1.8.145 头像索引 avatars.json + GET /me/avatar。"
   },
   "app": {
-    "versionCode": 94,
-    "versionName": "0.1.0-lanyu94",
-    "url": "https://aka.doubaocdn.com/s/90SDEq9yVB",
-    "size": 100697349,
-    "sha256": "66f9421d793f1c0193c2e4c4cde9037305813f8965f5ccd7425d143ec1236e72",
-    "notes": "v94：移除内置 QQ 接入（协议端页面、内核资源、部署脚本全部拆掉），回落到纯聊天/相册/房间形态，体积回到 100.7MB。v90-v93 的 QQ 协议端尝试作废，不再分发。"
+    "versionCode": 95,
+    "versionName": "0.1.0-lanyu95",
+    "url": "https://aka.doubaocdn.com/s/RkS3e8o4qY",
+    "size": 100705025,
+    "sha256": "082af0fa3f45d65a86e67706a88f3235fb7513d51ecd71916c542e59a5cdf132",
+    "notes": "v95：修头像。换头像先存本地一份，拉资料时若服务端没回 avatar 就单独请求 /me/avatar，再不行用本地留底顶上，聊天页/资料页不再退回「澜」字占位；昵称缺失时用注册昵称显示首字。v94 移除内置 QQ 接入。"
   }
 }
