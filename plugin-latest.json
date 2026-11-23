@@ -1,20 +1,21 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.136",
-  "url": "https://aka.doubaocdn.com/s/PUHKnM4HCP",
-  "size": 141589,
-  "sha256": "3ed587ba1afd988350d786a98802f8f26272fa6a0244d797427bbb8e33ad64a6",
-  "note": "1.8.136：修顺序错乱的真正原因——补拉会把已有的整段回复重放一遍、而且时间戳被写成收到时刻，于是“看到了”被挤到一排重复回复中间。现在改成按正文去重（不看时间戳），补拉没给时间就贴在队尾而不是写成“现在”，重绘前先清掉同内容重复记录。",
+  "version": "1.8.144",
+  "url": "https://aka.doubaocdn.com/s/mASyy6ihnq",
+  "size": 221671,
+  "sha256": "1c8bca2ebb5e838ea5e289b353340c42162f8a8418ec3e05b24acfc95625d9ab",
+  "note": "1.8.144：/profile 接口把 avatar 一起返回——以前只给昵称/签名/生日，App 永远拿不到头像字段，换多少次头像都还是灰头像。聊天页和资料卡现在都能正常显示头像。",
   "plugin_detail": {
-    "version": "1.8.136",
-    "url": "https://aka.doubaocdn.com/s/PUHKnM4HCP",
-    "notes": "1.8.131 回复带 seq/ts 并进缓存，WS 新增 resync；1.8.132 补拉基准改时间戳；1.8.133 用服务端原始 ts；1.8.134 打包改平铺；1.8.135 导出走 hist_export 原生桥 + localStorage 只存瘦身版（200 条、剥 base64）+ 按 ts 选插入点 + 本机/服务端时钟对齐；1.8.136 内容级去重（_isRepeatIn/_dedupeMsgs，不看 ts），补拉无 ts 时贴在队尾，reply 入列前也查重。"
+    "version": "1.8.144",
+    "url": "https://aka.doubaocdn.com/s/mASyy6ihnq",
+    "notes": "1.8.131 回复带 seq/ts 并进缓存，WS 新增 resync；1.8.132 补拉基准改时间戳；1.8.133 用服务端原始 ts；1.8.134 打包改平铺；1.8.135 导出走 hist_export 原生桥 + localStorage 只存瘦身版；1.8.136 内容级去重；1.8.143 机器人资料外置备份；1.8.144 资料接口补回 avatar 字段。"
   },
   "app": {
-    "versionCode": 69,
-    "versionName": "0.1.0-lanyu69",
-    "url": "https://aka.doubaocdn.com/s/7P2QS4L6Hp",
-    "size": 100454765,
-    "notes": "v69：WebView 保存图片改到公共相册目录 Pictures/AstrBotBubble，写盘后即时媒体扫描入库，系统相册直接可见（文件类仍落 Download/AstrBotBubble）；v68：修 WebView 录音不弹授权窗，补 WebView 权限回调 + 系统麦克风运行时授权；v67：修图片保存后黑遮罩卡死（补 FeiyuShell.saveImage 桥 + 保存后关遮罩），语音回放/录音转写三件套上线。"
+    "versionCode": 89,
+    "versionName": "0.1.0-lanyu89",
+    "url": "https://aka.doubaocdn.com/s/X2RIT7H2ZD",
+    "size": 100697349,
+    "sha256": "ef74fce6ab2e0787a7a89a3d5c9f2a137b74a75b7f9f0fd29e1f328061dba2fc",
+    "notes": "v89：长按保存改存公共相册 Pictures/AstrBotBubble 并调用媒体扫描入库，不再落到 App 私有 downloads 的 .bin；相册选择器换成自建九宫格（图片视频混排、带时长角标）；发视频时自动抽 3 帧拼一张画面条给模型看。v88 自建相册首发、头像单选；v87 相册开始支持视频、聊天里直接播视频气泡。"
   }
 }
