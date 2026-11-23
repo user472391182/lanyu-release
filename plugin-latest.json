@@ -1,14 +1,14 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.151",
-  "url": "https://aka.doubaocdn.com/s/lGZ6Hd8qdN",
-  "size": 231127,
-  "sha256": "50a320bd9612d1e4863a4dab1bb248a6c9afcadb7dd39afb31753493d4f2daab",
-  "note": "1.8.151：主动消息重做，不再像模板机器人。默认 auto：有模型就带着「现在几点/多久没聊/最近几条聊天/记忆里的事」临场写一句，必须带具体细节，禁掉「在吗/晚上好/今天过得怎么样」这类空话，并跟最近 6 条做相似度去重；写不出才退回语料。频率改成滚动式：发完按 75~180 分钟随机等下一轮，每天上限默认 6 条；对方老不回自动拉长间隔，正在聊天或还没回上一条时不插嘴。配置项新增 proactive_text_mode / proactive_gap_min / proactive_gap_max / proactive_daily_cap，旧的 use_llm 与 min/max_per_day 保留兼容。",
+  "version": "1.8.152",
+  "url": "https://aka.doubaocdn.com/s/RuL0Pzn2a6",
+  "size": 235044,
+  "sha256": "c8c50952dbc3d435a2fbe13d347e58bd9523ff525d387c6c55073fc8db002459",
+  "note": "1.8.152：补了原来没有的三件，且不额外调模型、不新增工具。①教训账本：你指出她的毛病（你又/说好的/糊弄/啰嗦等）判成 8 类记一笔，同类第 3 次或刚被说那轮才补一句提醒，7 天没再犯自动松绑（lessons.json）。②不装做过：回「我这就去/查好了」但本轮没真调工具时改写成「其实我还没动」，真做了才清账，3 小时最多提醒一次（promise.json）。③假记忆降级：写记忆前核对最近聊天，「我跟他说过」对不上就记成「想跟他说（没说出口）」。动态提醒走 extra_user_content，不动 system_prompt，不破坏缓存。",
   "plugin_detail": {
-    "version": "1.8.151",
-    "url": "https://aka.doubaocdn.com/s/lGZ6Hd8qdN",
-    "notes": "1.8.131 回复带 seq/ts 并进缓存，WS 新增 resync；1.8.132 补拉基准改时间戳；1.8.133 用服务端原始 ts；1.8.134 打包改平铺；1.8.135 导出走 hist_export 原生桥；1.8.136 内容级去重；1.8.143 机器人资料外置备份；1.8.144 资料接口补回 avatar；1.8.145 头像索引 + GET /me/avatar；1.8.146 朋友圈接口 token 改为 query/body 都认；1.8.147 面板状态注册保活；1.8.148 注册平台适配器类型，状态交回框架维护 + 兜底自愈；1.8.149 edit_my_profile（昵称/签名/生日/头像自改）+ nick_override；1.8.150 see_avatar（看图式看头像，带缓存与降级提示）；1.8.151 主动消息上下文生成 + 滚动式调度 + 回应率自适应（proactive_hours.json）。"
+    "version": "1.8.152",
+    "url": "https://aka.doubaocdn.com/s/RuL0Pzn2a6",
+    "notes": "1.8.131 回复带 seq/ts 并进缓存，WS 新增 resync；1.8.132 补拉基准改时间戳；1.8.133 用服务端原始 ts；1.8.134 打包改平铺；1.8.135 导出走 hist_export 原生桥；1.8.136 内容级去重；1.8.143 机器人资料外置备份；1.8.144 资料接口补回 avatar；1.8.145 头像索引 + GET /me/avatar；1.8.146 朋友圈接口 token 改为 query/body 都认；1.8.147 面板状态注册保活；1.8.148 注册平台适配器类型，状态交回框架维护 + 兜底自愈；1.8.149 edit_my_profile（昵称/签名/生日/头像自改）+ nick_override；1.8.150 see_avatar（看图式看头像，带缓存与降级提示）；1.8.151 主动消息上下文生成 + 滚动式调度 + 回应率自适应（proactive_hours.json）；1.8.152 教训账本 + 承诺/假完成改写 + 假记忆降级（lessons.json / promise.json，全本地判断）。"
   },
   "app": {
     "versionCode": 97,
