@@ -1,21 +1,21 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.149",
-  "url": "https://aka.doubaocdn.com/s/IkiXGOkzoG",
-  "size": 225512,
-  "sha256": "aa35e7cc5539fe9a8448a65820de84f25ecd68404391557d6f34840cb7bc5818",
-  "note": "1.8.149：澜宝可以自己改资料卡了。新增工具 edit_my_profile，一次能改昵称 / 个性签名 / 生日 / 头像，没提到的项保持原样；昵称新增 nick_override 标记，自己改过不会再被面板人格名盖回去；生日兼容 2026-10-26、2026年10月26日、10-26、10月26日 四种写法；改完推 profile_update，App 资料卡即时刷新。权限与后台一致，只有管理员能改澜宝的资料。",
+  "version": "1.8.150",
+  "url": "https://aka.doubaocdn.com/s/tXcIaEqAvy",
+  "size": 227213,
+  "sha256": "a7aa9e5c8dd709086f1162d7db990adb0855166f0f1949d51d1ddf76e7e347e9",
+  "note": "1.8.150：澜宝能真的看头像了。新增工具 see_avatar，把对方头像交给支持读图的模型描述后返回，可以按 who=me/peer 或昵称点名；同一张头像只描述一次，换图才重新看；没设头像/模型读不了图都会如实说明。",
   "plugin_detail": {
-    "version": "1.8.149",
-    "url": "https://aka.doubaocdn.com/s/IkiXGOkzoG",
-    "notes": "1.8.131 回复带 seq/ts 并进缓存，WS 新增 resync；1.8.132 补拉基准改时间戳；1.8.133 用服务端原始 ts；1.8.134 打包改平铺；1.8.135 导出走 hist_export 原生桥；1.8.136 内容级去重；1.8.143 机器人资料外置备份；1.8.144 资料接口补回 avatar；1.8.145 头像索引 + GET /me/avatar；1.8.146 朋友圈接口 token 改为 query/body 都认；1.8.147 面板状态注册保活；1.8.148 注册平台适配器类型，状态交回框架维护 + 兜底自愈；1.8.149 新增 edit_my_profile（昵称/签名/生日/头像自改）+ nick_override 昵称覆盖。"
+    "version": "1.8.150",
+    "url": "https://aka.doubaocdn.com/s/tXcIaEqAvy",
+    "notes": "1.8.131 回复带 seq/ts 并进缓存，WS 新增 resync；1.8.132 补拉基准改时间戳；1.8.133 用服务端原始 ts；1.8.134 打包改平铺；1.8.135 导出走 hist_export 原生桥；1.8.136 内容级去重；1.8.143 机器人资料外置备份；1.8.144 资料接口补回 avatar；1.8.145 头像索引 + GET /me/avatar；1.8.146 朋友圈接口 token 改为 query/body 都认；1.8.147 面板状态注册保活；1.8.148 注册平台适配器类型，状态交回框架维护 + 兜底自愈；1.8.149 edit_my_profile（昵称/签名/生日/头像自改）+ nick_override；1.8.150 see_avatar（看图式看头像，带缓存与降级提示）。"
   },
   "app": {
-    "versionCode": 95,
-    "versionName": "0.1.0-lanyu95",
-    "url": "https://aka.doubaocdn.com/s/RkS3e8o4qY",
-    "size": 100705025,
-    "sha256": "082af0fa3f45d65a86e67706a88f3235fb7513d51ecd71916c542e59a5cdf132",
-    "notes": "v95：修头像。换头像先存本地一份，拉资料时若服务端没回 avatar 就单独请求 /me/avatar，再不行用本地留底顶上；昵称缺失时用注册昵称显示首字。v94 移除内置 QQ 接入。"
+    "versionCode": 96,
+    "versionName": "0.1.0-lanyu96",
+    "url": "https://aka.doubaocdn.com/s/7UtTUBltsf",
+    "size": 100704969,
+    "sha256": "920bb77848be3b0138ff9a0882c7b75a6cf8243fc102e0bfca591ba3a610511c",
+    "notes": "v96：聊天页昵称下面的个性签名，颜色改为跟随昵称的「标题颜色」设置；昵称没设颜色时按深浅色给可读默认（深色 white70 / 浅色 black54）。"
   }
 }
