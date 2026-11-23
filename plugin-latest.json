@@ -1,14 +1,14 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.146",
-  "url": "https://aka.doubaocdn.com/s/1qJ3X5w8wF",
-  "size": 223028,
-  "sha256": "7f6d88e90f538722bc004da13fa6a882a946f0aeb16f037e72360d5482c2f616",
-  "note": "1.8.146：修朋友圈「token 不对」。App 把 token 放在 POST body 里，而朋友圈的评论/回复/删除/配图/发动态几个接口只读 URL 参数，于是一律 401。现在两边都认。同时保留 1.8.145 的头像修复（资料接口回头像 + GET /me/avatar + avatars.json 索引）。",
+  "version": "1.8.147",
+  "url": "https://aka.doubaocdn.com/s/y5kUAzVdmM",
+  "size": 222525,
+  "sha256": "4c5fb7f341dd4cc641aaa714a80b965bab2a5a757a06cbe5c62e32a105e72f30",
+  "note": "1.8.147：修面板「机器人」页状态一直显示未知。selfapp 服务由插件自起、绕过框架调度，实例被框架重载摘除后面板就查不到；现在加 5 秒注册保活，被摘掉自动重新登记；残留的未监听实例会清理后重拉；服务退出时状态置 stopped。",
   "plugin_detail": {
-    "version": "1.8.146",
-    "url": "https://aka.doubaocdn.com/s/1qJ3X5w8wF",
-    "notes": "1.8.131 回复带 seq/ts 并进缓存，WS 新增 resync；1.8.132 补拉基准改时间戳；1.8.133 用服务端原始 ts；1.8.134 打包改平铺；1.8.135 导出走 hist_export 原生桥；1.8.136 内容级去重；1.8.143 机器人资料外置备份；1.8.144 资料接口补回 avatar；1.8.145 头像索引 + GET /me/avatar；1.8.146 朋友圈接口 token 改为 query/body 都认。"
+    "version": "1.8.147",
+    "url": "https://aka.doubaocdn.com/s/y5kUAzVdmM",
+    "notes": "1.8.131 回复带 seq/ts 并进缓存，WS 新增 resync；1.8.132 补拉基准改时间戳；1.8.133 用服务端原始 ts；1.8.134 打包改平铺；1.8.135 导出走 hist_export 原生桥；1.8.136 内容级去重；1.8.143 机器人资料外置备份；1.8.144 资料接口补回 avatar；1.8.145 头像索引 + GET /me/avatar；1.8.146 朋友圈接口 token 改为 query/body 都认；1.8.147 面板状态注册保活 + 残留实例自愈。"
   },
   "app": {
     "versionCode": 95,
