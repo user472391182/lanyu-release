@@ -1,14 +1,14 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.148",
-  "url": "https://aka.doubaocdn.com/s/2RVgfUxWeS",
-  "size": 223892,
-  "sha256": "4e8acec535226bb69af16ba30d5a29097399efabcb28a8e813de0f7fca946428",
-  "note": "1.8.148：彻底修面板「机器人」页状态显示未知。根因是插件从没把 selfapp 适配器类型注册给框架，框架查不到类型就不实例化，面板拿不到运行状态。现在注册适配器类型，由框架自己拉起并维护状态（运行中/已停止/错误）；插件只在框架起不来时兜底自起，且不会再和框架实例撞成两条记录。",
+  "version": "1.8.149",
+  "url": "https://aka.doubaocdn.com/s/IkiXGOkzoG",
+  "size": 225512,
+  "sha256": "aa35e7cc5539fe9a8448a65820de84f25ecd68404391557d6f34840cb7bc5818",
+  "note": "1.8.149：澜宝可以自己改资料卡了。新增工具 edit_my_profile，一次能改昵称 / 个性签名 / 生日 / 头像，没提到的项保持原样；昵称新增 nick_override 标记，自己改过不会再被面板人格名盖回去；生日兼容 2026-10-26、2026年10月26日、10-26、10月26日 四种写法；改完推 profile_update，App 资料卡即时刷新。权限与后台一致，只有管理员能改澜宝的资料。",
   "plugin_detail": {
-    "version": "1.8.148",
-    "url": "https://aka.doubaocdn.com/s/2RVgfUxWeS",
-    "notes": "1.8.131 回复带 seq/ts 并进缓存，WS 新增 resync；1.8.132 补拉基准改时间戳；1.8.133 用服务端原始 ts；1.8.134 打包改平铺；1.8.135 导出走 hist_export 原生桥；1.8.136 内容级去重；1.8.143 机器人资料外置备份；1.8.144 资料接口补回 avatar；1.8.145 头像索引 + GET /me/avatar；1.8.146 朋友圈接口 token 改为 query/body 都认；1.8.147 面板状态注册保活；1.8.148 注册平台适配器类型，状态交回框架维护 + 兜底自愈。"
+    "version": "1.8.149",
+    "url": "https://aka.doubaocdn.com/s/IkiXGOkzoG",
+    "notes": "1.8.131 回复带 seq/ts 并进缓存，WS 新增 resync；1.8.132 补拉基准改时间戳；1.8.133 用服务端原始 ts；1.8.134 打包改平铺；1.8.135 导出走 hist_export 原生桥；1.8.136 内容级去重；1.8.143 机器人资料外置备份；1.8.144 资料接口补回 avatar；1.8.145 头像索引 + GET /me/avatar；1.8.146 朋友圈接口 token 改为 query/body 都认；1.8.147 面板状态注册保活；1.8.148 注册平台适配器类型，状态交回框架维护 + 兜底自愈；1.8.149 新增 edit_my_profile（昵称/签名/生日/头像自改）+ nick_override 昵称覆盖。"
   },
   "app": {
     "versionCode": 95,
