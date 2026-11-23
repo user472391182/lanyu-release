@@ -1,14 +1,14 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.147",
-  "url": "https://aka.doubaocdn.com/s/y5kUAzVdmM",
-  "size": 222525,
-  "sha256": "4c5fb7f341dd4cc641aaa714a80b965bab2a5a757a06cbe5c62e32a105e72f30",
-  "note": "1.8.147：修面板「机器人」页状态一直显示未知。selfapp 服务由插件自起、绕过框架调度，实例被框架重载摘除后面板就查不到；现在加 5 秒注册保活，被摘掉自动重新登记；残留的未监听实例会清理后重拉；服务退出时状态置 stopped。",
+  "version": "1.8.148",
+  "url": "https://aka.doubaocdn.com/s/2RVgfUxWeS",
+  "size": 223892,
+  "sha256": "4e8acec535226bb69af16ba30d5a29097399efabcb28a8e813de0f7fca946428",
+  "note": "1.8.148：彻底修面板「机器人」页状态显示未知。根因是插件从没把 selfapp 适配器类型注册给框架，框架查不到类型就不实例化，面板拿不到运行状态。现在注册适配器类型，由框架自己拉起并维护状态（运行中/已停止/错误）；插件只在框架起不来时兜底自起，且不会再和框架实例撞成两条记录。",
   "plugin_detail": {
-    "version": "1.8.147",
-    "url": "https://aka.doubaocdn.com/s/y5kUAzVdmM",
-    "notes": "1.8.131 回复带 seq/ts 并进缓存，WS 新增 resync；1.8.132 补拉基准改时间戳；1.8.133 用服务端原始 ts；1.8.134 打包改平铺；1.8.135 导出走 hist_export 原生桥；1.8.136 内容级去重；1.8.143 机器人资料外置备份；1.8.144 资料接口补回 avatar；1.8.145 头像索引 + GET /me/avatar；1.8.146 朋友圈接口 token 改为 query/body 都认；1.8.147 面板状态注册保活 + 残留实例自愈。"
+    "version": "1.8.148",
+    "url": "https://aka.doubaocdn.com/s/2RVgfUxWeS",
+    "notes": "1.8.131 回复带 seq/ts 并进缓存，WS 新增 resync；1.8.132 补拉基准改时间戳；1.8.133 用服务端原始 ts；1.8.134 打包改平铺；1.8.135 导出走 hist_export 原生桥；1.8.136 内容级去重；1.8.143 机器人资料外置备份；1.8.144 资料接口补回 avatar；1.8.145 头像索引 + GET /me/avatar；1.8.146 朋友圈接口 token 改为 query/body 都认；1.8.147 面板状态注册保活；1.8.148 注册平台适配器类型，状态交回框架维护 + 兜底自愈。"
   },
   "app": {
     "versionCode": 95,
