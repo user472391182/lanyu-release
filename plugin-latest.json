@@ -1,14 +1,14 @@
 {
   "plugin": "astrbot_plugin_self_app",
   "version": "1.8.145",
-  "url": "https://aka.doubaocdn.com/s/9i2aVD60gC",
-  "size": 223763,
-  "sha256": "3af28a465d7f4b1addb666fd0534d5cf9e861cd87d3c11311529e3c93632ff20",
-  "note": "1.8.145：资料接口稳定回头像，并新增 GET /me/avatar 单独查头像；头像另存一份 avatars.json 索引，用户表被旧备份覆盖时也能把图找回来。修聊天页头像显示成「澜」字占位的问题。",
+  "url": "https://aka.doubaocdn.com/s/YOHbJYoY6m",
+  "size": 222771,
+  "sha256": "2365b064f1c9bb7841c3acccf6c0e6c4fccb24a58acb414d4a6badd0e8f1c599",
+  "note": "1.8.145（平铺包）：资料接口稳定回头像，并新增 GET /me/avatar 单独查头像；头像另存一份 avatars.json 索引，用户表被旧备份覆盖时也能把图找回来。修聊天页头像显示成「澜」字占位的问题。",
   "plugin_detail": {
     "version": "1.8.145",
-    "url": "https://aka.doubaocdn.com/s/9i2aVD60gC",
-    "notes": "1.8.131 回复带 seq/ts 并进缓存，WS 新增 resync；1.8.132 补拉基准改时间戳；1.8.133 用服务端原始 ts；1.8.134 打包改平铺；1.8.135 导出走 hist_export 原生桥 + localStorage 只存瘦身版；1.8.136 内容级去重；1.8.143 机器人资料外置备份；1.8.144 资料接口补回 avatar 字段；1.8.145 头像索引 avatars.json + GET /me/avatar。"
+    "url": "https://aka.doubaocdn.com/s/YOHbJYoY6m",
+    "notes": "1.8.131 回复带 seq/ts 并进缓存，WS 新增 resync；1.8.132 补拉基准改时间戳；1.8.133 用服务端原始 ts；1.8.134 打包改平铺（插件包内不能多一层目录，否则在线更新解压后路径对不上）；1.8.135 导出走 hist_export 原生桥 + localStorage 只存瘦身版；1.8.136 内容级去重；1.8.143 机器人资料外置备份；1.8.144 资料接口补回 avatar 字段；1.8.145 头像索引 avatars.json + GET /me/avatar。"
   },
   "app": {
     "versionCode": 95,
