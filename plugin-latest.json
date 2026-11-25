@@ -1,14 +1,14 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.156",
-  "url": "https://aka.doubaocdn.com/s/pI4PUBmHJm",
-  "size": 235662,
-  "sha256": "ca7b03bb30fc3807baa0c2743fe151355f58005a3596d319432ff7ea84d6949c",
-  "note": "1.8.156：日记不再自动生成。删掉 _diary_loop / _diary_maybe_write / _compose_diary / _diary_material 与启动时的定时任务；新增 write_diary / read_diary 两个工具，交给她自己写、自己翻。栏目、GET /diary、diary.json 结构、插件名与 display_name 全部不变；diary_enabled / diary_hour / diary_minute 三项保留但标为已停用。基线为 1.8.153（_alive 改名 _live_conns）。",
+  "version": "1.8.157",
+  "url": "https://aka.doubaocdn.com/s/soAU3sZzkA",
+  "size": 235691,
+  "sha256": "deb2fc4e92345d831701ec0733dcd2c68a0296768326ac7fda9c7db281b8d58b",
+  "note": "1.8.157：修上一版加载失败（read_diary 的 count 用了 integer 注解，框架不认）。日记不再自动生成，改为她自己写（write_diary / read_diary）；日志残留与定时任务已删除；插件名与 display_name 不变。",
   "plugin_detail": {
-    "version": "1.8.156",
-    "url": "https://aka.doubaocdn.com/s/pI4PUBmHJm",
-    "notes": "1.8.153 内部方法 _alive 改名 _live_conns（5 处调用点，避免与框架基类同名冲突）；1.8.156 删掉自动写日记整套逻辑与定时任务，新增 write_diary（写，同一天覆盖当天那篇，带 by=self 标记）/ read_diary（翻最近几篇）两个 llm_tool；日记栏目与读取接口不变。"
+    "version": "1.8.157",
+    "url": "https://aka.doubaocdn.com/s/soAU3sZzkA",
+    "notes": "1.8.153 _alive 改名 _live_conns；1.8.156 去掉自动写日记 + 新增 write_diary/read_diary；1.8.157 把 read_diary.count 与 attach_gallery_image.count 的注解从 int 改 string（框架只认 string，否则加载报「不支持的参数类型: integer」）。"
   },
   "app": {
     "versionCode": 97,
