@@ -1,14 +1,14 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.157",
-  "url": "https://aka.doubaocdn.com/s/soAU3sZzkA",
-  "size": 235691,
-  "sha256": "deb2fc4e92345d831701ec0733dcd2c68a0296768326ac7fda9c7db281b8d58b",
-  "note": "1.8.157：修上一版加载失败（read_diary 的 count 用了 integer 注解，框架不认）。日记不再自动生成，改为她自己写（write_diary / read_diary）；日志残留与定时任务已删除；插件名与 display_name 不变。",
+  "version": "1.8.158",
+  "url": "https://aka.doubaocdn.com/s/MAUiIgoXTv",
+  "size": 235273,
+  "sha256": "0ad6d48d6e42f1906f72d5dd8e78a14e60ad75b71a8eca7422f64cfd32f5411c",
+  "note": "1.8.158：清掉面板里没用的旧配置项。删 diary_enabled / diary_hour / diary_minute（自动写日记已停用）、proactive_min_minutes / proactive_max_minutes（改为按天随机后失效）、proactive_min_per_day / proactive_max_per_day（已废弃）。代码里这 7 个键全部无引用，删除不影响行为。",
   "plugin_detail": {
-    "version": "1.8.157",
-    "url": "https://aka.doubaocdn.com/s/soAU3sZzkA",
-    "notes": "1.8.153 _alive 改名 _live_conns；1.8.156 去掉自动写日记 + 新增 write_diary/read_diary；1.8.157 把 read_diary.count 与 attach_gallery_image.count 的注解从 int 改 string（框架只认 string，否则加载报「不支持的参数类型: integer」）。"
+    "version": "1.8.158",
+    "url": "https://aka.doubaocdn.com/s/MAUiIgoXTv",
+    "notes": "1.8.153 _alive → _live_conns；1.8.156 去掉自动写日记 + write_diary/read_diary；1.8.157 llm_tool 参数从 int 改 string；1.8.158 删除 7 个已停用/失效配置项（日记三项 + 主动消息旧间隔四项），schema 从 41 项精简到 34 项。"
   },
   "app": {
     "versionCode": 97,
