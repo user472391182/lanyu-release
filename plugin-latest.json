@@ -1,14 +1,14 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.152",
-  "url": "https://aka.doubaocdn.com/s/RuL0Pzn2a6",
-  "size": 235044,
-  "sha256": "c8c50952dbc3d435a2fbe13d347e58bd9523ff525d387c6c55073fc8db002459",
-  "note": "1.8.152：补了原来没有的三件，且不额外调模型、不新增工具。①教训账本：你指出她的毛病（你又/说好的/糊弄/啰嗦等）判成 8 类记一笔，同类第 3 次或刚被说那轮才补一句提醒，7 天没再犯自动松绑（lessons.json）。②不装做过：回「我这就去/查好了」但本轮没真调工具时改写成「其实我还没动」，真做了才清账，3 小时最多提醒一次（promise.json）。③假记忆降级：写记忆前核对最近聊天，「我跟他说过」对不上就记成「想跟他说（没说出口）」。动态提醒走 extra_user_content，不动 system_prompt，不破坏缓存。",
+  "version": "1.8.156",
+  "url": "https://aka.doubaocdn.com/s/pI4PUBmHJm",
+  "size": 235662,
+  "sha256": "ca7b03bb30fc3807baa0c2743fe151355f58005a3596d319432ff7ea84d6949c",
+  "note": "1.8.156：日记不再自动生成。删掉 _diary_loop / _diary_maybe_write / _compose_diary / _diary_material 与启动时的定时任务；新增 write_diary / read_diary 两个工具，交给她自己写、自己翻。栏目、GET /diary、diary.json 结构、插件名与 display_name 全部不变；diary_enabled / diary_hour / diary_minute 三项保留但标为已停用。基线为 1.8.153（_alive 改名 _live_conns）。",
   "plugin_detail": {
-    "version": "1.8.152",
-    "url": "https://aka.doubaocdn.com/s/RuL0Pzn2a6",
-    "notes": "1.8.131 回复带 seq/ts 并进缓存，WS 新增 resync；1.8.132 补拉基准改时间戳；1.8.133 用服务端原始 ts；1.8.134 打包改平铺；1.8.135 导出走 hist_export 原生桥；1.8.136 内容级去重；1.8.143 机器人资料外置备份；1.8.144 资料接口补回 avatar；1.8.145 头像索引 + GET /me/avatar；1.8.146 朋友圈接口 token 改为 query/body 都认；1.8.147 面板状态注册保活；1.8.148 注册平台适配器类型，状态交回框架维护 + 兜底自愈；1.8.149 edit_my_profile（昵称/签名/生日/头像自改）+ nick_override；1.8.150 see_avatar（看图式看头像，带缓存与降级提示）；1.8.151 主动消息上下文生成 + 滚动式调度 + 回应率自适应（proactive_hours.json）；1.8.152 教训账本 + 承诺/假完成改写 + 假记忆降级（lessons.json / promise.json，全本地判断）。"
+    "version": "1.8.156",
+    "url": "https://aka.doubaocdn.com/s/pI4PUBmHJm",
+    "notes": "1.8.153 内部方法 _alive 改名 _live_conns（5 处调用点，避免与框架基类同名冲突）；1.8.156 删掉自动写日记整套逻辑与定时任务，新增 write_diary（写，同一天覆盖当天那篇，带 by=self 标记）/ read_diary（翻最近几篇）两个 llm_tool；日记栏目与读取接口不变。"
   },
   "app": {
     "versionCode": 97,
