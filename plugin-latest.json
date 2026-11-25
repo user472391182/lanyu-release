@@ -1,14 +1,14 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.158",
-  "url": "https://aka.doubaocdn.com/s/MAUiIgoXTv",
-  "size": 235273,
-  "sha256": "0ad6d48d6e42f1906f72d5dd8e78a14e60ad75b71a8eca7422f64cfd32f5411c",
-  "note": "1.8.158：清掉面板里没用的旧配置项。删 diary_enabled / diary_hour / diary_minute（自动写日记已停用）、proactive_min_minutes / proactive_max_minutes（改为按天随机后失效）、proactive_min_per_day / proactive_max_per_day（已废弃）。代码里这 7 个键全部无引用，删除不影响行为。",
+  "version": "1.8.159",
+  "url": "https://aka.doubaocdn.com/s/IfFN2G6d0Z",
+  "size": 235508,
+  "sha256": "630e2e7b253fa4ede1a76ab9db37c1fcc8e9addc46a057c8d34a148b3609b595",
+  "note": "1.8.159：修「后台通知有、聊天界面没有」。①页面端心跳停了（切后台被冻结）时，回复不再只投后台端，而是同时投页面端，回前台直接能看到；②resync 补拉比较从 > 改成 >=，避免与基准同毫秒的回复被漏掉。",
   "plugin_detail": {
-    "version": "1.8.158",
-    "url": "https://aka.doubaocdn.com/s/MAUiIgoXTv",
-    "notes": "1.8.153 _alive → _live_conns；1.8.156 去掉自动写日记 + write_diary/read_diary；1.8.157 llm_tool 参数从 int 改 string；1.8.158 删除 7 个已停用/失效配置项（日记三项 + 主动消息旧间隔四项），schema 从 41 项精简到 34 项。"
+    "version": "1.8.159",
+    "url": "https://aka.doubaocdn.com/s/IfFN2G6d0Z",
+    "notes": "1.8.153 _alive → _live_conns；1.8.156 去掉自动写日记 + write_diary/read_diary；1.8.157 llm_tool 参数改 string；1.8.158 删 7 个停用配置项；1.8.159 页面端 stale 时双投（页面端+后台端）+ resync 边界改 >=。"
   },
   "app": {
     "versionCode": 97,
