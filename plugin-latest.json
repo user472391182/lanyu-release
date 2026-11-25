@@ -11,11 +11,11 @@
     "notes": "1.8.153 _alive → _live_conns；1.8.156 去掉自动写日记 + write_diary/read_diary；1.8.157 llm_tool 参数改 string；1.8.158 删 7 个停用配置项；1.8.159 页面端 stale 时双投（页面端+后台端）+ resync 边界改 >=。"
   },
   "app": {
-    "versionCode": 97,
-    "versionName": "0.1.0-lanyu97",
-    "url": "https://aka.doubaocdn.com/s/G2tDN1IVET",
-    "size": 100707613,
-    "sha256": "faa99b5eade644c332170baab13f94082a25e551d00d9eb0a0e33e273a743353",
-    "notes": "v97：修点澜宝头像却弹出自己资料的问题。资料页新增只读的澜宝资料卡（大头像/昵称/签名/生日），点聊天里澜宝的头像或顶栏名字进这张；点自己的头像仍进自己的编辑页。v96 签名字色跟随标题颜色。"
+    "versionCode": 98,
+    "versionName": "0.1.0-lanyu98",
+    "url": "https://aka.doubaocdn.com/s/sCY7w4OpPZ",
+    "size": 100734513,
+    "sha256": "b052c6d5f26a6ff4652c75521da72658f77feebd0e0ecc3f9cbd80eb11bdaf1f",
+    "notes": "v98：接入 Shizuku，启动时自动申请一次 shell 权限，把澜雨从 App Standby / Doze 分桶里摘出来（standby-bucket=never、deviceidle 白名单、RUN_ANY_IN_BACKGROUND allow），后台存活率明显提高。首次打开会弹一次 Shizuku 授权框，点允许即可，之后每次启动自动执行且只提示一次。v97 修点澜宝头像误进自己资料页。"
   }
 }
