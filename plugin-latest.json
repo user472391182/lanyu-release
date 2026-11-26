@@ -1,15 +1,15 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.162",
-  "url": "https://aka.doubaocdn.com/s/KH1cEJykTm",
-  "size": 237313,
-  "sha256": "16a415abfb05198811d322136bae1df0696449fd7e2ab26e9d8cd58a851fad63",
+  "version": "1.8.163",
+  "url": "https://aka.doubaocdn.com/s/MW8cnYx2HI",
+  "size": 237979,
+  "sha256": "051b660deab1a342a28638ea52840418b965d919844c162365312d51f856555a",
   "layout": "flat",
-  "note": "1.8.162（扁平结构包）：主动发图兜底直发 + 平台登记自检 + 扁平包结构。v99/v100 App 的安装脚本会先解到 /tmp、自动拍平多余的一层，再备份替换，装错自动回滚。",
+  "note": "1.8.163: 修「一整天一条朋友圈都没发」。① 每次核账拿朋友圈实盘（今天真正发了几条）回写账本，数据被回滚/手删/换目录导致的账本虚高不再让整天停摆；② 朋友圈不再默认受静默时段拦截（新配置 moments_respect_quiet 默认关）；③ 活跃窗口过了也继续补欠账，跨天才归零；④ 每轮 tick 打一行「朋友圈记账 目标/实发/最少/窗口/静默」便于定位；⑤ provider 取用兼容老版 AstrBot（不收 umo 时不报错）。扁平结构包。",
   "plugin_detail": {
-    "version": "1.8.162",
-    "url": "https://aka.doubaocdn.com/s/KH1cEJykTm",
-    "notes": "1.8.153 _alive → _live_conns；1.8.156 去掉自动写日记；1.8.157 llm_tool 参数改 string；1.8.158 删 7 个停用配置项；1.8.159 stale 双投 + resync 边界；1.8.160 朋友圈自然日记账；1.8.161 聊天页字体排版；1.8.162 主动发送兜底直发 + 平台登记自检 + 扁平包。"
+    "version": "1.8.163",
+    "url": "https://aka.doubaocdn.com/s/MW8cnYx2HI",
+    "notes": "1.8.159 stale 双投 + resync 边界；1.8.160 朋友圈自然日记账；1.8.161 聊天页字体排版；1.8.162 主动发送兜底直发 + 平台登记自检 + 扁平包；1.8.163 朋友圈实盘对账 + 静默豁免 + 补欠账 + 核账日志。"
   },
   "app": {
     "versionCode": 100,
@@ -17,6 +17,6 @@
     "url": "https://aka.doubaocdn.com/s/7EamKJS5Ad",
     "size": 100743505,
     "sha256": "b6d1047d3b46b164edf8fd654c37f5c6ccc8f2774b2fa3927cf9224fe3651be8",
-    "notes": "v100：修「重启 App 进聊天页不自动刷新、澜宝头像显示默认、手动刷新才正常」。① WS 连上后若澜宝资料空着会自动补拉 profile（旧代码只在手动点 ⟳ 时拉）；② 进聊天页改为 ensureFreshOnEnter()，按 0/2/5/9/14 秒退避重试「建连 + 拉资料 + 补拉消息」，拿到头像昵称提前收手；③ 页面同时监听澜宝资料与连接状态，数据一到立刻重绘，不再等下一次刷新。v99 修在线更新的安装脚本（自动拍平 + 备份回滚）。"
+    "notes": "v100：重启 App 进聊天页会自动建连、补拉澜宝资料与漏掉的消息，头像不再空着等手动刷新；v99 修在线更新安装脚本（自动拍平 + 备份回滚）。"
   }
 }
