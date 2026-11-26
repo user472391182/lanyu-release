@@ -1,14 +1,14 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.161",
-  "url": "https://aka.doubaocdn.com/s/wXFePJnqYt",
-  "size": 236363,
-  "sha256": "691b502a13333a3caf5e221f16cd224f5b746e9709f8c5d71076a9f5ac139dd0",
-  "note": "1.8.161：聊天页字体排版微调，只动字体不动气泡。正文字号 15→16px、行高 1.55→1.68、字距 +0.2px；文字阴影由单层改为双层柔边（0 1px 2px .45 + 0 0 6px .38），暗背景分离度更高且不糊笔画；字体栈中文黑体提前（PingFang SC / HarmonyOS Sans SC / 微软雅黑 优先，英文数字回退 Inter），修掉混排基线错位；时间戳启用 tabular-nums 等宽数字。气泡底色、圆角、描边、配色一律未改。",
+  "version": "1.8.162",
+  "url": "https://aka.doubaocdn.com/s/AlB4geF023",
+  "size": 238065,
+  "sha256": "660589849630279f544a9fb5152a53cb577ce46795bc66bea76b5aa975453d75",
+  "note": "1.8.162：修「主动发图/发文件报 cannot find platform for session selfapp:... 被静默丢弃」。AstrBot 的 send_message 按 session 第一段比对 platform.meta().id，我们的平台实例是插件自起的，热重载/框架重启后容易对不上，图就发不出去（文字回复不受影响）。现在给 context.send_message 挂了兜底：名字匹配失败且会话前缀是 selfapp 时，直接用本插件活着的实例 send_by_session 发一次；另加启动自检日志（打印 platform_insts 里每个实例的 name/id/status）与 meta.id 为空自动补成 selfapp。插件卸载时自动撤下补丁。",
   "plugin_detail": {
-    "version": "1.8.161",
-    "url": "https://aka.doubaocdn.com/s/wXFePJnqYt",
-    "notes": "1.8.153 _alive → _live_conns；1.8.156 去掉自动写日记 + write_diary/read_diary；1.8.157 llm_tool 参数改 string；1.8.158 删 7 个停用配置项；1.8.159 页面端 stale 时双投 + resync 边界改 >=；1.8.160 朋友圈按自然日记账（moments_auto_state.json 记账、10 分钟 tick、窗口尾声兜底）；1.8.161 聊天页字体排版（16px / 1.68 / 双层柔边阴影 / 中文黑体优先 / 时间戳等宽）。"
+    "version": "1.8.162",
+    "url": "https://aka.doubaocdn.com/s/AlB4geF023",
+    "notes": "1.8.153 _alive → _live_conns；1.8.156 去掉自动写日记 + write_diary/read_diary；1.8.157 llm_tool 参数改 string；1.8.158 删 7 个停用配置项；1.8.159 页面端 stale 时双投 + resync 边界改 >=；1.8.160 朋友圈按自然日记账；1.8.161 聊天页字体排版；1.8.162 主动发送兜底直发 + 平台登记自检日志 + meta.id 校正。"
   },
   "app": {
     "versionCode": 98,
