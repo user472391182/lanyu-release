@@ -1,14 +1,15 @@
 {
   "plugin": "astrbot_plugin_self_app",
   "version": "1.8.162",
-  "url": "https://aka.doubaocdn.com/s/AlB4geF023",
-  "size": 238065,
-  "sha256": "660589849630279f544a9fb5152a53cb577ce46795bc66bea76b5aa975453d75",
-  "note": "1.8.162：修「主动发图/发文件报 cannot find platform for session selfapp:... 被静默丢弃」。AstrBot 的 send_message 按 session 第一段比对 platform.meta().id，我们的平台实例是插件自起的，热重载/框架重启后容易对不上，图就发不出去（文字回复不受影响）。现在给 context.send_message 挂了兜底：名字匹配失败且会话前缀是 selfapp 时，直接用本插件活着的实例 send_by_session 发一次；另加启动自检日志（打印 platform_insts 里每个实例的 name/id/status）与 meta.id 为空自动补成 selfapp。插件卸载时自动撤下补丁。",
+  "url": "https://aka.doubaocdn.com/s/KH1cEJykTm",
+  "size": 237313,
+  "sha256": "16a415abfb05198811d322136bae1df0696449fd7e2ab26e9d8cd58a851fad63",
+  "layout": "flat",
+  "note": "1.8.162（扁平结构包）：①修「主动发图/发文件报 cannot find platform for session selfapp:... 被静默丢弃」——给 context.send_message 挂兜底，平台名匹配失败且会话前缀是 selfapp 时用本插件实例 send_by_session 直发；②加启动自检日志（打印 platform_insts 里每个实例 name/id/status）；③meta.id 为空自动补成 selfapp。包结构改为扁平（main.py 等文件在 zip 根目录），配合 App 一键装：App 是把压缩包解进 astrbot_plugin_self_app/ 目录，带一层同名顶层目录会变成两层导致插件加载不到。",
   "plugin_detail": {
     "version": "1.8.162",
-    "url": "https://aka.doubaocdn.com/s/AlB4geF023",
-    "notes": "1.8.153 _alive → _live_conns；1.8.156 去掉自动写日记 + write_diary/read_diary；1.8.157 llm_tool 参数改 string；1.8.158 删 7 个停用配置项；1.8.159 页面端 stale 时双投 + resync 边界改 >=；1.8.160 朋友圈按自然日记账；1.8.161 聊天页字体排版；1.8.162 主动发送兜底直发 + 平台登记自检日志 + meta.id 校正。"
+    "url": "https://aka.doubaocdn.com/s/KH1cEJykTm",
+    "notes": "1.8.153 _alive → _live_conns；1.8.156 去掉自动写日记 + write_diary/read_diary；1.8.157 llm_tool 参数改 string；1.8.158 删 7 个停用配置项；1.8.159 页面端 stale 时双投 + resync 边界改 >=；1.8.160 朋友圈按自然日记账；1.8.161 聊天页字体排版；1.8.162 主动发送兜底直发 + 平台登记自检 + 扁平包结构。"
   },
   "app": {
     "versionCode": 98,
