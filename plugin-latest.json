@@ -12,11 +12,11 @@
     "notes": "1.8.163 实盘对账+补欠账；1.8.164 朋友圈自检命令；1.8.165 自检结果推聊天；1.8.166 方法归位到插件类；1.8.167 单条评论删除。"
   },
   "app": {
-    "versionCode": 101,
-    "versionName": "0.1.0-lanyu101",
-    "url": "https://aka.doubaocdn.com/s/xyhqRV1XKC",
-    "size": 100747377,
-    "sha256": "c27f503c1bc9da0b0951a86dc2628d9ec87ee58bc5df376fe1194674c6c124a5",
-    "notes": "v101：澜宝回复也带「回复」按钮（可接到它的回复上），自己的评论/回复多一个「删除」；v100 进聊天页自动建连拉资料。"
+    "versionCode": 102,
+    "versionName": "0.1.0-lanyu102",
+    "url": "https://aka.doubaocdn.com/s/UoTmFIrylU",
+    "size": 100749329,
+    "sha256": "68fb0c12584ec424ca550535ef2ca4225e518179b5e51879ae0b94bb09675417",
+    "notes": "v102：评论区只常驻「回复」，长按自己的评论/回复弹出「删除」（内容区也可长按）；v101 二级回复可接。"
   }
 }
