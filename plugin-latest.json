@@ -5,18 +5,18 @@
   "size": 237313,
   "sha256": "16a415abfb05198811d322136bae1df0696449fd7e2ab26e9d8cd58a851fad63",
   "layout": "flat",
-  "note": "1.8.162（扁平结构包）：①修「主动发图/发文件报 cannot find platform for session selfapp:... 被静默丢弃」——给 context.send_message 挂兜底，平台名匹配失败且会话前缀是 selfapp 时用本插件实例 send_by_session 直发；②加启动自检日志（打印 platform_insts 里每个实例 name/id/status）；③meta.id 为空自动补成 selfapp。包结构改为扁平（main.py 等文件在 zip 根目录），配合 App 一键装：App 是把压缩包解进 astrbot_plugin_self_app/ 目录，带一层同名顶层目录会变成两层导致插件加载不到。",
+  "note": "1.8.162（扁平结构包）：①修「主动发图/发文件报 cannot find platform for session selfapp:... 被静默丢弃」——给 context.send_message 挂兜底，平台名匹配失败且会话前缀是 selfapp 时用本插件实例 send_by_session 直发；②加启动自检日志；③meta.id 为空自动补成 selfapp。包结构扁平（main.py 在 zip 根目录）。v99 App 的新安装脚本会先解到 /tmp、自动拍平多余的一层，再备份替换，装错也能回滚，所以拿扁平包还是嵌套包都能装上。",
   "plugin_detail": {
     "version": "1.8.162",
     "url": "https://aka.doubaocdn.com/s/KH1cEJykTm",
     "notes": "1.8.153 _alive → _live_conns；1.8.156 去掉自动写日记 + write_diary/read_diary；1.8.157 llm_tool 参数改 string；1.8.158 删 7 个停用配置项；1.8.159 页面端 stale 时双投 + resync 边界改 >=；1.8.160 朋友圈按自然日记账；1.8.161 聊天页字体排版；1.8.162 主动发送兜底直发 + 平台登记自检 + 扁平包结构。"
   },
   "app": {
-    "versionCode": 98,
-    "versionName": "0.1.0-lanyu98",
-    "url": "https://aka.doubaocdn.com/s/sCY7w4OpPZ",
-    "size": 100734513,
-    "sha256": "b052c6d5f26a6ff4652c75521da72658f77feebd0e0ecc3f9cbd80eb11bdaf1f",
-    "notes": "v98：接入 Shizuku，启动时自动申请一次 shell 权限，把澜雨从 App Standby / Doze 分桶里摘出来（standby-bucket=never、deviceidle 白名单、RUN_ANY_IN_BACKGROUND allow），后台存活率明显提高。首次打开会弹一次 Shizuku 授权框，点允许即可，之后每次启动自动执行且只提示一次。v97 修点澜宝头像误进自己资料页。"
+    "versionCode": 99,
+    "versionName": "0.1.0-lanyu99",
+    "url": "https://aka.doubaocdn.com/s/WvwBppVxnu",
+    "size": 100740841,
+    "sha256": "0ab929abdca4b5135e3a6b187e56d1c14b451231537ae6557f4620168f9f24d1",
+    "notes": "v99：修「在线更新装不了新包」。旧脚本是先 rm -rf 旧插件目录、再把 zip 解进同名目录，包只要多套一层同名目录就变成两层，旧版已删、新版加载不到。新脚本改为：下载 → 校 sha256/字节数 → 解到 /tmp 临时目录 → 自动定位 main.py 并拍平多余那层 → 旧目录改名备份 → 整体替换 → 校验失败自动回滚；另外「在线更新」里 App 和插件都有新版时会两件一起办，不再装完 App 就返回。"
   }
 }
