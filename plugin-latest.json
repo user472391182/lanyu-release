@@ -1,15 +1,15 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.165",
-  "url": "https://aka.doubaocdn.com/s/qPlfhEoOs3",
-  "size": 239980,
-  "sha256": "676137d4b9b580d94f90c0487978c1224f4bada8da7f00c0a52b34dc0b23fa34",
+  "version": "1.8.166",
+  "url": "https://aka.doubaocdn.com/s/vewPK50u3w",
+  "size": 241060,
+  "sha256": "b3aad29053466d6ca99ddb89c60c0747769b4263c17d867b94de286f5101a25c",
   "layout": "flat",
-  "note": "1.8.165: 朋友圈自检不再依赖指令。① 插件启动 45 秒后自动把当天账目（开关/目标/实盘/最近结论）当系统提示推到 App 聊天里，没发够或开关关就直接告诉你原因；② 每次核账结论变成「没发出去」时补推一次；③ 保留 /朋友圈自检 命令与 /朋友圈自检 发。扁平结构包。",
+  "note": "1.8.166: 朋友圈停摆的真正原因——账本/补发这套方法被写进了平台类，插件类里没有；平台又读的是平台配置（只有 id/port，没有 moments_auto_post），开关永远被当成关，所以一整天 0 条。此版把方法补回插件类，并让平台改读插件那份配置。",
   "plugin_detail": {
-    "version": "1.8.165",
-    "url": "https://aka.doubaocdn.com/s/qPlfhEoOs3",
-    "notes": "1.8.162 主动发送兜底直发 + 扁平包；1.8.163 朋友圈实盘对账 + 静默豁免 + 补欠账；1.8.164 朋友圈自检命令 + 每轮核账日志 + 启动念开关；1.8.165 启动自检结果直接推到聊天（绕开指令系统）。"
+    "version": "1.8.166",
+    "url": "https://aka.doubaocdn.com/s/vewPK50u3w",
+    "notes": "1.8.163 实盘对账+补欠账；1.8.164 朋友圈自检命令；1.8.165 自检结果推聊天；1.8.166 修方法落到平台类导致的 AttributeError 与开关读空。"
   },
   "app": {
     "versionCode": 100,
