@@ -1,15 +1,15 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.169",
-  "url": "https://aka.doubaocdn.com/s/LrDwTDUB5C",
-  "size": 243649,
-  "sha256": "9583a2f99da9fcfb38296e142524cab1b693540282ed40f307e642f711048443",
+  "version": "1.8.170",
+  "url": "https://aka.doubaocdn.com/s/GCIbMK22FC",
+  "size": 244964,
+  "sha256": "1de3f913a1b7cab4a14f7fecbacde3cecc704d44c58a88bb8b11bf41bbbf1eb9",
   "layout": "flat",
-  "note": "1.8.169: 音乐守护默认只盯 58091（songloft），不再守已弃用的 xiaomusic 8090；新增 /音乐守护 关 与 /音乐守护 开 持久开关（写 data/music_guard_off）。",
+  "note": "1.8.170: 主动消息事件化（沉默时长/常在时段/未读/今日额度打分，低于门槛就不打死不打扰）+ 每轮注入语气锚点防人格漂移（可配置 persona_anchor）。",
   "plugin_detail": {
-    "version": "1.8.169",
-    "url": "https://aka.doubaocdn.com/s/LrDwTDUB5C",
-    "notes": "1.8.167 单条评论删除；1.8.168 音乐服务守护；1.8.169 守护只留 songloft 并可开关。"
+    "version": "1.8.170",
+    "url": "https://aka.doubaocdn.com/s/GCIbMK22FC",
+    "notes": "1.8.167 单条评论删除；1.8.168 音乐服务守护；1.8.169 守护只留 songloft + 开关；1.8.170 主动消息事件化 + 人格锚点。"
   },
   "app": {
     "versionCode": 102,
