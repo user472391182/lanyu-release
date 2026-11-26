@@ -1,14 +1,14 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.159",
-  "url": "https://aka.doubaocdn.com/s/IfFN2G6d0Z",
-  "size": 235508,
-  "sha256": "630e2e7b253fa4ede1a76ab9db37c1fcc8e9addc46a057c8d34a148b3609b595",
-  "note": "1.8.159：修「后台通知有、聊天界面没有」。①页面端心跳停了（切后台被冻结）时，回复不再只投后台端，而是同时投页面端，回前台直接能看到；②resync 补拉比较从 > 改成 >=，避免与基准同毫秒的回复被漏掉。",
+  "version": "1.8.161",
+  "url": "https://aka.doubaocdn.com/s/wXFePJnqYt",
+  "size": 236363,
+  "sha256": "691b502a13333a3caf5e221f16cd224f5b746e9709f8c5d71076a9f5ac139dd0",
+  "note": "1.8.161：聊天页字体排版微调，只动字体不动气泡。正文字号 15→16px、行高 1.55→1.68、字距 +0.2px；文字阴影由单层改为双层柔边（0 1px 2px .45 + 0 0 6px .38），暗背景分离度更高且不糊笔画；字体栈中文黑体提前（PingFang SC / HarmonyOS Sans SC / 微软雅黑 优先，英文数字回退 Inter），修掉混排基线错位；时间戳启用 tabular-nums 等宽数字。气泡底色、圆角、描边、配色一律未改。",
   "plugin_detail": {
-    "version": "1.8.159",
-    "url": "https://aka.doubaocdn.com/s/IfFN2G6d0Z",
-    "notes": "1.8.153 _alive → _live_conns；1.8.156 去掉自动写日记 + write_diary/read_diary；1.8.157 llm_tool 参数改 string；1.8.158 删 7 个停用配置项；1.8.159 页面端 stale 时双投（页面端+后台端）+ resync 边界改 >=。"
+    "version": "1.8.161",
+    "url": "https://aka.doubaocdn.com/s/wXFePJnqYt",
+    "notes": "1.8.153 _alive → _live_conns；1.8.156 去掉自动写日记 + write_diary/read_diary；1.8.157 llm_tool 参数改 string；1.8.158 删 7 个停用配置项；1.8.159 页面端 stale 时双投 + resync 边界改 >=；1.8.160 朋友圈按自然日记账（moments_auto_state.json 记账、10 分钟 tick、窗口尾声兜底）；1.8.161 聊天页字体排版（16px / 1.68 / 双层柔边阴影 / 中文黑体优先 / 时间戳等宽）。"
   },
   "app": {
     "versionCode": 98,
