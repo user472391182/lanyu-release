@@ -5,18 +5,18 @@
   "size": 237313,
   "sha256": "16a415abfb05198811d322136bae1df0696449fd7e2ab26e9d8cd58a851fad63",
   "layout": "flat",
-  "note": "1.8.162（扁平结构包）：①修「主动发图/发文件报 cannot find platform for session selfapp:... 被静默丢弃」——给 context.send_message 挂兜底，平台名匹配失败且会话前缀是 selfapp 时用本插件实例 send_by_session 直发；②加启动自检日志；③meta.id 为空自动补成 selfapp。包结构扁平（main.py 在 zip 根目录）。v99 App 的新安装脚本会先解到 /tmp、自动拍平多余的一层，再备份替换，装错也能回滚，所以拿扁平包还是嵌套包都能装上。",
+  "note": "1.8.162（扁平结构包）：主动发图兜底直发 + 平台登记自检 + 扁平包结构。v99/v100 App 的安装脚本会先解到 /tmp、自动拍平多余的一层，再备份替换，装错自动回滚。",
   "plugin_detail": {
     "version": "1.8.162",
     "url": "https://aka.doubaocdn.com/s/KH1cEJykTm",
-    "notes": "1.8.153 _alive → _live_conns；1.8.156 去掉自动写日记 + write_diary/read_diary；1.8.157 llm_tool 参数改 string；1.8.158 删 7 个停用配置项；1.8.159 页面端 stale 时双投 + resync 边界改 >=；1.8.160 朋友圈按自然日记账；1.8.161 聊天页字体排版；1.8.162 主动发送兜底直发 + 平台登记自检 + 扁平包结构。"
+    "notes": "1.8.153 _alive → _live_conns；1.8.156 去掉自动写日记；1.8.157 llm_tool 参数改 string；1.8.158 删 7 个停用配置项；1.8.159 stale 双投 + resync 边界；1.8.160 朋友圈自然日记账；1.8.161 聊天页字体排版；1.8.162 主动发送兜底直发 + 平台登记自检 + 扁平包。"
   },
   "app": {
-    "versionCode": 99,
-    "versionName": "0.1.0-lanyu99",
-    "url": "https://aka.doubaocdn.com/s/WvwBppVxnu",
-    "size": 100740841,
-    "sha256": "0ab929abdca4b5135e3a6b187e56d1c14b451231537ae6557f4620168f9f24d1",
-    "notes": "v99：修「在线更新装不了新包」。旧脚本是先 rm -rf 旧插件目录、再把 zip 解进同名目录，包只要多套一层同名目录就变成两层，旧版已删、新版加载不到。新脚本改为：下载 → 校 sha256/字节数 → 解到 /tmp 临时目录 → 自动定位 main.py 并拍平多余那层 → 旧目录改名备份 → 整体替换 → 校验失败自动回滚；另外「在线更新」里 App 和插件都有新版时会两件一起办，不再装完 App 就返回。"
+    "versionCode": 100,
+    "versionName": "0.1.0-lanyu100",
+    "url": "https://aka.doubaocdn.com/s/7EamKJS5Ad",
+    "size": 100743505,
+    "sha256": "b6d1047d3b46b164edf8fd654c37f5c6ccc8f2774b2fa3927cf9224fe3651be8",
+    "notes": "v100：修「重启 App 进聊天页不自动刷新、澜宝头像显示默认、手动刷新才正常」。① WS 连上后若澜宝资料空着会自动补拉 profile（旧代码只在手动点 ⟳ 时拉）；② 进聊天页改为 ensureFreshOnEnter()，按 0/2/5/9/14 秒退避重试「建连 + 拉资料 + 补拉消息」，拿到头像昵称提前收手；③ 页面同时监听澜宝资料与连接状态，数据一到立刻重绘，不再等下一次刷新。v99 修在线更新的安装脚本（自动拍平 + 备份回滚）。"
   }
 }
