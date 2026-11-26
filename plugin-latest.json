@@ -1,15 +1,15 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.167",
-  "url": "https://aka.doubaocdn.com/s/VAYBKaNIDY",
-  "size": 241350,
-  "sha256": "cd2f1b802ba57e42a87c05555cc6f5004579eb7811ab2f4598e211157ab15c40",
+  "version": "1.8.168",
+  "url": "https://aka.doubaocdn.com/s/dxsr70yZKj",
+  "size": 243432,
+  "sha256": "affd740f0ae553f2df80f1f65ca93d3efa1bcc6fb948c17e53e219fe185e15ad",
   "layout": "flat",
-  "note": "1.8.167: 新增单条评论/单条回复删除接口 /moment_cmt_del；1.8.166 修朋友圈方法错落在平台类、开关读空。",
+  "note": "1.8.168: 音乐服务守护。每 60 秒摸一次 8090（xiaomusic）与 58091（songloft），连续两次不在线就按 start.sh 拉起，并往聊天里推一条【音乐守护】；新增 /音乐守护 查看状态、/音乐守护 重启 立刻拉一次。",
   "plugin_detail": {
-    "version": "1.8.167",
-    "url": "https://aka.doubaocdn.com/s/VAYBKaNIDY",
-    "notes": "1.8.163 实盘对账+补欠账；1.8.164 朋友圈自检命令；1.8.165 自检结果推聊天；1.8.166 方法归位到插件类；1.8.167 单条评论删除。"
+    "version": "1.8.168",
+    "url": "https://aka.doubaocdn.com/s/dxsr70yZKj",
+    "notes": "1.8.163 朋友圈对账补欠账；1.8.164 朋友圈自检；1.8.165 自检推进聊天；1.8.166 方法归位；1.8.167 单条评论删除；1.8.168 音乐服务守护。"
   },
   "app": {
     "versionCode": 102,
@@ -17,6 +17,6 @@
     "url": "https://aka.doubaocdn.com/s/UoTmFIrylU",
     "size": 100749329,
     "sha256": "68fb0c12584ec424ca550535ef2ca4225e518179b5e51879ae0b94bb09675417",
-    "notes": "v102：评论区只常驻「回复」，长按自己的评论/回复弹出「删除」（内容区也可长按）；v101 二级回复可接。"
+    "notes": "v102：评论区只留「回复」，长按自己的评论弹删除；v101 二级回复可接。"
   }
 }
