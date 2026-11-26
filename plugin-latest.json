@@ -1,14 +1,14 @@
 {
   "plugin": "astrbot_plugin_self_app",
   "version": "1.8.166",
-  "url": "https://aka.doubaocdn.com/s/vewPK50u3w",
-  "size": 241060,
-  "sha256": "b3aad29053466d6ca99ddb89c60c0747769b4263c17d867b94de286f5101a25c",
+  "url": "https://aka.doubaocdn.com/s/kByj8clY3X",
+  "size": 241070,
+  "sha256": "1b6eb1bce198cb83613c9471ebc776ebe564113f47ed23e999827cb347d96b00",
   "layout": "flat",
   "note": "1.8.166: 朋友圈停摆的真正原因——账本/补发这套方法被写进了平台类，插件类里没有；平台又读的是平台配置（只有 id/port，没有 moments_auto_post），开关永远被当成关，所以一整天 0 条。此版把方法补回插件类，并让平台改读插件那份配置。",
   "plugin_detail": {
     "version": "1.8.166",
-    "url": "https://aka.doubaocdn.com/s/vewPK50u3w",
+    "url": "https://aka.doubaocdn.com/s/kByj8clY3X",
     "notes": "1.8.163 实盘对账+补欠账；1.8.164 朋友圈自检命令；1.8.165 自检结果推聊天；1.8.166 修方法落到平台类导致的 AttributeError 与开关读空。"
   },
   "app": {
