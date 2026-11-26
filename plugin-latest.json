@@ -1,15 +1,15 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.168",
-  "url": "https://aka.doubaocdn.com/s/dxsr70yZKj",
-  "size": 243432,
-  "sha256": "affd740f0ae553f2df80f1f65ca93d3efa1bcc6fb948c17e53e219fe185e15ad",
+  "version": "1.8.169",
+  "url": "https://aka.doubaocdn.com/s/LrDwTDUB5C",
+  "size": 243649,
+  "sha256": "9583a2f99da9fcfb38296e142524cab1b693540282ed40f307e642f711048443",
   "layout": "flat",
-  "note": "1.8.168: 音乐服务守护。每 60 秒摸一次 8090（xiaomusic）与 58091（songloft），连续两次不在线就按 start.sh 拉起，并往聊天里推一条【音乐守护】；新增 /音乐守护 查看状态、/音乐守护 重启 立刻拉一次。",
+  "note": "1.8.169: 音乐守护默认只盯 58091（songloft），不再守已弃用的 xiaomusic 8090；新增 /音乐守护 关 与 /音乐守护 开 持久开关（写 data/music_guard_off）。",
   "plugin_detail": {
-    "version": "1.8.168",
-    "url": "https://aka.doubaocdn.com/s/dxsr70yZKj",
-    "notes": "1.8.163 朋友圈对账补欠账；1.8.164 朋友圈自检；1.8.165 自检推进聊天；1.8.166 方法归位；1.8.167 单条评论删除；1.8.168 音乐服务守护。"
+    "version": "1.8.169",
+    "url": "https://aka.doubaocdn.com/s/LrDwTDUB5C",
+    "notes": "1.8.167 单条评论删除；1.8.168 音乐服务守护；1.8.169 守护只留 songloft 并可开关。"
   },
   "app": {
     "versionCode": 102,
@@ -17,6 +17,6 @@
     "url": "https://aka.doubaocdn.com/s/UoTmFIrylU",
     "size": 100749329,
     "sha256": "68fb0c12584ec424ca550535ef2ca4225e518179b5e51879ae0b94bb09675417",
-    "notes": "v102：评论区只留「回复」，长按自己的评论弹删除；v101 二级回复可接。"
+    "notes": "v102：评论区只留「回复」，长按自己的评论弹删除。"
   }
 }
