@@ -1,15 +1,15 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.171",
-  "url": "https://aka.doubaocdn.com/s/HNG2TXQsP6",
-  "size": 247902,
-  "sha256": "dbbcd84086e4a96bdc98f1b5816e7a62f9aedb4ea22edb150dbd32f64f19b9bf",
+  "version": "1.8.170",
+  "url": "https://aka.doubaocdn.com/s/GCIbMK22FC",
+  "size": 244964,
+  "sha256": "1de3f913a1b7cab4a14f7fecbacde3cecc704d44c58a88bb8b11bf41bbbf1eb9",
   "layout": "flat",
-  "note": "1.8.171: 记忆分层落地。data/memory.json 分三层（最近原话 / 摘要 / 事实卡）；每轮按关键词重叠召回最多 5 条注入提示词；后台每攒够 20 条对话让模型压一句摘要 + 最多 2 条事实；新增 /记忆 查看 搜索 记住 清空。",
+  "note": "1.8.170: 主动消息事件化（沉默时长/常在时段/未读/去重打分，低于门槛不发）+ 人格语气锚点（防助手腔漂移）。",
   "plugin_detail": {
-    "version": "1.8.171",
-    "url": "https://aka.doubaocdn.com/s/HNG2TXQsP6",
-    "notes": "1.8.170 主动事件化+人格锚点；1.8.171 记忆分层（原话/摘要/事实卡 + 召回注入）。"
+    "version": "1.8.170",
+    "url": "https://aka.doubaocdn.com/s/GCIbMK22FC",
+    "notes": "1.8.170 主动事件化 + 人格锚点。"
   },
   "app": {
     "versionCode": 102,
