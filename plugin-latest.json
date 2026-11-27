@@ -1,22 +1,22 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.177",
-  "url": "https://aka.doubaocdn.com/s/Jb9fma7MEY",
-  "size": 258115,
-  "sha256": "81b6b4419c0488de7aa0f662dfb5abbb95ca69436f32c85011df23bca0d321fd",
+  "version": "1.8.178",
+  "url": "https://aka.doubaocdn.com/s/yXoMxVrvLX",
+  "size": 258164,
+  "sha256": "f9088e7df7b5cdf8039f0f4150ca84061197ef94fbdc0917e20ada0a1faac225",
   "layout": "flat",
-  "note": "1.8.177：注入文本统一归一化（换行/空白/零宽），动态背景改尾部追加；记忆块内容不变时注入间隔 15 分钟放宽到 1 小时；新增系统提示指纹观测，提示变化时打日志。用于提高前缀缓存命中率。",
+  "note": "1.8.178：象棋台词接口 /xiangqi/say 支持 surface 参数，App 与网页分别措辞；App 端不再内置任何预制台词，称呼统一由插件按用户昵称生成。",
   "plugin_detail": {
-    "version": "1.8.177",
-    "url": "https://aka.doubaocdn.com/s/Jb9fma7MEY",
-    "notes": "1.8.177 缓存友好化：归一化 + 尾部注入 + 记忆去重 + 指纹观测。"
+    "version": "1.8.178",
+    "url": "https://aka.doubaocdn.com/s/yXoMxVrvLX",
+    "notes": "1.8.178：象棋台词去硬编码，App 台词全部走插件生成。"
   },
   "app": {
-    "versionCode": 105,
-    "versionName": "0.1.0-lanyu105",
-    "url": "https://aka.doubaocdn.com/s/ytaX2K1J5d",
-    "size": 100808921,
-    "sha256": "b12946399e01911e335a30a7fce5b6ff2659e7dc86f23ad24b4245973864c31e",
-    "notes": "v105：修改 Flutter 顶层 title，后台多任务卡片名从「AstrBot Android」改为澜雨；包名不变，覆盖安装保留全部聊天与配置数据。"
+    "versionCode": 106,
+    "versionName": "0.1.0-lanyu106",
+    "url": "https://aka.doubaocdn.com/s/WGu8YI3Kd5",
+    "size": 100813589,
+    "sha256": "779b0859f1838283472eccba96ca81169862dc29e1b021f2137cd3d061a3f93b",
+    "notes": "v106：象棋页删掉全部硬编码台词（含「义父赢了」），胜负与开局台词改为调用插件 /xiangqi/say 生成，新增澜宝台词气泡；包名不变，覆盖安装保留数据。"
   }
 }
