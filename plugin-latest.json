@@ -1,22 +1,22 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.170",
-  "url": "https://aka.doubaocdn.com/s/GCIbMK22FC",
-  "size": 244964,
-  "sha256": "1de3f913a1b7cab4a14f7fecbacde3cecc704d44c58a88bb8b11bf41bbbf1eb9",
+  "version": "1.8.176",
+  "url": "https://aka.doubaocdn.com/s/BeGkxhKRFm",
+  "size": 257387,
+  "sha256": "4b8cf9fa463bdae79b94c8dbeff5c51c4605bd89a170b901a0803d8bc19471ce",
   "layout": "flat",
-  "note": "1.8.170: 主动消息事件化（沉默时长/常在时段/未读/去重打分，低于门槛不发）+ 人格语气锚点（防助手腔漂移）。",
+  "note": "1.8.176：新增中国象棋网页接口（state/new/move/undo/say/sync）与棋局上下文注入；台词称呼改为按用户昵称，不再写死「义父」。",
   "plugin_detail": {
-    "version": "1.8.170",
-    "url": "https://aka.doubaocdn.com/s/GCIbMK22FC",
-    "notes": "1.8.170 主动事件化 + 人格锚点。"
+    "version": "1.8.176",
+    "url": "https://aka.doubaocdn.com/s/BeGkxhKRFm",
+    "notes": "1.8.176 象棋接口 + 昵称称呼，去除写死称谓。"
   },
   "app": {
-    "versionCode": 104,
-    "versionName": "0.1.0-lanyu104",
-    "url": "https://aka.doubaocdn.com/s/jjUzrXB19l",
-    "size": 100751705,
-    "sha256": "ec16122f36adc73117b29db6b0807557b0acd675fa14579b073056816bbc6362",
-    "notes": "v104：聊天输入框待发送文字（含光标）改用「我的消息」同款字色，跟随外观面板 meFg / 主题。"
+    "versionCode": 105,
+    "versionName": "0.1.0-lanyu105",
+    "url": "https://aka.doubaocdn.com/s/ytaX2K1J5d",
+    "size": 100808921,
+    "sha256": "b12946399e01911e335a30a7fce5b6ff2659e7dc86f23ad24b4245973864c31e",
+    "notes": "v105：修改 Flutter 顶层 title，后台多任务卡片名从「AstrBot Android」改为澜雨；包名不变，覆盖安装保留全部聊天与配置数据。"
   }
 }
