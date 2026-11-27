@@ -1,15 +1,15 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.176",
-  "url": "https://aka.doubaocdn.com/s/BeGkxhKRFm",
-  "size": 257387,
-  "sha256": "4b8cf9fa463bdae79b94c8dbeff5c51c4605bd89a170b901a0803d8bc19471ce",
+  "version": "1.8.177",
+  "url": "https://aka.doubaocdn.com/s/Jb9fma7MEY",
+  "size": 258115,
+  "sha256": "81b6b4419c0488de7aa0f662dfb5abbb95ca69436f32c85011df23bca0d321fd",
   "layout": "flat",
-  "note": "1.8.176：新增中国象棋网页接口（state/new/move/undo/say/sync）与棋局上下文注入；台词称呼改为按用户昵称，不再写死「义父」。",
+  "note": "1.8.177：注入文本统一归一化（换行/空白/零宽），动态背景改尾部追加；记忆块内容不变时注入间隔 15 分钟放宽到 1 小时；新增系统提示指纹观测，提示变化时打日志。用于提高前缀缓存命中率。",
   "plugin_detail": {
-    "version": "1.8.176",
-    "url": "https://aka.doubaocdn.com/s/BeGkxhKRFm",
-    "notes": "1.8.176 象棋接口 + 昵称称呼，去除写死称谓。"
+    "version": "1.8.177",
+    "url": "https://aka.doubaocdn.com/s/Jb9fma7MEY",
+    "notes": "1.8.177 缓存友好化：归一化 + 尾部注入 + 记忆去重 + 指纹观测。"
   },
   "app": {
     "versionCode": 105,
