@@ -12,11 +12,11 @@
     "notes": "1.8.170 主动事件化 + 人格锚点。"
   },
   "app": {
-    "versionCode": 102,
-    "versionName": "0.1.0-lanyu102",
-    "url": "https://aka.doubaocdn.com/s/UoTmFIrylU",
-    "size": 100749329,
-    "sha256": "68fb0c12584ec424ca550535ef2ca4225e518179b5e51879ae0b94bb09675417",
-    "notes": "v102：评论区只留「回复」，长按自己的评论弹删除。"
+    "versionCode": 103,
+    "versionName": "0.1.0-lanyu103",
+    "url": "https://aka.doubaocdn.com/s/eqoU7WvVUT",
+    "size": 100749897,
+    "sha256": "27eccb056b662091b8348e32df14c22c390fb53d1179603ed398fea5806e3365",
+    "notes": "v103：机器人守护插件改为半小时巡检一次（原 20 秒），成功日志降为 debug，不再刷屏。"
   }
 }
