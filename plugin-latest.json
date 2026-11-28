@@ -1,15 +1,15 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.186",
-  "url": "https://aka.doubaocdn.com/s/soyW3dLhpY",
-  "size": 262770,
-  "sha256": "429ab17e8c909aa105ac9a890ee1de739559112314e6d0dc47efbad8cbdbe163",
+  "version": "1.8.187",
+  "url": "https://aka.doubaocdn.com/s/N6OUV4cWdm",
+  "size": 263334,
+  "sha256": "21c0cf99291c2ef9d89906900978caf81b9810134b5f9103766ea5e55c5948db",
   "layout": "flat",
-  "note": "1.8.186：修「通知栏有澜宝消息、聊天页没有」。① 服务端最近回复改为落盘 recent_outbox.json，AstrBot 重启后 App 回前台 resync 仍能补拉；② 纯空白/被拦截的空回复直接不推不缓存；③ 图片收发修复：澜宝发来的本地图复制进 uploads 回 /img 相对地址（127.0.0.1 绝对地址也改相对），入站也认 /img 地址；WS 单帧上限提到 32MB，避免手机发大图被默认 4MB 上限整帧丢弃。需配合澜雨 v113 App 生效。",
+  "note": "1.8.187：继续修「本地图收不到」。① 图片外置前先等文件大小稳定再拷贝（画图/相册工具刚写完就发送，旧版会拷到半截，线上出现过 403 字节的坏图）；② HEIC/HEIF 等 Flutter 解不了的手机照片，服务端先用 PIL 转成 1600px JPEG 再给 /img 地址；③ 兜底的 base64 也改成落盘换 URL，不再内联大帧；④ 实在取不到图时补一句人话提示，不再让消息凭空消失。",
   "plugin_detail": {
-    "version": "1.8.186",
-    "url": "https://aka.doubaocdn.com/s/soyW3dLhpY",
-    "notes": "1.8.186：最近回复落盘 + 空回复拦截 + 图片走 URL/放宽 WS 帧上限。"
+    "version": "1.8.187",
+    "url": "https://aka.doubaocdn.com/s/N6OUV4cWdm",
+    "notes": "1.8.187：图片稳定拷贝 + HEIC 转码 + base64 落盘 + 取不到图时给提示。"
   },
   "requires": {
     "plugin": "astrbot_plugin_lanyu_tools",
