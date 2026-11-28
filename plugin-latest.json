@@ -13,11 +13,11 @@
   },
   "requires": {
     "plugin": "astrbot_plugin_lanyu_tools",
-    "version": "1.0.2",
-    "url": "https://aka.doubaocdn.com/s/lTnQLyguXK",
-    "size": 619252,
-    "sha256": "01938f96b8aed7656d023616e3b0ae496b78f6800ae8452ce652eb66324872f7",
-    "note": "象棋 + 抖音解析；1.0.2 修短链失效误报（跳回首页时直接提示链接失效，不再归给 Cookie），并新增 /login 登录页。需先于 self_app 1.8.182 安装。"
+    "version": "1.0.3",
+    "url": "https://aka.doubaocdn.com/s/pS2D20CGEL",
+    "size": 619989,
+    "sha256": "1cbc2563ed4e6567be97362c2e33f8456fe0579069732a7a80863bdd1112bbf1",
+    "note": "象棋 + 抖音解析；1.0.3 给解析加中转兜底：本机 detail 接口被 Argus 风控（Uifid Not Found）、分享页 SSR 又不下发作品时，自动走中转接口拿直链，登录 Cookie 过期也能解析。需先于 self_app 1.8.182 安装。"
   },
   "app": {
     "versionCode": 108,
