@@ -1,15 +1,15 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.179",
-  "url": "https://aka.doubaocdn.com/s/FhNnBmNwNj",
-  "size": 508620,
-  "sha256": "eaac6dbbc52c96b6b47316ada594132d6126ff75399378800c0e2d3ea42a2baa",
+  "version": "1.8.180",
+  "url": "https://aka.doubaocdn.com/s/yfmrg1aLPf",
+  "size": 511986,
+  "sha256": "cbd1d4832855523a27ae252fa570e22818bf338b0a36672765e54033b896c29b",
   "layout": "flat",
-  "note": "1.8.179：新增 /xiangqi/chat —— 棋盘边的聊天带上当前局面、最近 10 手棋谱和最近 6 轮对话，由模型现场回一句，40 字内；模型不可用时按局面给兜底话。",
+  "note": "1.8.180：棋局状态改由服务端统一记录 —— 开局/落子/悔棋/网页 sync 都写进 _XQ_LIVE，主聊天注入不再依赖客户端上报；注入内容带「在哪下的、已走几手、刚在棋盘上聊了什么」；棋盘聊天也回写这一句。",
   "plugin_detail": {
-    "version": "1.8.179",
-    "url": "https://aka.doubaocdn.com/s/FhNnBmNwNj",
-    "notes": "1.8.179：象棋盘边聊天接口 /xiangqi/chat（带棋局上下文 + 6 轮对话），网页与 App 共用。"
+    "version": "1.8.180",
+    "url": "https://aka.doubaocdn.com/s/yfmrg1aLPf",
+    "notes": "1.8.180：修「网页下棋她不知道」——服务端记录棋局，注入带来源/手数/棋盘对话。"
   },
   "app": {
     "versionCode": 108,
@@ -17,6 +17,6 @@
     "url": "https://aka.doubaocdn.com/s/mTUgGyAv3E",
     "size": 100825285,
     "sha256": "613c8eb26dd939ca810a913bd255584dd75d61df413bd40e26f9e55626e20aab",
-    "notes": "v108：象棋聊天改省 token —— 前三句交代局面，之后只带对话不再重复塞棋谱；台词仍只在开局与终局等关键手请服务端生成。包名不变，覆盖安装保留数据。"
+    "notes": "v108：象棋聊天省 token —— 前三句交代局面，之后只带对话不再重复塞棋谱；台词仍只在开局与终局等关键手请服务端生成。包名不变，覆盖安装保留数据。"
   }
 }
