@@ -1,15 +1,15 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.191",
-  "url": "https://aka.doubaocdn.com/s/7eAsUUIfzf",
-  "size": 266465,
-  "sha256": "360044b81918de4ffd469e1eb423883edfaa9e603b1735bfccd1db8f0c50cec1",
+  "version": "1.8.192",
+  "url": "https://aka.doubaocdn.com/s/bbWLVo0gP3",
+  "size": 268352,
+  "sha256": "ed53edf019c03d709cb0d604b3415d02e7ec73801dabb06de0f99a6863c4a35b",
   "layout": "flat",
-  "note": "1.8.191：修象棋页报错。转发到 lanyu_tools（6200）的 _xq_proxy_handler 与 _dy_status_handler 用了 aiohttp 但模块里没导入，日志一直是 name 'aiohttp' is not defined，转发 502 一片，棋页只能用老的本地引擎/根本走不通。现在在文件头统一 import aiohttp，抖音解析状态接口也一并修掉。含 1.8.190 的本地图修复。",
+  "note": "1.8.192：修「语音过一会儿不能听」。① /voice 路由同时认 v_ 和 voice_ 前缀（出站大语音落盘是 voice_，老代码只放行 v_，于是重载历史后点开必 404）；② 转文字不再把 /voice/xxx.wav 当本地路径喂 open()，先映射到 uploads 再识别，没文件也会给一句人话而不是刷 Errno 2；③ 新增语音回收任务：按最后一次播放/写入算，7 天没人碰才删，上限 2000 个（面板可调 voice_keep_hours / voice_max_files）。象棋转发报错一并加固：导入齐全 + 失败日志写清方法和路径。含 1.8.190/191 全部修复。",
   "plugin_detail": {
-    "version": "1.8.191",
-    "url": "https://aka.doubaocdn.com/s/7eAsUUIfzf",
-    "notes": "1.8.191：补 import aiohttp，修象棋转发/抖音状态 502。"
+    "version": "1.8.192",
+    "url": "https://aka.doubaocdn.com/s/bbWLVo0gP3",
+    "notes": "1.8.192：语音路由前缀、ASR 路径、7 天回收；象棋转发加固。"
   },
   "requires": {
     "plugin": "astrbot_plugin_lanyu_tools",
@@ -20,11 +20,11 @@
     "note": "象棋 + 抖音解析；1.0.3 给解析加中转兜底。需先于 self_app 安装。"
   },
   "app": {
-    "versionCode": 114,
-    "versionName": "0.1.0-lanyu114",
-    "url": "https://aka.doubaocdn.com/s/UENvLcXEUw",
-    "size": 100837277,
-    "sha256": "91cb307dd3dd4ee6bcb5a44359560367ec93ada700aade190b9c4a7349f07e12",
-    "notes": "v114：正式渠道包 com.lanyu.app（就是你现在用的澜雨），覆盖安装保留数据。"
+    "versionCode": 115,
+    "versionName": "0.1.0-lanyu115",
+    "url": "https://aka.doubaocdn.com/s/fogX5U6Uxr",
+    "size": 100843713,
+    "sha256": "e91cc4826932d9a0916ba3f52bae8a3bb691446d52247fb7a7764a5e5d4e79dc",
+    "notes": "v115：语音条长按弹菜单（下载原声 / 转文字），常驻「转文字」按钮撤掉；下载存 Music/AstrBotBubble；正式渠道 com.lanyu.app 覆盖安装保留数据。"
   }
 }
