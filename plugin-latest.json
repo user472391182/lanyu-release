@@ -12,11 +12,11 @@
     "notes": "1.8.179：象棋盘边聊天接口 /xiangqi/chat（带棋局上下文 + 6 轮对话），网页与 App 共用。"
   },
   "app": {
-    "versionCode": 107,
-    "versionName": "0.1.0-lanyu107",
-    "url": "https://aka.doubaocdn.com/s/d2hYU8tuFe",
-    "size": 100824813,
-    "sha256": "3dae7f7590575ce855f923e5e2c6a97d69d4d3d49d5e07e3d5c978606d1f9b18",
-    "notes": "v107：象棋页加对话栏（常驻输入条 + 132px 聊天列表，她说的话靠左、你的靠右），消息走插件 /xiangqi/chat，带棋局与最近对话上下文；包名不变，覆盖安装保留数据。"
+    "versionCode": 108,
+    "versionName": "0.1.0-lanyu108",
+    "url": "https://aka.doubaocdn.com/s/mTUgGyAv3E",
+    "size": 100825285,
+    "sha256": "613c8eb26dd939ca810a913bd255584dd75d61df413bd40e26f9e55626e20aab",
+    "notes": "v108：象棋聊天改省 token —— 前三句交代局面，之后只带对话不再重复塞棋谱；台词仍只在开局与终局等关键手请服务端生成。包名不变，覆盖安装保留数据。"
   }
 }
