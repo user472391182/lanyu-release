@@ -1,15 +1,15 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.188",
-  "url": "https://aka.doubaocdn.com/s/L5GErsFzVU",
-  "size": 264034,
-  "sha256": "c300555945e46c2e6668144cc47d008b1e20fb348c09ceb0b070217cbdaab434",
+  "version": "1.8.189",
+  "url": "https://aka.doubaocdn.com/s/5Vpf7LOz5y",
+  "size": 264870,
+  "sha256": "e8c55ad8cd95b1977598ec56916e08778c2c11a39e40788aaef13d7eb2c4f29c",
   "layout": "flat",
-  "note": "1.8.188：修「澜宝发图收不到」。工具直发（send_message / send_file_to_user / 画图直发）走的是 send_by_session，以前它不打 seq、不进 recent_outbox，用的还是本实例的 _conns——框架给的实例和真正持有连接的实例不是同一个时，消息就静静丢了，也补不回来。现在这条路和正常回复完全对齐：空段不推、写缓存带 seq、本实例无活连接就跨实例兜底，并打印「工具直发已投递 / 没找到在线端」。",
+  "note": "1.8.189：修「澜宝从本地发图收不到」（文生图一直正常，坏的是本地图这一路）。① 本地图多路径识别：安卓侧 /sdcard、/storage/emulated/0、/data/data/com.lanyu.app/files 与 proot 的 /root 自动互转，以前只认原样路径，对不上就当『图取不到』；② File 组件里的图（澜宝发相册图常包成文件）扩展名是图片就直接转图片气泡，不再只显示一行文件名；③ 图片外置前的 exists 预检放宽，避免把可用图误杀。",
   "plugin_detail": {
-    "version": "1.8.188",
-    "url": "https://aka.doubaocdn.com/s/L5GErsFzVU",
-    "notes": "1.8.188：工具直发补 seq + 落缓存 + 跨实例兜底推送。"
+    "version": "1.8.189",
+    "url": "https://aka.doubaocdn.com/s/5Vpf7LOz5y",
+    "notes": "1.8.189：本地图多路径识别 + File 段图片转气泡 + 放宽存在性预检。"
   },
   "requires": {
     "plugin": "astrbot_plugin_lanyu_tools",
@@ -25,6 +25,6 @@
     "url": "https://aka.doubaocdn.com/s/UENvLcXEUw",
     "size": 100837277,
     "sha256": "91cb307dd3dd4ee6bcb5a44359560367ec93ada700aade190b9c4a7349f07e12",
-    "notes": "v114：正式渠道包 com.lanyu.app（就是你现在用的澜雨），覆盖安装保留数据；含后台消息补收与大图发送压缩修复。旧清单里的 v113 误指向 com.lanyu.app.profile 测试包，所以之前在线更新装完还是 108。"
+    "notes": "v114：正式渠道包 com.lanyu.app（就是你现在用的澜雨），覆盖安装保留数据。"
   }
 }
