@@ -13,11 +13,11 @@
   },
   "requires": {
     "plugin": "astrbot_plugin_lanyu_tools",
-    "version": "1.0.1",
-    "url": "https://aka.doubaocdn.com/s/f2zqLF2F51",
-    "size": 618981,
-    "sha256": "cb9a53a1910a80e0fff786fc36ecd2763649ca06c7ac80340540ee20fea85f94",
-    "note": "象棋 + 抖音解析；1.0.1 加了分享页免登录兜底、未登录时明确报「还没登录」、新增 /login 登录页（8899/6200 都能进）。需先于 self_app 1.8.182 安装。"
+    "version": "1.0.2",
+    "url": "https://aka.doubaocdn.com/s/lTnQLyguXK",
+    "size": 619252,
+    "sha256": "01938f96b8aed7656d023616e3b0ae496b78f6800ae8452ce652eb66324872f7",
+    "note": "象棋 + 抖音解析；1.0.2 修短链失效误报（跳回首页时直接提示链接失效，不再归给 Cookie），并新增 /login 登录页。需先于 self_app 1.8.182 安装。"
   },
   "app": {
     "versionCode": 108,
