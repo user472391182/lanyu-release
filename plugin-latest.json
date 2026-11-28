@@ -13,11 +13,11 @@
   },
   "requires": {
     "plugin": "astrbot_plugin_lanyu_tools",
-    "version": "1.0.0",
-    "url": "https://aka.doubaocdn.com/s/59h0xH4zhl",
-    "size": 616509,
-    "sha256": "bae87957ce0ba72cb76d6d9dbef85e835593564754885b54d8b2d4a69c526efd",
-    "note": "象棋服务 + 抖音解析服务（8899），需先于 self_app 1.8.182 安装；已补 README.md，修面板「缺少 README.md」报错"
+    "version": "1.0.1",
+    "url": "https://aka.doubaocdn.com/s/f2zqLF2F51",
+    "size": 618981,
+    "sha256": "cb9a53a1910a80e0fff786fc36ecd2763649ca06c7ac80340540ee20fea85f94",
+    "note": "象棋 + 抖音解析；1.0.1 加了分享页免登录兜底、未登录时明确报「还没登录」、新增 /login 登录页（8899/6200 都能进）。需先于 self_app 1.8.182 安装。"
   },
   "app": {
     "versionCode": 108,
