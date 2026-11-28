@@ -1,15 +1,15 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.187",
-  "url": "https://aka.doubaocdn.com/s/N6OUV4cWdm",
-  "size": 263334,
-  "sha256": "21c0cf99291c2ef9d89906900978caf81b9810134b5f9103766ea5e55c5948db",
+  "version": "1.8.188",
+  "url": "https://aka.doubaocdn.com/s/L5GErsFzVU",
+  "size": 264034,
+  "sha256": "c300555945e46c2e6668144cc47d008b1e20fb348c09ceb0b070217cbdaab434",
   "layout": "flat",
-  "note": "1.8.187：继续修「本地图收不到」。① 图片外置前先等文件大小稳定再拷贝；② HEIC/HEIF 等转 1600px JPEG；③ 兜底 base64 改落盘换 URL；④ 取不到图时补提示。",
+  "note": "1.8.188：修「澜宝发图收不到」。工具直发（send_message / send_file_to_user / 画图直发）走的是 send_by_session，以前它不打 seq、不进 recent_outbox，用的还是本实例的 _conns——框架给的实例和真正持有连接的实例不是同一个时，消息就静静丢了，也补不回来。现在这条路和正常回复完全对齐：空段不推、写缓存带 seq、本实例无活连接就跨实例兜底，并打印「工具直发已投递 / 没找到在线端」。",
   "plugin_detail": {
-    "version": "1.8.187",
-    "url": "https://aka.doubaocdn.com/s/N6OUV4cWdm",
-    "notes": "1.8.187：图片稳定拷贝 + HEIC 转码 + base64 落盘 + 取不到图时给提示。"
+    "version": "1.8.188",
+    "url": "https://aka.doubaocdn.com/s/L5GErsFzVU",
+    "notes": "1.8.188：工具直发补 seq + 落缓存 + 跨实例兜底推送。"
   },
   "requires": {
     "plugin": "astrbot_plugin_lanyu_tools",
@@ -25,6 +25,6 @@
     "url": "https://aka.doubaocdn.com/s/UENvLcXEUw",
     "size": 100837277,
     "sha256": "91cb307dd3dd4ee6bcb5a44359560367ec93ada700aade190b9c4a7349f07e12",
-    "notes": "v114：正式渠道包 com.lanyu.app（就是现在打不开更新的那个澜雨），覆盖安装保留数据；内容含 v113 的后台消息补收（有通知没消息）与大图发送压缩修复。以前清单里的 v113 误指向 com.lanyu.app.profile 测试包，装上去只会更新那个同名测试应用，所以你的澜雨一直停在 108。"
+    "notes": "v114：正式渠道包 com.lanyu.app（就是你现在用的澜雨），覆盖安装保留数据；含后台消息补收与大图发送压缩修复。旧清单里的 v113 误指向 com.lanyu.app.profile 测试包，所以之前在线更新装完还是 108。"
   }
 }
