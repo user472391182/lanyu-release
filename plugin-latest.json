@@ -5,7 +5,7 @@
   "size": 263334,
   "sha256": "21c0cf99291c2ef9d89906900978caf81b9810134b5f9103766ea5e55c5948db",
   "layout": "flat",
-  "note": "1.8.187：继续修「本地图收不到」。① 图片外置前先等文件大小稳定再拷贝（画图/相册工具刚写完就发送，旧版会拷到半截，线上出现过 403 字节的坏图）；② HEIC/HEIF 等 Flutter 解不了的手机照片，服务端先用 PIL 转成 1600px JPEG 再给 /img 地址；③ 兜底的 base64 也改成落盘换 URL，不再内联大帧；④ 实在取不到图时补一句人话提示，不再让消息凭空消失。",
+  "note": "1.8.187：继续修「本地图收不到」。① 图片外置前先等文件大小稳定再拷贝；② HEIC/HEIF 等转 1600px JPEG；③ 兜底 base64 改落盘换 URL；④ 取不到图时补提示。",
   "plugin_detail": {
     "version": "1.8.187",
     "url": "https://aka.doubaocdn.com/s/N6OUV4cWdm",
@@ -17,14 +17,14 @@
     "url": "https://aka.doubaocdn.com/s/pS2D20CGEL",
     "size": 619989,
     "sha256": "1cbc2563ed4e6567be97362c2e33f8456fe0579069732a7a80863bdd1112bbf1",
-    "note": "象棋 + 抖音解析；1.0.3 给解析加中转兜底：本机 detail 接口被 Argus 风控（Uifid Not Found）、分享页 SSR 又不下发作品时，自动走中转接口拿直链，登录 Cookie 过期也能解析。需先于 self_app 安装。"
+    "note": "象棋 + 抖音解析；1.0.3 给解析加中转兜底。需先于 self_app 安装。"
   },
   "app": {
-    "versionCode": 113,
-    "versionName": "0.1.0-lanyu113",
-    "url": "https://aka.doubaocdn.com/s/ZH1ibBYRwR",
-    "size": 100837289,
-    "sha256": "ea59f737ae0e34f9e65d101411089edc42295e9a6d9bf858d694c06fbcdcb8b6",
-    "notes": "v113：后台弹通知的同时把消息本体落盘（lanyu_bg_inbox.json），回前台/重连/点顶栏「同步消息」时合并进聊天历史，修「有通知没消息」；发图改专用压缩（1440 起，超 5MB 继续缩），避免大图被服务端帧上限丢弃；包名 com.lanyu.app.profile 不变，覆盖安装保留数据。"
+    "versionCode": 114,
+    "versionName": "0.1.0-lanyu114",
+    "url": "https://aka.doubaocdn.com/s/UENvLcXEUw",
+    "size": 100837277,
+    "sha256": "91cb307dd3dd4ee6bcb5a44359560367ec93ada700aade190b9c4a7349f07e12",
+    "notes": "v114：正式渠道包 com.lanyu.app（就是现在打不开更新的那个澜雨），覆盖安装保留数据；内容含 v113 的后台消息补收（有通知没消息）与大图发送压缩修复。以前清单里的 v113 误指向 com.lanyu.app.profile 测试包，装上去只会更新那个同名测试应用，所以你的澜雨一直停在 108。"
   }
 }
