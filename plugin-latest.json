@@ -1,15 +1,15 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.182",
-  "url": "https://aka.doubaocdn.com/s/10ck5L85Rq",
-  "size": 261277,
-  "sha256": "16fafb662e66b1bca43746b290346adc9d5762fbdb42144df01c28c81ddaf785",
+  "version": "1.8.186",
+  "url": "https://aka.doubaocdn.com/s/soyW3dLhpY",
+  "size": 262770,
+  "sha256": "429ab17e8c909aa105ac9a890ee1de739559112314e6d0dc47efbad8cbdbe163",
   "layout": "flat",
-  "note": "1.8.182：象棋与抖音解析已独立成 astrbot_plugin_lanyu_tools（127.0.0.1:6200）；self_app 只保留 /xiangqi/* 与 /dy/status 的等价转发，App 地址与 token 不变，无需重打 APK。安装顺序：先装 lanyu_tools，再更新 self_app。包体从 866KB 降到 261KB。",
+  "note": "1.8.186：修「通知栏有澜宝消息、聊天页没有」。① 服务端最近回复改为落盘 recent_outbox.json，AstrBot 重启后 App 回前台 resync 仍能补拉；② 纯空白/被拦截的空回复直接不推不缓存；③ 图片收发修复：澜宝发来的本地图复制进 uploads 回 /img 相对地址（127.0.0.1 绝对地址也改相对），入站也认 /img 地址；WS 单帧上限提到 32MB，避免手机发大图被默认 4MB 上限整帧丢弃。需配合澜雨 v113 App 生效。",
   "plugin_detail": {
-    "version": "1.8.182",
-    "url": "https://aka.doubaocdn.com/s/10ck5L85Rq",
-    "notes": "1.8.182：拆出 lanyu_tools（象棋+解析），self_app 改为转发；棋局注入改读共享快照文件。"
+    "version": "1.8.186",
+    "url": "https://aka.doubaocdn.com/s/soyW3dLhpY",
+    "notes": "1.8.186：最近回复落盘 + 空回复拦截 + 图片走 URL/放宽 WS 帧上限。"
   },
   "requires": {
     "plugin": "astrbot_plugin_lanyu_tools",
@@ -17,14 +17,14 @@
     "url": "https://aka.doubaocdn.com/s/pS2D20CGEL",
     "size": 619989,
     "sha256": "1cbc2563ed4e6567be97362c2e33f8456fe0579069732a7a80863bdd1112bbf1",
-    "note": "象棋 + 抖音解析；1.0.3 给解析加中转兜底：本机 detail 接口被 Argus 风控（Uifid Not Found）、分享页 SSR 又不下发作品时，自动走中转接口拿直链，登录 Cookie 过期也能解析。需先于 self_app 1.8.182 安装。"
+    "note": "象棋 + 抖音解析；1.0.3 给解析加中转兜底：本机 detail 接口被 Argus 风控（Uifid Not Found）、分享页 SSR 又不下发作品时，自动走中转接口拿直链，登录 Cookie 过期也能解析。需先于 self_app 安装。"
   },
   "app": {
-    "versionCode": 108,
-    "versionName": "0.1.0-lanyu108",
-    "url": "https://aka.doubaocdn.com/s/mTUgGyAv3E",
-    "size": 100825285,
-    "sha256": "613c8eb26dd939ca810a913bd255584dd75d61df413bd40e26f9e55626e20aab",
-    "notes": "v108：象棋聊天省 token；包名不变，覆盖安装保留数据。"
+    "versionCode": 113,
+    "versionName": "0.1.0-lanyu113",
+    "url": "https://aka.doubaocdn.com/s/ZH1ibBYRwR",
+    "size": 100837289,
+    "sha256": "ea59f737ae0e34f9e65d101411089edc42295e9a6d9bf858d694c06fbcdcb8b6",
+    "notes": "v113：后台弹通知的同时把消息本体落盘（lanyu_bg_inbox.json），回前台/重连/点顶栏「同步消息」时合并进聊天历史，修「有通知没消息」；发图改专用压缩（1440 起，超 5MB 继续缩），避免大图被服务端帧上限丢弃；包名 com.lanyu.app.profile 不变，覆盖安装保留数据。"
   }
 }
