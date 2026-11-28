@@ -1,15 +1,15 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.189",
-  "url": "https://aka.doubaocdn.com/s/5Vpf7LOz5y",
-  "size": 264870,
-  "sha256": "e8c55ad8cd95b1977598ec56916e08778c2c11a39e40788aaef13d7eb2c4f29c",
+  "version": "1.8.190",
+  "url": "https://aka.doubaocdn.com/s/TVUGdP5PxH",
+  "size": 266393,
+  "sha256": "f642552f3fbecbce407cb59b1a99b76dcea860d72efae73bba873b5552fad33e",
   "layout": "flat",
-  "note": "1.8.189：修「澜宝从本地发图收不到」（文生图一直正常，坏的是本地图这一路）。① 本地图多路径识别：安卓侧 /sdcard、/storage/emulated/0、/data/data/com.lanyu.app/files 与 proot 的 /root 自动互转，以前只认原样路径，对不上就当『图取不到』；② File 组件里的图（澜宝发相册图常包成文件）扩展名是图片就直接转图片气泡，不再只显示一行文件名；③ 图片外置前的 exists 预检放宽，避免把可用图误杀。",
+  "note": "1.8.190：本地图两处硬伤一起处理。① 图片就绪等待：连续两次 stat 大小一致且不为 0 才算写完，最多等 5 秒，拷回去之前再稳一次，不再把只写了一半的文件（线上出现过 403 字节）发给 App；② 大图先压再发：超过 8MB 或最长边超 2000px 的本地图统一转成 2000px 内 JPEG，HEIC/HEIF 同样转码，避免大图传输慢、App 解码 OOM；空文件直接跳过不推。另含 1.8.189 的安卓/proot 多路径互认与 File 段图片转气泡。",
   "plugin_detail": {
-    "version": "1.8.189",
-    "url": "https://aka.doubaocdn.com/s/5Vpf7LOz5y",
-    "notes": "1.8.189：本地图多路径识别 + File 段图片转气泡 + 放宽存在性预检。"
+    "version": "1.8.190",
+    "url": "https://aka.doubaocdn.com/s/TVUGdP5PxH",
+    "notes": "1.8.190：图片就绪等待（防半截坏图）+ 超 8MB/2000px 自动压缩转码。"
   },
   "requires": {
     "plugin": "astrbot_plugin_lanyu_tools",
