@@ -1,22 +1,22 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.178",
-  "url": "https://aka.doubaocdn.com/s/yXoMxVrvLX",
-  "size": 258164,
-  "sha256": "f9088e7df7b5cdf8039f0f4150ca84061197ef94fbdc0917e20ada0a1faac225",
+  "version": "1.8.179",
+  "url": "https://aka.doubaocdn.com/s/FhNnBmNwNj",
+  "size": 508620,
+  "sha256": "eaac6dbbc52c96b6b47316ada594132d6126ff75399378800c0e2d3ea42a2baa",
   "layout": "flat",
-  "note": "1.8.178：象棋台词接口 /xiangqi/say 支持 surface 参数，App 与网页分别措辞；App 端不再内置任何预制台词，称呼统一由插件按用户昵称生成。",
+  "note": "1.8.179：新增 /xiangqi/chat —— 棋盘边的聊天带上当前局面、最近 10 手棋谱和最近 6 轮对话，由模型现场回一句，40 字内；模型不可用时按局面给兜底话。",
   "plugin_detail": {
-    "version": "1.8.178",
-    "url": "https://aka.doubaocdn.com/s/yXoMxVrvLX",
-    "notes": "1.8.178：象棋台词去硬编码，App 台词全部走插件生成。"
+    "version": "1.8.179",
+    "url": "https://aka.doubaocdn.com/s/FhNnBmNwNj",
+    "notes": "1.8.179：象棋盘边聊天接口 /xiangqi/chat（带棋局上下文 + 6 轮对话），网页与 App 共用。"
   },
   "app": {
-    "versionCode": 106,
-    "versionName": "0.1.0-lanyu106",
-    "url": "https://aka.doubaocdn.com/s/WGu8YI3Kd5",
-    "size": 100813589,
-    "sha256": "779b0859f1838283472eccba96ca81169862dc29e1b021f2137cd3d061a3f93b",
-    "notes": "v106：象棋页删掉全部硬编码台词（含「义父赢了」），胜负与开局台词改为调用插件 /xiangqi/say 生成，新增澜宝台词气泡；包名不变，覆盖安装保留数据。"
+    "versionCode": 107,
+    "versionName": "0.1.0-lanyu107",
+    "url": "https://aka.doubaocdn.com/s/d2hYU8tuFe",
+    "size": 100824813,
+    "sha256": "3dae7f7590575ce855f923e5e2c6a97d69d4d3d49d5e07e3d5c978606d1f9b18",
+    "notes": "v107：象棋页加对话栏（常驻输入条 + 132px 聊天列表，她说的话靠左、你的靠右），消息走插件 /xiangqi/chat，带棋局与最近对话上下文；包名不变，覆盖安装保留数据。"
   }
 }
