@@ -1,23 +1,23 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.192",
-  "url": "https://aka.doubaocdn.com/s/bbWLVo0gP3",
-  "size": 268352,
-  "sha256": "ed53edf019c03d709cb0d604b3415d02e7ec73801dabb06de0f99a6863c4a35b",
+  "version": "1.8.193",
+  "url": "https://aka.doubaocdn.com/s/GYsMyfgamP",
+  "size": 269132,
+  "sha256": "9ff098cd0b9b32af0ff6cbe33fc0ae98520ef9fd8e13127e152f9bbd905d9ec8",
   "layout": "flat",
-  "note": "1.8.192：修「语音过一会儿不能听」。① /voice 路由同时认 v_ 和 voice_ 前缀（出站大语音落盘是 voice_，老代码只放行 v_，于是重载历史后点开必 404）；② 转文字不再把 /voice/xxx.wav 当本地路径喂 open()，先映射到 uploads 再识别，没文件也会给一句人话而不是刷 Errno 2；③ 新增语音回收任务：按最后一次播放/写入算，7 天没人碰才删，上限 2000 个（面板可调 voice_keep_hours / voice_max_files）。象棋转发报错一并加固：导入齐全 + 失败日志写清方法和路径。含 1.8.190/191 全部修复。",
+  "note": "1.8.193：修「下完棋好久之后突然冒一句这盘的结果」。棋局快照里的胜负以前每次聊天都会塞进模型上下文，旧局结束态一直存在，模型就隔一小时又报一次结果。现在对终局结果做 ACK：同一盘（status+手数）只送进上下文一次，之后记录到 lanyu_chess_result_ack.json 不再重复；终局超过 45 分钟也不再当当前棋局。含 1.8.192 的语音修复（v_/voice_ 路由前缀、ASR 路径、7 天回收）。",
   "plugin_detail": {
-    "version": "1.8.192",
-    "url": "https://aka.doubaocdn.com/s/bbWLVo0gP3",
-    "notes": "1.8.192：语音路由前缀、ASR 路径、7 天回收；象棋转发加固。"
+    "version": "1.8.193",
+    "url": "https://aka.doubaocdn.com/s/GYsMyfgamP",
+    "notes": "1.8.193：棋局终局结果 ACK 去重 + 45 分钟过期；含语音全套修复。"
   },
   "requires": {
     "plugin": "astrbot_plugin_lanyu_tools",
-    "version": "1.0.3",
-    "url": "https://aka.doubaocdn.com/s/pS2D20CGEL",
-    "size": 619989,
-    "sha256": "1cbc2563ed4e6567be97362c2e33f8456fe0579069732a7a80863bdd1112bbf1",
-    "note": "象棋 + 抖音解析；1.0.3 给解析加中转兜底。需先于 self_app 安装。"
+    "version": "1.0.4",
+    "url": "https://aka.doubaocdn.com/s/5ewVB9L86a",
+    "size": 620793,
+    "sha256": "e771b737e0b70f4eea2e7c184a99ee0bd4593ecd2732dcdcffeb6ca13004e61e",
+    "note": "象棋 + 抖音解析；1.0.4 加终局结果时间戳（result_ts），同一盘结果反复 sync 不再刷新成「刚结束」。"
   },
   "app": {
     "versionCode": 115,
