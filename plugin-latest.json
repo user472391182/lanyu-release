@@ -1,15 +1,23 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.180",
-  "url": "https://aka.doubaocdn.com/s/yfmrg1aLPf",
-  "size": 511986,
-  "sha256": "cbd1d4832855523a27ae252fa570e22818bf338b0a36672765e54033b896c29b",
+  "version": "1.8.182",
+  "url": "https://aka.doubaocdn.com/s/10ck5L85Rq",
+  "size": 261277,
+  "sha256": "16fafb662e66b1bca43746b290346adc9d5762fbdb42144df01c28c81ddaf785",
   "layout": "flat",
-  "note": "1.8.180：棋局状态改由服务端统一记录 —— 开局/落子/悔棋/网页 sync 都写进 _XQ_LIVE，主聊天注入不再依赖客户端上报；注入内容带「在哪下的、已走几手、刚在棋盘上聊了什么」；棋盘聊天也回写这一句。",
+  "note": "1.8.182：象棋与抖音解析已独立成 astrbot_plugin_lanyu_tools（127.0.0.1:6200）；self_app 只保留 /xiangqi/* 与 /dy/status 的等价转发，App 地址与 token 不变，无需重打 APK。安装顺序：先装 lanyu_tools，再更新 self_app。包体从 866KB 降到 261KB。",
   "plugin_detail": {
-    "version": "1.8.180",
-    "url": "https://aka.doubaocdn.com/s/yfmrg1aLPf",
-    "notes": "1.8.180：修「网页下棋她不知道」——服务端记录棋局，注入带来源/手数/棋盘对话。"
+    "version": "1.8.182",
+    "url": "https://aka.doubaocdn.com/s/10ck5L85Rq",
+    "notes": "1.8.182：拆出 lanyu_tools（象棋+解析），self_app 改为转发；棋局注入改读共享快照文件。"
+  },
+  "requires": {
+    "plugin": "astrbot_plugin_lanyu_tools",
+    "version": "1.0.0",
+    "url": "https://aka.doubaocdn.com/s/WDhmjR07Yw",
+    "size": 615063,
+    "sha256": "9738ac7acea8474505670415f162fb191318e5c3d05daa209e1cfe76ff9bb769",
+    "note": "象棋服务 + 抖音解析服务（8899），需先于 self_app 1.8.182 安装"
   },
   "app": {
     "versionCode": 108,
@@ -17,6 +25,6 @@
     "url": "https://aka.doubaocdn.com/s/mTUgGyAv3E",
     "size": 100825285,
     "sha256": "613c8eb26dd939ca810a913bd255584dd75d61df413bd40e26f9e55626e20aab",
-    "notes": "v108：象棋聊天省 token —— 前三句交代局面，之后只带对话不再重复塞棋谱；台词仍只在开局与终局等关键手请服务端生成。包名不变，覆盖安装保留数据。"
+    "notes": "v108：象棋聊天省 token；包名不变，覆盖安装保留数据。"
   }
 }
