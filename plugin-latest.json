@@ -1,15 +1,15 @@
 {
   "plugin": "astrbot_plugin_self_app",
-  "version": "1.8.190",
-  "url": "https://aka.doubaocdn.com/s/TVUGdP5PxH",
-  "size": 266393,
-  "sha256": "f642552f3fbecbce407cb59b1a99b76dcea860d72efae73bba873b5552fad33e",
+  "version": "1.8.191",
+  "url": "https://aka.doubaocdn.com/s/7eAsUUIfzf",
+  "size": 266465,
+  "sha256": "360044b81918de4ffd469e1eb423883edfaa9e603b1735bfccd1db8f0c50cec1",
   "layout": "flat",
-  "note": "1.8.190：本地图两处硬伤一起处理。① 图片就绪等待：连续两次 stat 大小一致且不为 0 才算写完，最多等 5 秒，拷回去之前再稳一次，不再把只写了一半的文件（线上出现过 403 字节）发给 App；② 大图先压再发：超过 8MB 或最长边超 2000px 的本地图统一转成 2000px 内 JPEG，HEIC/HEIF 同样转码，避免大图传输慢、App 解码 OOM；空文件直接跳过不推。另含 1.8.189 的安卓/proot 多路径互认与 File 段图片转气泡。",
+  "note": "1.8.191：修象棋页报错。转发到 lanyu_tools（6200）的 _xq_proxy_handler 与 _dy_status_handler 用了 aiohttp 但模块里没导入，日志一直是 name 'aiohttp' is not defined，转发 502 一片，棋页只能用老的本地引擎/根本走不通。现在在文件头统一 import aiohttp，抖音解析状态接口也一并修掉。含 1.8.190 的本地图修复。",
   "plugin_detail": {
-    "version": "1.8.190",
-    "url": "https://aka.doubaocdn.com/s/TVUGdP5PxH",
-    "notes": "1.8.190：图片就绪等待（防半截坏图）+ 超 8MB/2000px 自动压缩转码。"
+    "version": "1.8.191",
+    "url": "https://aka.doubaocdn.com/s/7eAsUUIfzf",
+    "notes": "1.8.191：补 import aiohttp，修象棋转发/抖音状态 502。"
   },
   "requires": {
     "plugin": "astrbot_plugin_lanyu_tools",
