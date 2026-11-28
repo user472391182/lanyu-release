@@ -14,10 +14,10 @@
   "requires": {
     "plugin": "astrbot_plugin_lanyu_tools",
     "version": "1.0.0",
-    "url": "https://aka.doubaocdn.com/s/WDhmjR07Yw",
-    "size": 615063,
-    "sha256": "9738ac7acea8474505670415f162fb191318e5c3d05daa209e1cfe76ff9bb769",
-    "note": "象棋服务 + 抖音解析服务（8899），需先于 self_app 1.8.182 安装"
+    "url": "https://aka.doubaocdn.com/s/59h0xH4zhl",
+    "size": 616509,
+    "sha256": "bae87957ce0ba72cb76d6d9dbef85e835593564754885b54d8b2d4a69c526efd",
+    "note": "象棋服务 + 抖音解析服务（8899），需先于 self_app 1.8.182 安装；已补 README.md，修面板「缺少 README.md」报错"
   },
   "app": {
     "versionCode": 108,
